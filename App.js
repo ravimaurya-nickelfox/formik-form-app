@@ -40,17 +40,17 @@ export default class App extends Component{
       secondary_insurance_member_id:''
     }
     this.fieldValidationRules = yup.object().shape({
-      first_name:yup.string().required().min(3),
-      last_name:yup.string().required().min(3),
-      age:yup.number().required().min(2).max(3),
-      email: yup.string().email().required(),
-      password: yup.string().min(6).required(),
-      confirm_password: yup.string().min(6).required(),
-      mobile:yup.number().min(10).required(),
-      address:yup.string().required(),
-      emergency_contact_person:yup.string().required(),
-      emergency_contact_number:yup.number().required().min(10),
-      primary_insurance_member_id:yup.string().required()
+      first_name:yup.string().required('First Name is required').matches(/^[a-zA-Z]+$/, 'Digits, space & special characters are not allowed'),
+      last_name:yup.string().required('Last Name is required').matches(/^[a-zA-Z]+$/, 'Digits, space & special characters are not allowed'),
+      age:yup.number().typeError('Age must be a number').required('Age is required').max(140, 'Age must be less than 140.').positive('Age must be positive'),
+      email: yup.string().email('Enter a valid email address').required('Email is required'),
+      password: yup.string().required('Password is required').matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, 'Password must contain atleast 8 characters, one uppercase and one lowercase, a digit and one special character.'),
+      confirm_password: yup.string().required('Confirm password please').oneOf([yup.ref('Password'), null], 'Password does not match'),
+      mobile:yup.number().required('Mobile no. is required'),
+      address:yup.string().required('Address is required'),
+      emergency_contact_person:yup.string().required('This is required'),
+      emergency_contact_number:yup.string().required('This is required'),
+      primary_insurance_member_id:yup.string()
     })
     this.genders = [
       {label:'Male',value:'M'},
@@ -188,7 +188,7 @@ export default class App extends Component{
                         />
                       </TouchableOpacity>
                     </View>
-                    <View style={{flex:1,marginTop:10}}>
+                    <View style={{flex:1,marginTop:10,marginBottom:10}}>
                       <Text style={styles.inputLabel}>Plan Type</Text>
                       <TouchableOpacity
                         activeOpacity={0.8}
@@ -260,7 +260,7 @@ export default class App extends Component{
                             />
                           </TouchableOpacity>
                         </View>
-                        <View style={{flex:1,marginTop:10}}>
+                        <View style={{flex:1,marginTop:10,marginBottom:10}}>
                           <Text style={styles.inputLabel}>Plan Type</Text>
                           <TouchableOpacity
                             activeOpacity={0.8}
