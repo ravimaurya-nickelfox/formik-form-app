@@ -107,7 +107,39 @@ const style = StyleSheet.create({
         fontFamily: "Helvetica",
         fontSize: 14,
         fontWeight: "500",
-      }
+    },
+    rowtWrapper:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        marginVertical:7
+    },
+    rowTitle:{
+        fontSize:14,
+        fontWeight:'600',
+        fontFamily: "Helvetica"
+    },
+    rowValue:{
+        fontSize:14,
+        color:'#668391',
+        fontFamily: "Helvetica",
+        fontWeight:'600',
+    }
 })
+
+export class ListCells extends Component{
+    constructor(props){
+        super(props)
+    }
+
+    render(){
+        return(
+            <View style={style.rowtWrapper}>
+                <Text style={style.rowTitle}>{this.props.title}</Text>
+                <Text style={style.rowValue}>{this.props.value}</Text>
+            </View>
+        )
+    }
+}
 
 export const MyInput = compose(handleTextInput,withNextInputAutoFocusInput)(Input)

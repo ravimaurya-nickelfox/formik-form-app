@@ -5,11 +5,17 @@ import React, { Component, Fragment } from 'react';
 import { TextInput, Text, Button, Alert, StyleSheet, SafeAreaView, 
   View, Picker, PickerIOS, KeyboardAvoidingView, ScrollView,
 TouchableOpacity, Image, TouchableWithoutFeedback } from 'react-native';
-import { MyInput } from './components';
+import { MyInput, ListCells } from './components';
 import {withNextInputAutoFocusForm,withNextInputAutoFocusInput} from 'react-native-formik'
 import RNPicker from 'react-native-picker-select'
 
 const MyView = withNextInputAutoFocusForm(View)
+
+const doctorInfo = [
+  {title:'Doctor Name',value:'Adam Smith'},
+  {title:'Address',value:'24th George St'},
+  {title:'Referral Code',value:'94533'},
+]
 
 export default class App extends Component{
   constructor(props){
@@ -279,6 +285,25 @@ export default class App extends Component{
               </MyView>
             )}
           </Formik>
+          <View style={{borderBottomColor:'rgba(0,0,0,0.16)',borderBottomWidth:1,marginHorizontal:20,marginVertical:10}}></View>
+          <View style={{padding:20,}}>
+            <Text style={{fontSize:16,fontWeight:'600',fontFamily:'Helvetica'}}>Associated PCP Details</Text>
+            <View style={{marginTop:10}}>
+              {
+                doctorInfo.map((item,index)=>
+                  <ListCells
+                    title={item.title}
+                    value={item.value}
+                  />
+                )
+              }
+            </View>
+          </View>
+          <View style={{}}>
+              <TouchableOpacity style={styles.submitBtn} activeOpacity={0.7}>
+                <Text style={{fontSize:16,fontWeight:'600',fontFamily:'Helvetica',color:'#fff'}}>SUBMIT</Text>
+              </TouchableOpacity>
+          </View>
         </ScrollView>
         <View>
           {
@@ -348,5 +373,13 @@ const styles = StyleSheet.create({
     fontFamily: "Helvetica",
     fontSize: 14,
     fontWeight: "500",
+  },
+  submitBtn:{
+    paddingVertical:14,
+    paddingHorizontal:45,
+    backgroundColor:'#0CD0A7',
+    alignSelf:'center',
+    borderRadius:4,
+    marginVertical:50
   }
 });
