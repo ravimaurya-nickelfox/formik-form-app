@@ -62,14 +62,14 @@ class Input extends React.PureComponent {
     render() {
         return (
             <View style={{marginBottom:5}}>
-                <Text>{this.props.label}</Text>
+                <Text style={style.inputLabel}>{this.props.label}</Text>
                 <View ref={p=>this.view=p} style={[style.view,{borderColor:this.borderColor()}]}>
                     <TextInput
                         ref={p=>this.input=p}
                         {...this.props}
                         onFocus={this.zoomInFocus}
                         onBlur={this.zoomOutFocus}
-                        style={[style.input]}
+                        style={[style.input,{...this.props.style}]}
                     />
                 </View>
                 {this.isError() &&
@@ -86,7 +86,7 @@ class Input extends React.PureComponent {
 const style = StyleSheet.create({
     input:{
         color:Colors.purple,
-        paddingVertical:15,
+        paddingVertical:10,
         paddingHorizontal:10,
         fontFamily: "Helvetica",
        fontSize: 14,
@@ -101,8 +101,13 @@ const style = StyleSheet.create({
     view:{
         borderWidth:1,
         borderRadius:4,
-        marginTop:5
-    }
+        marginTop:10
+    },
+    inputLabel:{
+        fontFamily: "Helvetica",
+        fontSize: 14,
+        fontWeight: "500",
+      }
 })
 
 export const MyInput = compose(handleTextInput,withNextInputAutoFocusInput)(Input)

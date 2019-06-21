@@ -85,21 +85,11 @@ export default class App extends Component{
                     />
                   </View>
                   <View style={{flex:1,marginStart:16}}>
-                    <Text>Gender</Text>
+                    <Text style={styles.inputLabel}>Gender</Text>
                     <TouchableOpacity
                       activeOpacity={0.8}
                       onPress={()=>this.setState({showGenderPicker:true})}
-                      style={{
-                        borderWidth:1,
-                        borderRadius:4,
-                        marginTop:5,
-                        flex:1,
-                        justifyContent:'space-between',
-                        alignItems:'center',
-                        paddingHorizontal:14,
-                        marginBottom:20,
-                        flexDirection:'row'
-                      }}
+                      style={styles.smallPickerStyle}
                     >
                       <Text>{this.state.gender}</Text>
                       <Image
@@ -140,6 +130,7 @@ export default class App extends Component{
                     type={'address'}
                     label={'Address'}
                     multiline
+                    style={{height:110}}
                   />
                 <MyInput
                     placeholder={'Emergency Contact Person'}
@@ -153,10 +144,54 @@ export default class App extends Component{
                     type={'phone'}
                     label={'Emergency Contact Number'}
                   />
-                  <View>
-                    <Text>Primary Insurance Information</Text>
+                  <View style={{marginBottom:10}}>
+                    <Text style={styles.primaryLabelStyle}>Primary Insurance Information</Text>
                   </View>
-
+                  <View style={{flex:1,marginTop:10}}>
+                      <Text style={styles.inputLabel}>State</Text>
+                      <TouchableOpacity
+                        activeOpacity={0.8}
+                        onPress={()=>this.setState({showGenderPicker:true})}
+                        style={styles.fullPickerStyle}
+                      >
+                        <Text>State</Text>
+                        <Image
+                          source={require('./assets/icons/dropdown/dropdown.png')}
+                        />
+                      </TouchableOpacity>
+                    </View>
+                    <View style={{flex:1,marginTop:10}}>
+                      <Text style={styles.inputLabel}>Carrier</Text>
+                      <TouchableOpacity
+                        activeOpacity={0.8}
+                        onPress={()=>this.setState({showGenderPicker:true})}
+                        style={styles.fullPickerStyle}
+                      >
+                        <Text>Carrier</Text>
+                        <Image
+                          source={require('./assets/icons/dropdown/dropdown.png')}
+                        />
+                      </TouchableOpacity>
+                    </View>
+                    <View style={{flex:1,marginTop:10}}>
+                      <Text style={styles.inputLabel}>Plan Type</Text>
+                      <TouchableOpacity
+                        activeOpacity={0.8}
+                        onPress={()=>this.setState({showGenderPicker:true})}
+                        style={styles.fullPickerStyle}
+                      >
+                        <Text>Plan Type</Text>
+                        <Image
+                          source={require('./assets/icons/dropdown/dropdown.png')}
+                        />
+                      </TouchableOpacity>
+                    </View>
+                    <MyInput
+                      placeholder={'Member ID'}
+                      name={'primary_insurance_member_id'}
+                      type={'name'}
+                      label={'Member ID'}
+                    />
               </MyView>
             )}
           </Formik>
@@ -173,7 +208,6 @@ export default class App extends Component{
               </View>
               <Picker
                     selectedValue={this.state.gender}
-                    style={{height: 50, width: 100}}
                     onValueChange={(itemValue, itemIndex) =>
                       this.setState({gender: itemValue})
                     }
@@ -193,14 +227,42 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  input:{
-    // borderRadius:2,
-    // fontSize:16,
-    // paddingVertical:5,
-    // paddingHorizontal:10,
-    // marginTop:10
-  },
   p20:{
     padding:20
+  },
+  smallPickerStyle:{
+    borderWidth:1,
+    borderRadius:4,
+    marginTop:10,
+    flex:1,
+    justifyContent:'space-between',
+    alignItems:'center',
+    paddingHorizontal:14,
+    marginBottom:22,
+    flexDirection:'row',
+    borderColor:'#6B7A81'
+  },
+  fullPickerStyle:{
+    borderWidth:1,
+    borderRadius:4,
+    marginTop:10,
+    flex:1,
+    justifyContent:'space-between',
+    alignItems:'center',
+    paddingHorizontal:14,
+    paddingVertical:10,
+    marginBottom:10,
+    flexDirection:'row',
+    borderColor:'#6B7A81'
+  },
+  primaryLabelStyle:{
+    fontFamily: "Helvetica",
+    fontSize: 16,
+    fontWeight: "500",
+  },
+  inputLabel:{
+    fontFamily: "Helvetica",
+    fontSize: 14,
+    fontWeight: "500",
   }
 });
