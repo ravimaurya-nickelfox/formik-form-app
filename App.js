@@ -77,6 +77,7 @@ export default class App extends Component{
             initialValues={this.fieldSchema}
             onSubmit={values => this.submitForm(values)}
             validationSchema={this.fieldValidationRules}
+            ref={p=>this.formik=p}
           >
             {({ values, handleChange, errors, setFieldTouched, touched, isValid, handleSubmit }) => (
               <MyView style={styles.p20}>
@@ -303,7 +304,9 @@ export default class App extends Component{
             </View>
           </View>
           <View style={{}}>
-              <TouchableOpacity style={styles.submitBtn} activeOpacity={0.7}>
+              <TouchableOpacity style={styles.submitBtn} activeOpacity={0.7}
+                onPress={()=>this.formik.submitForm()}
+              >
                 <Text style={{fontSize:16,fontWeight:'600',fontFamily:'Helvetica',color:'#fff'}}>SUBMIT</Text>
               </TouchableOpacity>
           </View>
