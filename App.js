@@ -4,7 +4,7 @@ import { Formik } from 'formik'
 import React, { Component, Fragment } from 'react';
 import { TextInput, Text, Button, Alert, StyleSheet, SafeAreaView, 
   View, Picker, PickerIOS, KeyboardAvoidingView, ScrollView,
-TouchableOpacity, Image } from 'react-native';
+TouchableOpacity, Image, TouchableWithoutFeedback } from 'react-native';
 import { MyInput } from './components';
 import {withNextInputAutoFocusForm,withNextInputAutoFocusInput} from 'react-native-formik'
 import RNPicker from 'react-native-picker-select'
@@ -16,7 +16,8 @@ export default class App extends Component{
     super(props)
     this.state = {
       gender:'Gender',
-      showGenderPicker:false
+      showGenderPicker:false,
+      showSecondary:false
     }
     this.fieldSchema = {
       first_name:'',
@@ -51,10 +52,18 @@ export default class App extends Component{
     ]
   }
 
+  handleSecondaryFormBtnPress=()=>{
+    this.setState({showSecondary:!this.state.showSecondary},()=>{
+      setTimeout(()=>{
+        this.scrollRef.scrollToEnd({animated:true})
+      },150)
+    })
+  }
+
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <ScrollView>
+        <ScrollView ref={p=>this.scrollRef=p}>
           <Formik
             initialValues={this.fieldSchema}
             onSubmit={values => Alert.alert(JSON.stringify(values))}
@@ -192,6 +201,81 @@ export default class App extends Component{
                       type={'name'}
                       label={'Member ID'}
                     />
+
+                    <TouchableOpacity activeOpacity={1}
+                      onPress={this.handleSecondaryFormBtnPress}
+                    >
+                      { !this.state.showSecondary && <View style={{
+                        flexDirection:'row',
+                        alignItems:'center'
+                      }}>
+                        <Image
+                          source={require('./assets/icons/ic_add/ic_add.png')}
+                        />
+                        <Text style={{fontSize:16, color:'#5B57DC',fontWeight:'600',marginStart:10}}>Add Secondary Insurance</Text>
+                      </View>}
+                      { this.state.showSecondary && <View style={{
+                        flexDirection:'row',
+                        justifyContent:'space-between',
+                        alignItems:'center'
+                      }}>
+                        <Text style={{fontSize:16, color:'#000',fontWeight:'600'}}>Secondary Insurance Information</Text>
+                        <Image
+                          source={require('./assets/icons/ic_remove/ic_remove.png')}
+                        />
+                      </View>}
+                    </TouchableOpacity>
+
+                    { this.state.showSecondary && 
+                      <View>
+                        <View style={{flex:1,marginTop:10}}>
+                          <Text style={styles.inputLabel}>State</Text>
+                          <TouchableOpacity
+                            activeOpacity={0.8}
+                            onPress={()=>this.setState({showGenderPicker:true})}
+                            style={styles.fullPickerStyle}
+                          >
+                            <Text>State</Text>
+                            <Image
+                              source={require('./assets/icons/dropdown/dropdown.png')}
+                            />
+                          </TouchableOpacity>
+                        </View>
+                        <View style={{flex:1,marginTop:10}}>
+                          <Text style={styles.inputLabel}>Carrier</Text>
+                          <TouchableOpacity
+                            activeOpacity={0.8}
+                            onPress={()=>this.setState({showGenderPicker:true})}
+                            style={styles.fullPickerStyle}
+                          >
+                            <Text>Carrier</Text>
+                            <Image
+                              source={require('./assets/icons/dropdown/dropdown.png')}
+                            />
+                          </TouchableOpacity>
+                        </View>
+                        <View style={{flex:1,marginTop:10}}>
+                          <Text style={styles.inputLabel}>Plan Type</Text>
+                          <TouchableOpacity
+                            activeOpacity={0.8}
+                            onPress={()=>this.setState({showGenderPicker:true})}
+                            style={styles.fullPickerStyle}
+                          >
+                            <Text>Plan Type</Text>
+                            <Image
+                              source={require('./assets/icons/dropdown/dropdown.png')}
+                            />
+                          </TouchableOpacity>
+                        </View>
+                        <MyInput
+                          placeholder={'Member ID'}
+                          name={'primary_insurance_member_id'}
+                          type={'name'}
+                          label={'Member ID'}
+                        />
+                      </View>
+                    }
+
               </MyView>
             )}
           </Formik>
