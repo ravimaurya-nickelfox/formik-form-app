@@ -20,13 +20,6 @@ class Input extends React.PureComponent {
     zoomInFocus=()=>{
         this.view.setNativeProps({
             style:{
-                // shadowColor: Colors.purple,
-                // shadowOpacity: 0.4,
-                // shadowRadius: 3,
-                // shadowOffset: {
-                //     height: 4,
-                //     width: 0
-                // },
                 borderColor:Colors.purple
             }
         })

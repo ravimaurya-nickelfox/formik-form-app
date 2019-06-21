@@ -1,13 +1,12 @@
 import * as yup from 'yup'
 import { Formik } from 'formik'
 
-import React, { Component, Fragment } from 'react';
-import { TextInput, Text, Button, Alert, StyleSheet, SafeAreaView, 
-  View, Picker, PickerIOS, KeyboardAvoidingView, ScrollView,
-TouchableOpacity, Image, TouchableWithoutFeedback } from 'react-native';
-import { MyInput, ListCells } from './components';
-import {withNextInputAutoFocusForm,withNextInputAutoFocusInput} from 'react-native-formik'
-import RNPicker from 'react-native-picker-select'
+import React, { Component } from 'react';
+import { Text, Button, Alert, StyleSheet, SafeAreaView, 
+  View, Picker, ScrollView,
+TouchableOpacity, Image,  } from 'react-native';
+import { MyInput, ListCells } from './Components';
+import {withNextInputAutoFocusForm} from 'react-native-formik'
 
 const MyView = withNextInputAutoFocusForm(View)
 
@@ -66,13 +65,17 @@ export default class App extends Component{
     })
   }
 
+  submitForm=(values)=>{
+    Alert.alert(JSON.stringify(values))
+  }
+
   render() {
     return (
       <SafeAreaView style={styles.container}>
         <ScrollView ref={p=>this.scrollRef=p}>
           <Formik
             initialValues={this.fieldSchema}
-            onSubmit={values => Alert.alert(JSON.stringify(values))}
+            onSubmit={values => this.submitForm(values)}
             validationSchema={this.fieldValidationRules}
           >
             {({ values, handleChange, errors, setFieldTouched, touched, isValid, handleSubmit }) => (
