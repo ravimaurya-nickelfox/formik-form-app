@@ -8,7 +8,6 @@ TouchableOpacity, Image,  } from 'react-native';
 import { MyInput, ListCells, APTPicker } from './Components';
 import {withNextInputAutoFocusForm} from 'react-native-formik'
 import {KeyboardAccessoryNavigation} from 'react-native-keyboard-accessory'
-import Picker from 'react-native-picker';
 
 const MyView = withNextInputAutoFocusForm(View)
 

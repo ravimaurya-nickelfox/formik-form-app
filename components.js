@@ -19,6 +19,7 @@ class Input extends React.PureComponent {
     }
 
     zoomInFocus=()=>{
+        console.log(this.input)
         this.view.setNativeProps({
             style:{
                 borderColor:Colors.purple
