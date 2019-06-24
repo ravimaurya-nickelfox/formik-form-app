@@ -80,6 +80,7 @@ class Input extends React.PureComponent {
                         onBlur={this.zoomOutFocus}
                         style={[style.input,{...this.props.style}]}
                         onChangeText={()=>console.log(this.input)}
+                        autoCorrect={false}
                     />
                 </View>
                 {this.isError() &&
