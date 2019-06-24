@@ -3,10 +3,12 @@ import { Formik } from 'formik'
 
 import React, { Component } from 'react';
 import { Text, Button, Alert, StyleSheet, SafeAreaView, 
-  View, Picker, ScrollView,
+  View, ScrollView,
 TouchableOpacity, Image,  } from 'react-native';
-import { MyInput, ListCells } from './Components';
+import { MyInput, ListCells, APTPicker } from './Components';
 import {withNextInputAutoFocusForm} from 'react-native-formik'
+import {KeyboardAccessoryNavigation} from 'react-native-keyboard-accessory'
+import Picker from 'react-native-picker';
 
 const MyView = withNextInputAutoFocusForm(View)
 
@@ -16,13 +18,41 @@ const doctorInfo = [
   {title:'Referral Code',value:'94533'},
 ]
 
+const genders = [
+    {'label':'Male',value:'M'},
+    {'label':'Female',value:'F'}
+]
+
+const states = [
+    {label:'State 1', value:1},
+    {label:'State 2',value:2},
+    {label:'State 3',value:3}
+]
+
+const carriers = [
+  {label:'Carrier 1', value:1},
+  {label:'Carrier 2',value:2},
+  {label:'Carrier 3',value:3}
+]
+
+const plans = [
+  {label:'Plan 1', value:1},
+  {label:'Plan 2',value:2},
+  {label:'Plan 3',value:3}
+]
+
 export default class App extends Component{
   constructor(props){
     super(props)
     this.state = {
       gender:'Gender',
-      showGenderPicker:false,
-      showSecondary:false
+      showSecondary:false,
+      state:'State',
+      carrier:'Carrier',
+      plan:'Plan',
+      stateSecondary:'State',
+      carrierSecondary:'Carrier',
+      planSecondary:'Plan'
     }
     this.fieldSchema = {
       first_name:'',
@@ -55,6 +85,15 @@ export default class App extends Component{
       {label:'Male',value:'M'},
       {label:'Female',value:'F'}
     ]
+    this.customValidation = {
+          gender:true,
+          state:true,
+          carrier:true,
+          plan:true,
+          stateSecondary:true,
+          carrierSecondary:true,
+          planSecondary:true
+    }
   }
 
   handleSecondaryFormBtnPress=()=>{
@@ -66,7 +105,19 @@ export default class App extends Component{
   }
 
   submitForm=(values)=>{
-    Alert.alert(JSON.stringify(values))
+    this.pickerValidation()
+    this.formik.submitForm()
+    console.log(values)
+    // Alert.alert(JSON.stringify(values))
+  }
+
+  pickerValidation=()=>{
+    for(let v in this.customValidation){
+      if(typeof this.state[v] == 'string'){
+        this.customValidation[v] = false
+      }else
+        this.customValidation[v] = true
+    }
   }
 
   render() {
@@ -105,16 +156,14 @@ export default class App extends Component{
                   </View>
                   <View style={{flex:1,marginStart:16}}>
                     <Text style={styles.inputLabel}>Gender</Text>
-                    <TouchableOpacity
-                      activeOpacity={0.8}
-                      onPress={()=>this.setState({showGenderPicker:true})}
+                    <APTPicker
+                      data={genders}
                       style={styles.smallPickerStyle}
-                    >
-                      <Text>{this.state.gender}</Text>
-                      <Image
-                        source={require('./assets/icons/dropdown/dropdown.png')}
-                      />
-                    </TouchableOpacity>
+                      title={'Gender'}
+                      pickerTitle={'Select Gender'}
+                      onChange={(gender)=>this.setState({gender})}
+                      valid={this.customValidation.gender}
+                    />
                   </View>
               </View>
               <MyInput
@@ -168,42 +217,36 @@ export default class App extends Component{
                   </View>
                   <View style={{flex:1,marginTop:10}}>
                       <Text style={styles.inputLabel}>State</Text>
-                      <TouchableOpacity
-                        activeOpacity={0.8}
-                        onPress={()=>this.setState({showGenderPicker:true})}
+                      <APTPicker
+                        data={states}
                         style={styles.fullPickerStyle}
-                      >
-                        <Text>State</Text>
-                        <Image
-                          source={require('./assets/icons/dropdown/dropdown.png')}
-                        />
-                      </TouchableOpacity>
+                        title={'State'}
+                        pickerTitle={'Select State'}
+                        onChange={(state)=>this.setState({state})}
+                        valid={this.customValidation.state}
+                      />
                     </View>
                     <View style={{flex:1,marginTop:10}}>
                       <Text style={styles.inputLabel}>Carrier</Text>
-                      <TouchableOpacity
-                        activeOpacity={0.8}
-                        onPress={()=>this.setState({showGenderPicker:true})}
+                      <APTPicker
+                        data={carriers}
                         style={styles.fullPickerStyle}
-                      >
-                        <Text>Carrier</Text>
-                        <Image
-                          source={require('./assets/icons/dropdown/dropdown.png')}
-                        />
-                      </TouchableOpacity>
+                        title={'Carrier'}
+                        pickerTitle={'Select Carrier'}
+                        onChange={(carrier)=>this.setState({carrier})}
+                        valid={this.customValidation.carrier}
+                      />
                     </View>
                     <View style={{flex:1,marginTop:10,marginBottom:10}}>
                       <Text style={styles.inputLabel}>Plan Type</Text>
-                      <TouchableOpacity
-                        activeOpacity={0.8}
-                        onPress={()=>this.setState({showGenderPicker:true})}
+                      <APTPicker
+                        data={plans}
                         style={styles.fullPickerStyle}
-                      >
-                        <Text>Plan Type</Text>
-                        <Image
-                          source={require('./assets/icons/dropdown/dropdown.png')}
-                        />
-                      </TouchableOpacity>
+                        title={'Plan Type'}
+                        pickerTitle={'Select Plan'}
+                        onChange={(plan)=>this.setState({plan})}
+                        valid={this.customValidation.plan}
+                      />
                     </View>
                     <MyInput
                       placeholder={'Member ID'}
@@ -240,42 +283,36 @@ export default class App extends Component{
                       <View>
                         <View style={{flex:1,marginTop:10}}>
                           <Text style={styles.inputLabel}>State</Text>
-                          <TouchableOpacity
-                            activeOpacity={0.8}
-                            onPress={()=>this.setState({showGenderPicker:true})}
+                          <APTPicker
+                            data={states}
                             style={styles.fullPickerStyle}
-                          >
-                            <Text>State</Text>
-                            <Image
-                              source={require('./assets/icons/dropdown/dropdown.png')}
-                            />
-                          </TouchableOpacity>
+                            title={'State'}
+                            pickerTitle={'Select State'}
+                            onChange={(stateSecondary)=>this.setState({stateSecondary})}
+                            valid={this.customValidation.stateSecondary}
+                          />
                         </View>
                         <View style={{flex:1,marginTop:10}}>
                           <Text style={styles.inputLabel}>Carrier</Text>
-                          <TouchableOpacity
-                            activeOpacity={0.8}
-                            onPress={()=>this.setState({showGenderPicker:true})}
+                          <APTPicker
+                            data={carriers}
                             style={styles.fullPickerStyle}
-                          >
-                            <Text>Carrier</Text>
-                            <Image
-                              source={require('./assets/icons/dropdown/dropdown.png')}
-                            />
-                          </TouchableOpacity>
+                            title={'Carrier'}
+                            pickerTitle={'Select Carrier'}
+                            onChange={(carrierSecondary)=>this.setState({carrierSecondary})}
+                            valid={this.customValidation.carrierSecondary}
+                          />
                         </View>
                         <View style={{flex:1,marginTop:10,marginBottom:10}}>
                           <Text style={styles.inputLabel}>Plan Type</Text>
-                          <TouchableOpacity
-                            activeOpacity={0.8}
-                            onPress={()=>this.setState({showGenderPicker:true})}
+                          <APTPicker
+                            data={plans}
                             style={styles.fullPickerStyle}
-                          >
-                            <Text>Plan Type</Text>
-                            <Image
-                              source={require('./assets/icons/dropdown/dropdown.png')}
-                            />
-                          </TouchableOpacity>
+                            title={'Plan Type'}
+                            pickerTitle={'Select Plan'}
+                            onChange={(planSecondary)=>this.setState({planSecondary})}
+                            valid={this.customValidation.planSecondary}
+                          />
                         </View>
                         <MyInput
                           placeholder={'Member ID'}
@@ -296,6 +333,7 @@ export default class App extends Component{
               {
                 doctorInfo.map((item,index)=>
                   <ListCells
+                    key={'list'+index.toString()}
                     title={item.title}
                     value={item.value}
                   />
@@ -305,34 +343,18 @@ export default class App extends Component{
           </View>
           <View style={{}}>
               <TouchableOpacity style={styles.submitBtn} activeOpacity={0.7}
-                onPress={()=>this.formik.submitForm()}
+                onPress={()=>this.submitForm(this.formik.state.values)}
               >
                 <Text style={{fontSize:16,fontWeight:'600',fontFamily:'Helvetica',color:'#fff'}}>SUBMIT</Text>
               </TouchableOpacity>
           </View>
         </ScrollView>
-        <View>
-          {
-            this.state.showGenderPicker &&
-            <View>
-              <View style={{alignSelf:'flex-end'}}>
-                <Button
-                  title={'Done'}
-                  onPress={()=>this.setState({showGenderPicker:false})}
-                />
-              </View>
-              <Picker
-                    selectedValue={this.state.gender}
-                    onValueChange={(itemValue, itemIndex) =>
-                      this.setState({gender: itemValue})
-                    }
-                    style={{backgroundColor:'#fff'}}>
-                    <Picker.Item label="Male" value="Male" />
-                    <Picker.Item label="Female" value="Female" />
-                  </Picker>
-            </View>
-          }
-        </View>
+        <KeyboardAccessoryNavigation
+          avoidKeyboard={true}
+          multiline={false}
+          androidAdjustResize ={true}
+          accessoryStyle={{marginBottom:-35,backgroundColor:'#fff'}}
+        />
       </SafeAreaView>
     );
   }

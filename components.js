@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Text, View, TextInput,StyleSheet } from 'react-native'
+import { Text, View, TextInput,StyleSheet, Picker, Platform, TouchableOpacity ,Image } from 'react-native'
 import {withNextInputAutoFocusInput,handleTextInput} from 'react-native-formik'
 import { compose } from 'recompose'
+import PickerIOS from 'react-native-picker';
 
 const Colors = {
     primary:'#6B7A81',
@@ -76,6 +77,8 @@ class Input extends React.PureComponent {
     }
 }
 
+export const MyInput = compose(handleTextInput,withNextInputAutoFocusInput)(Input)
+
 const style = StyleSheet.create({
     input:{
         color:Colors.purple,
@@ -135,4 +138,86 @@ export class ListCells extends Component{
     }
 }
 
-export const MyInput = compose(handleTextInput,withNextInputAutoFocusInput)(Input)
+export class APTPicker extends React.PureComponent{
+    constructor(props){
+        super(props)
+        this.state = {
+            selectedValue:this.props.title
+        }
+    }
+
+    openPicker=()=>{
+        var data = []
+        for(let d of this.props.data)
+            data.push(d.label)
+
+        PickerIOS.init({
+            pickerData: data,
+            selectedValue: [data[0]],
+            pickerConfirmBtnText:'Confirm',
+            pickerCancelBtnText:'Cancel',
+            pickerTitleText:this.props.pickerTitle,
+            onPickerConfirm: data => {
+                this.setState({selectedValue:data[0]})
+                this.selectValue(data[0])
+            },
+            onPickerCancel: data => {
+                console.log(data);
+            },
+            onPickerSelect: data => {
+                console.log(data)
+            }
+        });
+        PickerIOS.show();
+    }
+
+    selectValue=value=>{
+        let val = this.props.data.find((ele)=>ele.label == value)
+        this.props.onChange(val)
+    }
+
+    borderColor=()=>{
+        return this.props.valid?Colors.primary:Colors.red
+    }
+
+    render(){
+        if(Platform.OS == 'ios'){
+            return(
+                <View style={{flex:1}}>
+                    <TouchableOpacity
+                        activeOpacity={0.8}
+                        onPress={this.openPicker}
+                        style={{...this.props.style,borderColor:this.borderColor(),marginBottom:6}}
+                    >
+                        <Text>{this.state.selectedValue}</Text>
+                        <Image
+                        source={require('./assets/icons/dropdown/dropdown.png')}
+                        />
+                    </TouchableOpacity>
+                    {!this.props.valid &&
+                        <Text style={{ fontSize: 12, color: 'red' }}>{this.props.title} is required</Text>
+                    }
+                    {
+                        this.props.valid && <Text>{' '}</Text>
+                    }
+                </View>
+            )
+        }else{
+            return(
+                <Picker
+                    selectedValue={this.props.data}
+                    onValueChange={(itemValue, itemIndex) =>
+                      this.setState({gender: itemValue})
+                    }
+                    style={[{backgroundColor:'#fff',...this.props.style}]}>
+                    {
+                        this.props.data.map((item,index)=>
+                            <Picker.Item label={item.label} value={item.value} key={item.label.toString()+index.toString()} />
+                        )
+                    }
+                </Picker>
+            )
+        }
+    }
+
+}
