@@ -13,6 +13,7 @@ const Colors = {
 class Input extends React.PureComponent {
     constructor(props){
         super(props)
+
     }
     focus=()=>{
         this.input.focus()
@@ -78,6 +79,7 @@ class Input extends React.PureComponent {
                         onFocus={this.zoomInFocus}
                         onBlur={this.zoomOutFocus}
                         style={[style.input,{...this.props.style}]}
+                        onChangeText={()=>console.log(this.input)}
                     />
                 </View>
                 {this.isError() &&

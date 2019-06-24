@@ -355,9 +355,7 @@ export default class App extends Component{
           multiline={false}
           androidAdjustResize ={true}
           accessoryStyle={{marginBottom:-35,backgroundColor:'#fff'}}
-          onNext={()=>console.log(this.formik.props)}
-          onPress={()=>console.log('pressed')}
-        />
+          onNext={()=>console.log(this.formik.getFormikContext())}/>
       </SafeAreaView>
     );
   }
