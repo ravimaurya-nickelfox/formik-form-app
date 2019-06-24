@@ -19,10 +19,23 @@ class Input extends React.PureComponent {
     }
 
     zoomInFocus=()=>{
-        console.log(this.input)
         this.view.setNativeProps({
             style:{
-                borderColor:Colors.purple
+                borderColor:Colors.purple,
+                shadowColor: Colors.purple,
+                ...Platform.select({
+                    ios:{
+                        shadowOffset: {
+                            width: 0,
+                            height: 2,
+                        },
+                        shadowOpacity: 0.4,
+                        shadowRadius: 4,
+                    },
+                    android:{
+                        elevation:2
+                    }
+                })
             }
         })
     }
@@ -87,18 +100,21 @@ const style = StyleSheet.create({
         paddingHorizontal:10,
         fontFamily: "Helvetica",
        fontSize: 14,
-       fontWeight: "600",
-       borderRadius:4,
-       shadowRadius:0,
-       shadowOffset: {
-            height: 0,
-            width: 0
-        },
+       fontWeight: "600"
     },
     view:{
         borderWidth:1,
         borderRadius:4,
-        marginTop:10
+        marginTop:10,
+        // shadowColor: Colors.purple,
+        // shadowOffset: {
+        //     width: 0,
+        //     height: 3,
+        // },
+        // shadowOpacity: 0.5,
+        // shadowRadius: 7,
+        borderColor:Colors.red,
+        elevation: 2,
     },
     inputLabel:{
         fontFamily: "Helvetica",

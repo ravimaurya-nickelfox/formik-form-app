@@ -2,12 +2,12 @@ import * as yup from 'yup'
 import { Formik } from 'formik'
 
 import React, { Component } from 'react';
-import { Text, Button, Alert, StyleSheet, SafeAreaView, 
+import { Text, StyleSheet, SafeAreaView, 
   View, ScrollView,
 TouchableOpacity, Image,  } from 'react-native';
 import { MyInput, ListCells, APTPicker } from './Components';
 import {withNextInputAutoFocusForm} from 'react-native-formik'
-import {KeyboardAccessoryNavigation} from 'react-native-keyboard-accessory'
+// import {KeyboardAccessoryNavigation} from 'react-native-keyboard-accessory'
 
 const MyView = withNextInputAutoFocusForm(View)
 
@@ -348,12 +348,13 @@ export default class App extends Component{
               </TouchableOpacity>
           </View>
         </ScrollView>
-        <KeyboardAccessoryNavigation
+        {/* <KeyboardAccessoryNavigation
           avoidKeyboard={true}
           multiline={false}
           androidAdjustResize ={true}
           accessoryStyle={{marginBottom:-35,backgroundColor:'#fff'}}
-        />
+          onNext={()=>console.log(this.formik)}
+        /> */}
       </SafeAreaView>
     );
   }
