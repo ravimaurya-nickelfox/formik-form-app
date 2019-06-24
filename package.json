@@ -14,7 +14,6 @@
     "react-native-keyboard-accessory": "^0.1.9",
     "react-native-picker": "^4.3.7",
     "recompose": "^0.30.0",
-    "tcomb-form-native": "^0.6.20",
     "yup": "^0.27.0"
   },
   "devDependencies": {

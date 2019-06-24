@@ -7,7 +7,7 @@ import { Text, StyleSheet, SafeAreaView,
 TouchableOpacity, Image,  } from 'react-native';
 import { MyInput, ListCells, APTPicker } from './Components';
 import {withNextInputAutoFocusForm} from 'react-native-formik'
-// import {KeyboardAccessoryNavigation} from 'react-native-keyboard-accessory'
+import {KeyboardAccessoryNavigation} from 'react-native-keyboard-accessory'
 
 const MyView = withNextInputAutoFocusForm(View)
 
@@ -136,6 +136,8 @@ export default class App extends Component{
                   name={'first_name'}
                   type={'name'}
                   label={'First Name'}
+                  ref={p=>this.in=p}
+                  onFocus={()=>console.log(this.in)}
                 />
               <MyInput
                   placeholder={'Last Name'}
@@ -348,13 +350,14 @@ export default class App extends Component{
               </TouchableOpacity>
           </View>
         </ScrollView>
-        {/* <KeyboardAccessoryNavigation
+        <KeyboardAccessoryNavigation
           avoidKeyboard={true}
           multiline={false}
           androidAdjustResize ={true}
           accessoryStyle={{marginBottom:-35,backgroundColor:'#fff'}}
-          onNext={()=>console.log(this.formik)}
-        /> */}
+          onNext={()=>console.log(this.formik.props)}
+          onPress={()=>console.log('pressed')}
+        />
       </SafeAreaView>
     );
   }
