@@ -29,8 +29,8 @@ class Input extends React.PureComponent {
                             width: 0,
                             height: 2,
                         },
-                        shadowOpacity: 0.4,
-                        shadowRadius: 4,
+                        shadowOpacity: 0.3,
+                        shadowRadius: 3,
                     },
                     android:{
                         elevation:2
