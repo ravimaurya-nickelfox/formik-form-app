@@ -73,7 +73,7 @@ export default class App extends Component{
       age:yup.number().typeError('Age must be a number').required('Age is required').max(140, 'Age must be less than 140.').positive('Age must be positive'),
       email: yup.string().email('Enter a valid email address').required('Email is required'),
       password: yup.string().required('Password is required').matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, 'Password must contain atleast 8 characters, one uppercase and one lowercase, a digit and one special character.'),
-      confirm_password: yup.string().required('Confirm password please').oneOf([yup.ref('Password'), null], 'Password does not match'),
+      confirm_password: yup.string().required('Confirm password please').oneOf([yup.ref('password'), null], 'Password does not match'),
       mobile:yup.number().required('Mobile no. is required'),
       address:yup.string().required('Address is required'),
       emergency_contact_person:yup.string().required('This is required'),
@@ -119,6 +119,12 @@ export default class App extends Component{
     }
   }
 
+  updatePickerValue=(field,select)=>{
+    this.setState({[field]:select},()=>{
+      this.submitForm()
+    })
+  }
+
   render() {
     return (
       <SafeAreaView style={styles.container}>
@@ -136,7 +142,6 @@ export default class App extends Component{
                   name={'first_name'}
                   type={'name'}
                   label={'First Name'}
-                  ref={p=>this.in=p}
                   onFocus={()=>console.log(this.in)}
                 />
               <MyInput
@@ -162,7 +167,7 @@ export default class App extends Component{
                       style={styles.smallPickerStyle}
                       title={'Gender'}
                       pickerTitle={'Select Gender'}
-                      onChange={(gender)=>this.setState({gender})}
+                      onChange={(gender)=>this.updatePickerValue('gender',gender)}
                       valid={this.customValidation.gender}
                     />
                   </View>
@@ -223,7 +228,7 @@ export default class App extends Component{
                         style={styles.fullPickerStyle}
                         title={'State'}
                         pickerTitle={'Select State'}
-                        onChange={(state)=>this.setState({state})}
+                        onChange={(state)=>this.updatePickerValue('state',state)}
                         valid={this.customValidation.state}
                       />
                     </View>
@@ -234,7 +239,7 @@ export default class App extends Component{
                         style={styles.fullPickerStyle}
                         title={'Carrier'}
                         pickerTitle={'Select Carrier'}
-                        onChange={(carrier)=>this.setState({carrier})}
+                        onChange={(carrier)=>this.updatePickerValue('carrier',carrier)}
                         valid={this.customValidation.carrier}
                       />
                     </View>
@@ -245,7 +250,7 @@ export default class App extends Component{
                         style={styles.fullPickerStyle}
                         title={'Plan Type'}
                         pickerTitle={'Select Plan'}
-                        onChange={(plan)=>this.setState({plan})}
+                        onChange={(plan)=>this.updatePickerValue('plan',plan)}
                         valid={this.customValidation.plan}
                       />
                     </View>
@@ -300,7 +305,7 @@ export default class App extends Component{
                             style={styles.fullPickerStyle}
                             title={'Carrier'}
                             pickerTitle={'Select Carrier'}
-                            onChange={(carrierSecondary)=>this.setState({carrierSecondary})}
+                            onChange={(carrierSecondary)=>this.updatePickerValue('carrierSecondary',carrierSecondary)}
                             valid={this.customValidation.carrierSecondary}
                           />
                         </View>
@@ -311,7 +316,7 @@ export default class App extends Component{
                             style={styles.fullPickerStyle}
                             title={'Plan Type'}
                             pickerTitle={'Select Plan'}
-                            onChange={(planSecondary)=>this.setState({planSecondary})}
+                            onChange={(planSecondary)=>this.updatePickerValue('planSecondary',planSecondary)}
                             valid={this.customValidation.planSecondary}
                           />
                         </View>
@@ -350,12 +355,12 @@ export default class App extends Component{
               </TouchableOpacity>
           </View>
         </ScrollView>
-        <KeyboardAccessoryNavigation
+        {/* <KeyboardAccessoryNavigation
           avoidKeyboard={true}
           multiline={false}
           androidAdjustResize ={true}
           accessoryStyle={{marginBottom:-35,backgroundColor:'#fff'}}
-          onNext={()=>console.log(this.formik.getFormikContext())}/>
+          onNext={()=>console.log(this.formik.getFormikContext())}/> */}
       </SafeAreaView>
     );
   }

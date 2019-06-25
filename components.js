@@ -79,7 +79,6 @@ class Input extends React.PureComponent {
                         onFocus={this.zoomInFocus}
                         onBlur={this.zoomOutFocus}
                         style={[style.input,{...this.props.style}]}
-                        onChangeText={()=>console.log(this.input)}
                         autoCorrect={false}
                     />
                 </View>
