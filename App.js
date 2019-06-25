@@ -3,8 +3,8 @@ import { Formik } from 'formik'
 
 import React, { Component } from 'react';
 import { Text, StyleSheet, SafeAreaView, 
-  View, ScrollView,
-TouchableOpacity, Image,  } from 'react-native';
+  View, ScrollView, 
+  TouchableOpacity, Image,  } from 'react-native';
 import { MyInput, ListCells, APTPicker } from './Components';
 import {withNextInputAutoFocusForm} from 'react-native-formik'
 import {KeyboardAccessoryNavigation} from 'react-native-keyboard-accessory'
@@ -51,7 +51,8 @@ export default class App extends Component{
       plan:'Plan',
       stateSecondary:'State',
       carrierSecondary:'Carrier',
-      planSecondary:'Plan'
+      planSecondary:'Plan',
+      customValidation:{}
     }
     this.fieldSchema = {
       first_name:'',
@@ -93,6 +94,11 @@ export default class App extends Component{
           carrierSecondary:true,
           planSecondary:true
     }
+    
+  }
+
+  componentDidMount(){
+    this.setState({customValidation:this.customValidation})
   }
 
   handleSecondaryFormBtnPress=()=>{
@@ -117,11 +123,12 @@ export default class App extends Component{
       }else
         this.customValidation[v] = true
     }
+    this.setState({customValidation:this.customValidation})
   }
 
   updatePickerValue=(field,select)=>{
     this.setState({[field]:select},()=>{
-      this.submitForm()
+      this.pickerValidation()
     })
   }
 
@@ -142,77 +149,77 @@ export default class App extends Component{
                   name={'first_name'}
                   type={'name'}
                   label={'First Name'}
-                  onFocus={()=>console.log(this.in)}
+                  ref={()=>this.first_name=p}
                 />
-              <MyInput
-                  placeholder={'Last Name'}
-                  name={'last_name'}
-                  type={'name'}
-                  label={'Last Name'}
-                />
-              <View style={{flexDirection:'row',justifyContent:'space-around'}}>
-                  <View style={{flex:1}}>
-                    <MyInput
-                      placeholder={'Age'}
-                      name={'age'}
+                <MyInput
+                    placeholder={'Last Name'}
+                    name={'last_name'}
+                    type={'name'}
+                    label={'Last Name'}
+                  />
+                <View style={{flexDirection:'row',justifyContent:'space-around'}}>
+                    <View style={{flex:1}}>
+                      <MyInput
+                        placeholder={'Age'}
+                        name={'age'}
+                        type={'number'}
+                        label={'Age'}
+                        keyboardType={'phone-pad'}
+                      />
+                    </View>
+                    <View style={{flex:1,marginStart:16}}>
+                      <Text style={styles.inputLabel}>Gender</Text>
+                      <APTPicker
+                        data={genders}
+                        style={styles.smallPickerStyle}
+                        title={'Gender'}
+                        pickerTitle={'Select Gender'}
+                        onChange={(gender)=>this.updatePickerValue('gender',gender)}
+                        valid={this.state.customValidation.gender}
+                      />
+                    </View>
+                </View>
+                <MyInput
+                    placeholder={'Email'}
+                    name={'email'}
+                    type={'email'}
+                    label={'Email'}
+                    keyboardType={'email-address'}
+                  />
+                  <MyInput
+                      placeholder={'Password'}
+                      name={'password'}
+                      type={'password'}
+                      label={'Password'}
+                    />
+                  <MyInput
+                      placeholder={'Confirm Password'}
+                      name={'confirm_password'}
+                      type={'password'}
+                      label={'Confirm Passowrd'}
+                    />
+                  <MyInput
+                      placeholder={'Mobile'}
+                      name={'mobile'}
                       type={'number'}
-                      label={'Age'}
+                      label={'Mobile'}
                       keyboardType={'phone-pad'}
                     />
-                  </View>
-                  <View style={{flex:1,marginStart:16}}>
-                    <Text style={styles.inputLabel}>Gender</Text>
-                    <APTPicker
-                      data={genders}
-                      style={styles.smallPickerStyle}
-                      title={'Gender'}
-                      pickerTitle={'Select Gender'}
-                      onChange={(gender)=>this.updatePickerValue('gender',gender)}
-                      valid={this.customValidation.gender}
+                  <MyInput
+                      placeholder={'Address'}
+                      name={'address'}
+                      type={'address'}
+                      label={'Address'}
+                      multiline
+                      style={{height:110}}
                     />
-                  </View>
-              </View>
-              <MyInput
-                  placeholder={'Email'}
-                  name={'email'}
-                  type={'email'}
-                  label={'Email'}
-                  keyboardType={'email-address'}
-                />
-                <MyInput
-                    placeholder={'Password'}
-                    name={'password'}
-                    type={'password'}
-                    label={'Password'}
-                  />
-                <MyInput
-                    placeholder={'Confirm Password'}
-                    name={'confirm_password'}
-                    type={'password'}
-                    label={'Confirm Passowrd'}
-                  />
-                <MyInput
-                    placeholder={'Mobile'}
-                    name={'mobile'}
-                    type={'number'}
-                    label={'Mobile'}
-                    keyboardType={'phone-pad'}
-                  />
-                <MyInput
-                    placeholder={'Address'}
-                    name={'address'}
-                    type={'address'}
-                    label={'Address'}
-                    multiline
-                    style={{height:110}}
-                  />
-                <MyInput
-                    placeholder={'Emergency Contact Person'}
-                    name={'emergency_contact_person'}
-                    type={'name'}
-                    label={'Emergency Contact Person'}
-                  />
-                <MyInput
+                  <MyInput
+                      placeholder={'Emergency Contact Person'}
+                      name={'emergency_contact_person'}
+                      type={'name'}
+                      label={'Emergency Contact Person'}
+                    />
+                  <MyInput
                     placeholder={'Emergency Contact Number'}
                     name={'emergency_contact_number'}
                     type={'phone'}
@@ -229,7 +236,7 @@ export default class App extends Component{
                         title={'State'}
                         pickerTitle={'Select State'}
                         onChange={(state)=>this.updatePickerValue('state',state)}
-                        valid={this.customValidation.state}
+                        valid={this.state.customValidation.state}
                       />
                     </View>
                     <View style={{flex:1,marginTop:10}}>
@@ -240,7 +247,7 @@ export default class App extends Component{
                         title={'Carrier'}
                         pickerTitle={'Select Carrier'}
                         onChange={(carrier)=>this.updatePickerValue('carrier',carrier)}
-                        valid={this.customValidation.carrier}
+                        valid={this.state.customValidation.carrier}
                       />
                     </View>
                     <View style={{flex:1,marginTop:10,marginBottom:10}}>
@@ -251,7 +258,7 @@ export default class App extends Component{
                         title={'Plan Type'}
                         pickerTitle={'Select Plan'}
                         onChange={(plan)=>this.updatePickerValue('plan',plan)}
-                        valid={this.customValidation.plan}
+                        valid={this.state.customValidation.plan}
                       />
                     </View>
                     <MyInput
@@ -295,7 +302,7 @@ export default class App extends Component{
                             title={'State'}
                             pickerTitle={'Select State'}
                             onChange={(stateSecondary)=>this.setState({stateSecondary})}
-                            valid={this.customValidation.stateSecondary}
+                            valid={this.state.customValidation.stateSecondary}
                           />
                         </View>
                         <View style={{flex:1,marginTop:10}}>
@@ -306,7 +313,7 @@ export default class App extends Component{
                             title={'Carrier'}
                             pickerTitle={'Select Carrier'}
                             onChange={(carrierSecondary)=>this.updatePickerValue('carrierSecondary',carrierSecondary)}
-                            valid={this.customValidation.carrierSecondary}
+                            valid={this.state.customValidation.carrierSecondary}
                           />
                         </View>
                         <View style={{flex:1,marginTop:10,marginBottom:10}}>
@@ -317,7 +324,7 @@ export default class App extends Component{
                             title={'Plan Type'}
                             pickerTitle={'Select Plan'}
                             onChange={(planSecondary)=>this.updatePickerValue('planSecondary',planSecondary)}
-                            valid={this.customValidation.planSecondary}
+                            valid={this.state.customValidation.planSecondary}
                           />
                         </View>
                         <MyInput
@@ -355,12 +362,12 @@ export default class App extends Component{
               </TouchableOpacity>
           </View>
         </ScrollView>
-        {/* <KeyboardAccessoryNavigation
+        <KeyboardAccessoryNavigation
           avoidKeyboard={true}
           multiline={false}
           androidAdjustResize ={true}
           accessoryStyle={{marginBottom:-35,backgroundColor:'#fff'}}
-          onNext={()=>console.log(this.formik.getFormikContext())}/> */}
+          onNext={()=>console.log(this.formik)}/>
       </SafeAreaView>
     );
   }

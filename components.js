@@ -16,7 +16,7 @@ class Input extends React.PureComponent {
 
     }
     focus=()=>{
-        this.input.focus()
+        this[this.props.name].focus()
     }
 
     zoomInFocus=()=>{
@@ -68,13 +68,19 @@ class Input extends React.PureComponent {
     return false
     }
 
+    focusNext=()=>{
+        alert('Name')
+    }
+    
+    getInnerRef = () => this[this.props.name];
+
     render() {
         return (
             <View style={{marginBottom:5}}>
                 <Text style={style.inputLabel}>{this.props.label}</Text>
                 <View ref={p=>this.view=p} style={[style.view,{borderColor:this.borderColor()}]}>
                     <TextInput
-                        ref={p=>this.input=p}
+                        ref={p=>this[this.props.name]=p}
                         {...this.props}
                         onFocus={this.zoomInFocus}
                         onBlur={this.zoomOutFocus}
@@ -93,7 +99,8 @@ class Input extends React.PureComponent {
     }
 }
 
-export const MyInput = compose(handleTextInput,withNextInputAutoFocusInput)(Input)
+const CustomInput = compose(handleTextInput,withNextInputAutoFocusInput)(Input)
+export const MyInput = React.forwardRef((props, ref) => <CustomInput innerRef={ref} {...props}/>);
 
 const style = StyleSheet.create({
     input:{
