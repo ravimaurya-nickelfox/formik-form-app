@@ -51,8 +51,7 @@ export default class App extends Component{
       plan:'Plan',
       stateSecondary:'State',
       carrierSecondary:'Carrier',
-      planSecondary:'Plan',
-      customValidation:{}
+      planSecondary:'Plan'
     }
     this.fieldSchema = {
       first_name:'',
@@ -94,11 +93,6 @@ export default class App extends Component{
           carrierSecondary:true,
           planSecondary:true
     }
-    
-  }
-
-  componentDidMount(){
-    this.setState({customValidation:this.customValidation})
   }
 
   handleSecondaryFormBtnPress=()=>{
@@ -123,12 +117,11 @@ export default class App extends Component{
       }else
         this.customValidation[v] = true
     }
-    this.setState({customValidation:this.customValidation})
   }
 
   updatePickerValue=(field,select)=>{
     this.setState({[field]:select},()=>{
-      this.pickerValidation()
+      this.submitForm()
     })
   }
 
@@ -149,7 +142,6 @@ export default class App extends Component{
                   name={'first_name'}
                   type={'name'}
                   label={'First Name'}
-                  ref={()=>this.first_name=p}
                 />
                 <MyInput
                     placeholder={'Last Name'}
@@ -175,7 +167,7 @@ export default class App extends Component{
                         title={'Gender'}
                         pickerTitle={'Select Gender'}
                         onChange={(gender)=>this.updatePickerValue('gender',gender)}
-                        valid={this.state.customValidation.gender}
+                        valid={this.customValidation.gender}
                       />
                     </View>
                 </View>
@@ -236,7 +228,7 @@ export default class App extends Component{
                         title={'State'}
                         pickerTitle={'Select State'}
                         onChange={(state)=>this.updatePickerValue('state',state)}
-                        valid={this.state.customValidation.state}
+                        valid={this.customValidation.state}
                       />
                     </View>
                     <View style={{flex:1,marginTop:10}}>
@@ -247,7 +239,7 @@ export default class App extends Component{
                         title={'Carrier'}
                         pickerTitle={'Select Carrier'}
                         onChange={(carrier)=>this.updatePickerValue('carrier',carrier)}
-                        valid={this.state.customValidation.carrier}
+                        valid={this.customValidation.carrier}
                       />
                     </View>
                     <View style={{flex:1,marginTop:10,marginBottom:10}}>
@@ -258,7 +250,7 @@ export default class App extends Component{
                         title={'Plan Type'}
                         pickerTitle={'Select Plan'}
                         onChange={(plan)=>this.updatePickerValue('plan',plan)}
-                        valid={this.state.customValidation.plan}
+                        valid={this.customValidation.plan}
                       />
                     </View>
                     <MyInput
@@ -302,7 +294,7 @@ export default class App extends Component{
                             title={'State'}
                             pickerTitle={'Select State'}
                             onChange={(stateSecondary)=>this.setState({stateSecondary})}
-                            valid={this.state.customValidation.stateSecondary}
+                            valid={this.customValidation.stateSecondary}
                           />
                         </View>
                         <View style={{flex:1,marginTop:10}}>
@@ -313,7 +305,7 @@ export default class App extends Component{
                             title={'Carrier'}
                             pickerTitle={'Select Carrier'}
                             onChange={(carrierSecondary)=>this.updatePickerValue('carrierSecondary',carrierSecondary)}
-                            valid={this.state.customValidation.carrierSecondary}
+                            valid={this.customValidation.carrierSecondary}
                           />
                         </View>
                         <View style={{flex:1,marginTop:10,marginBottom:10}}>
@@ -324,7 +316,7 @@ export default class App extends Component{
                             title={'Plan Type'}
                             pickerTitle={'Select Plan'}
                             onChange={(planSecondary)=>this.updatePickerValue('planSecondary',planSecondary)}
-                            valid={this.state.customValidation.planSecondary}
+                            valid={this.customValidation.planSecondary}
                           />
                         </View>
                         <MyInput
@@ -367,7 +359,7 @@ export default class App extends Component{
           multiline={false}
           androidAdjustResize ={true}
           accessoryStyle={{marginBottom:-35,backgroundColor:'#fff'}}
-          onNext={()=>console.log(this.formik)}/>
+          onNext={()=>console.log(this)}/>
       </SafeAreaView>
     );
   }
