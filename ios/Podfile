@@ -1,20 +1,16 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '8.1'
 
 target 'formiktest' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
+#   use_frameworks!
+   pod 'TwilioVoice', '~> 2.0.0'
   # Pods for formiktest
-
-  target 'formiktest-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
   target 'formiktestTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'TwilioVoice', '~> 2.0.0'
   end
 
 end

@@ -1,0 +1,931 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		73614281932881D538B76C26B92E0193 /* TwilioVoice */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2884EF198ADEBE9BA3FBEAAF74479B50 /* Build configuration list for PBXAggregateTarget "TwilioVoice" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = TwilioVoice;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		18694C69E5580223BD857473D9F2BB0E /* Pods-formiktest-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A46E6D8341F8BB94238888E19BA95B6A /* Pods-formiktest-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27F3F5C9E284E1072D5B4EAAFE248F51 /* Pods-formiktest-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8050BB1C3D42ACAC7D0B091EDE481A5 /* Pods-formiktest-tvOSTests-dummy.m */; };
+		9D8A2C7311230F73E06B517CA373F724 /* Pods-formiktestTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A746354502F46AD844D4E1543AED6 /* Pods-formiktestTests-dummy.m */; };
+		AACA407D8993B3E9FDC2D3FBB53BBC2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		AC1F6CFB60BD55AAF2446929FF9138BF /* Pods-formiktest-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A97431AB5CA16154FE643D0C3D85BF /* Pods-formiktest-tvOS-dummy.m */; };
+		BA58DDCB6FB0049790EC679F43E2B9C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D8592BEE740501877C4A281257434BCB /* Pods-formiktest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 205578F105421B4484C1F5CC507D28E5 /* Pods-formiktest-dummy.m */; };
+		EF30C63D62E87D4EE93750BD3079AD84 /* Pods-formiktest-tvOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 085F413A6F882631946ADF3E0D1DB5A1 /* Pods-formiktest-tvOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4847ECABBD2C4102F6B1AD2A5CC7B6BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDD5C1F83CD3BFD14CA423E44C19DE16;
+			remoteInfo = "Pods-formiktest";
+		};
+		A3EA61F394E4FF67B86016C32E3AE12B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73614281932881D538B76C26B92E0193;
+			remoteInfo = TwilioVoice;
+		};
+		DD085A8D9C99547F9117C90D3141D951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CDB188110A719CBB28C3133DFECCA40;
+			remoteInfo = "Pods-formiktest-tvOS";
+		};
+		EF121F528407A31662AA38650C63FF33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73614281932881D538B76C26B92E0193;
+			remoteInfo = TwilioVoice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F7DF04F95430054A8769098AA15DAC /* Pods-formiktest-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		085F413A6F882631946ADF3E0D1DB5A1 /* Pods-formiktest-tvOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-formiktest-tvOSTests-umbrella.h"; sourceTree = "<group>"; };
+		0BA03D618CF17EB3AF9148A311FEFA44 /* Pods-formiktest-tvOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-formiktest-tvOSTests.modulemap"; sourceTree = "<group>"; };
+		0BCD0F0DE8C16F1069D85C780478818A /* Pods-formiktest-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-formiktest-tvOS.modulemap"; sourceTree = "<group>"; };
+		1930F619A9C887281F8444A6B4BA2A5E /* Pods-formiktest-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1EFD675866BEBADE6AD8B7F84AF6889F /* TwilioVoice.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TwilioVoice.xcconfig; sourceTree = "<group>"; };
+		205578F105421B4484C1F5CC507D28E5 /* Pods-formiktest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-formiktest-dummy.m"; sourceTree = "<group>"; };
+		23977C7C68D58CDCE7E2A00CD160D906 /* Pods-formiktestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktestTests.release.xcconfig"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		390140E739FE0385E1DAC6847ACBF366 /* Pods-formiktest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest.debug.xcconfig"; sourceTree = "<group>"; };
+		3B48399E52D445FB7676BC5D54758A6F /* libPods-formiktest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-formiktest.a"; path = "libPods-formiktest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C934AB6D39AA623CDA81D34258431C9 /* Pods-formiktest-tvOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOSTests-Info.plist"; sourceTree = "<group>"; };
+		4052AE720EB23E396CE137DC904084D4 /* Pods-formiktest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest.release.xcconfig"; sourceTree = "<group>"; };
+		5A39B13250A2F7878E6A4A88C6FC4A16 /* Pods-formiktest-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A54C48A53CB5082964CDB1914086A01 /* Pods-formiktest-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		670A746354502F46AD844D4E1543AED6 /* Pods-formiktestTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-formiktestTests-dummy.m"; sourceTree = "<group>"; };
+		6AACCC1D6256E3BD3E7F63D2B4792C62 /* Pods-formiktest-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-formiktest-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6CBAA913EDE95623B5864342F125AA64 /* libPods-formiktestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-formiktestTests.a"; path = "libPods-formiktestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		763BF43C10CFBF6DD650296691BDFCBA /* Pods_formiktest_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_formiktest_tvOS.framework; path = "Pods-formiktest-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B762D9FC41F4B851A143ABF5FAB3795 /* Pods-formiktestTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-formiktestTests-frameworks.sh"; sourceTree = "<group>"; };
+		818A397F7700BA6CC29A96F58A55505B /* Pods-formiktest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-formiktest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		88A97431AB5CA16154FE643D0C3D85BF /* Pods-formiktest-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-formiktest-tvOS-dummy.m"; sourceTree = "<group>"; };
+		8A6213E2B36E1F97FA4F026F74D814C4 /* Pods-formiktestTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktestTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8A62319931A35380FA949259A506201F /* Pods-formiktestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9182B6655B980C688CD94C6BACFA23D5 /* Pods-formiktest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-formiktest-frameworks.sh"; sourceTree = "<group>"; };
+		969DA0E2D185536EE4E9DDF1E958AF74 /* Pods-formiktest-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A46E6D8341F8BB94238888E19BA95B6A /* Pods-formiktest-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-formiktest-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		A8050BB1C3D42ACAC7D0B091EDE481A5 /* Pods-formiktest-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-formiktest-tvOSTests-dummy.m"; sourceTree = "<group>"; };
+		B6107C593F7D0AAA5706D1360A157B16 /* Pods-formiktestTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-formiktestTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B799A0B3AC42D7F150290BFFFC155CAE /* Pods_formiktest_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_formiktest_tvOSTests.framework; path = "Pods-formiktest-tvOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C40E99EFF693FAAF127DB06EB9EB10C5 /* Pods-formiktest-tvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOS-Info.plist"; sourceTree = "<group>"; };
+		C40FFB9838D29B29AD0A7E4364C51152 /* Pods-formiktest-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		C7DEDCA4A13D18E2B9E625DF37B8E1CA /* Pods-formiktest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-acknowledgements.plist"; sourceTree = "<group>"; };
+		C9D5818277F9082040916C2C61E61001 /* TwilioVoice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwilioVoice.framework; sourceTree = "<group>"; };
+		D2C806E2116F7CA10D966695918803F4 /* Pods-formiktest-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-formiktest-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21073A7CE78F0CD968C4C8357803D12C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA58DDCB6FB0049790EC679F43E2B9C2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73B05A1DD28662E23C2545FB8DD97939 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E6A9B1B6FF45E1F3665A59A808A0F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D38A84D092B9C784E2D1A09B80EC2798 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACA407D8993B3E9FDC2D3FBB53BBC2E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		217E79A303083C558087CD50F2E2FAA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F79E95AD9D5A28ED3E4317587AB8A2B /* TwilioVoice */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		25D9EBE5B0423BC7EF828177F9B46D18 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B35CAAF154AD5313AE2A09CBF0214F6C /* Pods-formiktest */,
+				63A2BEC32B42F1C248542B3D0D88A31F /* Pods-formiktest-tvOS */,
+				5762D8BF8F093B7773E1BEB11B6BA422 /* Pods-formiktest-tvOSTests */,
+				D8AE9F3640F889AEF0D8EEB400488A14 /* Pods-formiktestTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2F79E95AD9D5A28ED3E4317587AB8A2B /* TwilioVoice */ = {
+			isa = PBXGroup;
+			children = (
+				E603855DBD35DDB9AC7C7CA74AA1F5FD /* Frameworks */,
+				EADAE8DA4A27A89F1B8A1C111108357B /* Support Files */,
+			);
+			name = TwilioVoice;
+			path = TwilioVoice;
+			sourceTree = "<group>";
+		};
+		5762D8BF8F093B7773E1BEB11B6BA422 /* Pods-formiktest-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				0BA03D618CF17EB3AF9148A311FEFA44 /* Pods-formiktest-tvOSTests.modulemap */,
+				6AACCC1D6256E3BD3E7F63D2B4792C62 /* Pods-formiktest-tvOSTests-acknowledgements.markdown */,
+				5A54C48A53CB5082964CDB1914086A01 /* Pods-formiktest-tvOSTests-acknowledgements.plist */,
+				A8050BB1C3D42ACAC7D0B091EDE481A5 /* Pods-formiktest-tvOSTests-dummy.m */,
+				3C934AB6D39AA623CDA81D34258431C9 /* Pods-formiktest-tvOSTests-Info.plist */,
+				085F413A6F882631946ADF3E0D1DB5A1 /* Pods-formiktest-tvOSTests-umbrella.h */,
+				1930F619A9C887281F8444A6B4BA2A5E /* Pods-formiktest-tvOSTests.debug.xcconfig */,
+				5A39B13250A2F7878E6A4A88C6FC4A16 /* Pods-formiktest-tvOSTests.release.xcconfig */,
+			);
+			name = "Pods-formiktest-tvOSTests";
+			path = "Target Support Files/Pods-formiktest-tvOSTests";
+			sourceTree = "<group>";
+		};
+		63A2BEC32B42F1C248542B3D0D88A31F /* Pods-formiktest-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				0BCD0F0DE8C16F1069D85C780478818A /* Pods-formiktest-tvOS.modulemap */,
+				D2C806E2116F7CA10D966695918803F4 /* Pods-formiktest-tvOS-acknowledgements.markdown */,
+				C40FFB9838D29B29AD0A7E4364C51152 /* Pods-formiktest-tvOS-acknowledgements.plist */,
+				88A97431AB5CA16154FE643D0C3D85BF /* Pods-formiktest-tvOS-dummy.m */,
+				C40E99EFF693FAAF127DB06EB9EB10C5 /* Pods-formiktest-tvOS-Info.plist */,
+				A46E6D8341F8BB94238888E19BA95B6A /* Pods-formiktest-tvOS-umbrella.h */,
+				969DA0E2D185536EE4E9DDF1E958AF74 /* Pods-formiktest-tvOS.debug.xcconfig */,
+				01F7DF04F95430054A8769098AA15DAC /* Pods-formiktest-tvOS.release.xcconfig */,
+			);
+			name = "Pods-formiktest-tvOS";
+			path = "Target Support Files/Pods-formiktest-tvOS";
+			sourceTree = "<group>";
+		};
+		AF9238D3C68D97697BC8F59A18D54308 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B48399E52D445FB7676BC5D54758A6F /* libPods-formiktest.a */,
+				6CBAA913EDE95623B5864342F125AA64 /* libPods-formiktestTests.a */,
+				763BF43C10CFBF6DD650296691BDFCBA /* Pods_formiktest_tvOS.framework */,
+				B799A0B3AC42D7F150290BFFFC155CAE /* Pods_formiktest_tvOSTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B35CAAF154AD5313AE2A09CBF0214F6C /* Pods-formiktest */ = {
+			isa = PBXGroup;
+			children = (
+				818A397F7700BA6CC29A96F58A55505B /* Pods-formiktest-acknowledgements.markdown */,
+				C7DEDCA4A13D18E2B9E625DF37B8E1CA /* Pods-formiktest-acknowledgements.plist */,
+				205578F105421B4484C1F5CC507D28E5 /* Pods-formiktest-dummy.m */,
+				9182B6655B980C688CD94C6BACFA23D5 /* Pods-formiktest-frameworks.sh */,
+				390140E739FE0385E1DAC6847ACBF366 /* Pods-formiktest.debug.xcconfig */,
+				4052AE720EB23E396CE137DC904084D4 /* Pods-formiktest.release.xcconfig */,
+			);
+			name = "Pods-formiktest";
+			path = "Target Support Files/Pods-formiktest";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				217E79A303083C558087CD50F2E2FAA4 /* Pods */,
+				AF9238D3C68D97697BC8F59A18D54308 /* Products */,
+				25D9EBE5B0423BC7EF828177F9B46D18 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8AE9F3640F889AEF0D8EEB400488A14 /* Pods-formiktestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B6107C593F7D0AAA5706D1360A157B16 /* Pods-formiktestTests-acknowledgements.markdown */,
+				8A6213E2B36E1F97FA4F026F74D814C4 /* Pods-formiktestTests-acknowledgements.plist */,
+				670A746354502F46AD844D4E1543AED6 /* Pods-formiktestTests-dummy.m */,
+				7B762D9FC41F4B851A143ABF5FAB3795 /* Pods-formiktestTests-frameworks.sh */,
+				8A62319931A35380FA949259A506201F /* Pods-formiktestTests.debug.xcconfig */,
+				23977C7C68D58CDCE7E2A00CD160D906 /* Pods-formiktestTests.release.xcconfig */,
+			);
+			name = "Pods-formiktestTests";
+			path = "Target Support Files/Pods-formiktestTests";
+			sourceTree = "<group>";
+		};
+		E603855DBD35DDB9AC7C7CA74AA1F5FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9D5818277F9082040916C2C61E61001 /* TwilioVoice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EADAE8DA4A27A89F1B8A1C111108357B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EFD675866BEBADE6AD8B7F84AF6889F /* TwilioVoice.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TwilioVoice";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		07B4E8B5801F531E564266E013C763D3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174D463D97AEAE34DA8771859FD592EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32848411A37776C3D8FE77225EED33F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF30C63D62E87D4EE93750BD3079AD84 /* Pods-formiktest-tvOSTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ACC79AB365BDF81A45E89BC697FDBE8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18694C69E5580223BD857473D9F2BB0E /* Pods-formiktest-tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0CED1D3B8625C617FC0E4B9064533514 /* Pods-formiktest-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA28FCE124196FD3C546529070FDEF98 /* Build configuration list for PBXNativeTarget "Pods-formiktest-tvOSTests" */;
+			buildPhases = (
+				32848411A37776C3D8FE77225EED33F4 /* Headers */,
+				333C9876A961F97A644A7CEDEBA630A1 /* Sources */,
+				21073A7CE78F0CD968C4C8357803D12C /* Frameworks */,
+				B524CB047B50D9E423CCEB4CEC4ADC37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82F4EFF4DA57A941531EE02CF7196C68 /* PBXTargetDependency */,
+			);
+			name = "Pods-formiktest-tvOSTests";
+			productName = "Pods-formiktest-tvOSTests";
+			productReference = B799A0B3AC42D7F150290BFFFC155CAE /* Pods_formiktest_tvOSTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4CDB188110A719CBB28C3133DFECCA40 /* Pods-formiktest-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB2D6A41E705393ED52C968A7236C325 /* Build configuration list for PBXNativeTarget "Pods-formiktest-tvOS" */;
+			buildPhases = (
+				3ACC79AB365BDF81A45E89BC697FDBE8 /* Headers */,
+				3F666C28BA2C2E2F0DD837E8275B18B2 /* Sources */,
+				D38A84D092B9C784E2D1A09B80EC2798 /* Frameworks */,
+				E1EDB763A1884F31306AFE2ABA757E89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-formiktest-tvOS";
+			productName = "Pods-formiktest-tvOS";
+			productReference = 763BF43C10CFBF6DD650296691BDFCBA /* Pods_formiktest_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F127AD11BB5A1B4B9F53882A8A8027AB /* Pods-formiktestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EB5A81B27175051077C06A22615784E /* Build configuration list for PBXNativeTarget "Pods-formiktestTests" */;
+			buildPhases = (
+				07B4E8B5801F531E564266E013C763D3 /* Headers */,
+				F23D32780CBA6DCD238169358C4F6C10 /* Sources */,
+				7E6A9B1B6FF45E1F3665A59A808A0F51 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02217F57DEE496D723C8817376C2CFD9 /* PBXTargetDependency */,
+				3F0A01EB15A02D0FC67E6DDB2AFEED65 /* PBXTargetDependency */,
+			);
+			name = "Pods-formiktestTests";
+			productName = "Pods-formiktestTests";
+			productReference = 6CBAA913EDE95623B5864342F125AA64 /* libPods-formiktestTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FDD5C1F83CD3BFD14CA423E44C19DE16 /* Pods-formiktest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 921B4D40E843D40C2B1AC9A77D741744 /* Build configuration list for PBXNativeTarget "Pods-formiktest" */;
+			buildPhases = (
+				174D463D97AEAE34DA8771859FD592EC /* Headers */,
+				0BF2B382D15BCDECD6BA0518B9D91CA6 /* Sources */,
+				73B05A1DD28662E23C2545FB8DD97939 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C95D499B47DA3989DB80BEB37728E40 /* PBXTargetDependency */,
+			);
+			name = "Pods-formiktest";
+			productName = "Pods-formiktest";
+			productReference = 3B48399E52D445FB7676BC5D54758A6F /* libPods-formiktest.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = AF9238D3C68D97697BC8F59A18D54308 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDD5C1F83CD3BFD14CA423E44C19DE16 /* Pods-formiktest */,
+				4CDB188110A719CBB28C3133DFECCA40 /* Pods-formiktest-tvOS */,
+				0CED1D3B8625C617FC0E4B9064533514 /* Pods-formiktest-tvOSTests */,
+				F127AD11BB5A1B4B9F53882A8A8027AB /* Pods-formiktestTests */,
+				73614281932881D538B76C26B92E0193 /* TwilioVoice */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B524CB047B50D9E423CCEB4CEC4ADC37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1EDB763A1884F31306AFE2ABA757E89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0BF2B382D15BCDECD6BA0518B9D91CA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8592BEE740501877C4A281257434BCB /* Pods-formiktest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		333C9876A961F97A644A7CEDEBA630A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27F3F5C9E284E1072D5B4EAAFE248F51 /* Pods-formiktest-tvOSTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F666C28BA2C2E2F0DD837E8275B18B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC1F6CFB60BD55AAF2446929FF9138BF /* Pods-formiktest-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F23D32780CBA6DCD238169358C4F6C10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D8A2C7311230F73E06B517CA373F724 /* Pods-formiktestTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02217F57DEE496D723C8817376C2CFD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-formiktest";
+			target = FDD5C1F83CD3BFD14CA423E44C19DE16 /* Pods-formiktest */;
+			targetProxy = 4847ECABBD2C4102F6B1AD2A5CC7B6BA /* PBXContainerItemProxy */;
+		};
+		3F0A01EB15A02D0FC67E6DDB2AFEED65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TwilioVoice;
+			target = 73614281932881D538B76C26B92E0193 /* TwilioVoice */;
+			targetProxy = EF121F528407A31662AA38650C63FF33 /* PBXContainerItemProxy */;
+		};
+		7C95D499B47DA3989DB80BEB37728E40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TwilioVoice;
+			target = 73614281932881D538B76C26B92E0193 /* TwilioVoice */;
+			targetProxy = A3EA61F394E4FF67B86016C32E3AE12B /* PBXContainerItemProxy */;
+		};
+		82F4EFF4DA57A941531EE02CF7196C68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-formiktest-tvOS";
+			target = 4CDB188110A719CBB28C3133DFECCA40 /* Pods-formiktest-tvOS */;
+			targetProxy = DD085A8D9C99547F9117C90D3141D951 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1021685E9B903F1167507C2D94BED13E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A39B13250A2F7878E6A4A88C6FC4A16 /* Pods-formiktest-tvOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-formiktest-tvOSTests/Pods-formiktest-tvOSTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-formiktest-tvOSTests/Pods-formiktest-tvOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		32619C43B0985BDB1DBBAFF43CF7224F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EFD675866BEBADE6AD8B7F84AF6889F /* TwilioVoice.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46F83CEC982C4EC7EB8B0E0F03CABBD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1930F619A9C887281F8444A6B4BA2A5E /* Pods-formiktest-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-formiktest-tvOSTests/Pods-formiktest-tvOSTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-formiktest-tvOSTests/Pods-formiktest-tvOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		642E337E75F05FEE20C9FC001F30CE2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EFD675866BEBADE6AD8B7F84AF6889F /* TwilioVoice.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E5AAFFA46AEE3559BB6610635719F61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8B657477970DAB00FF937A0598EE8E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01F7DF04F95430054A8769098AA15DAC /* Pods-formiktest-tvOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-formiktest-tvOS/Pods-formiktest-tvOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-formiktest-tvOS/Pods-formiktest-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C07AB71E31558B3C8D430F3E78F338EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 969DA0E2D185536EE4E9DDF1E958AF74 /* Pods-formiktest-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-formiktest-tvOS/Pods-formiktest-tvOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-formiktest-tvOS/Pods-formiktest-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C79C876089A3BDC5A9B42BA850854E21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 390140E739FE0385E1DAC6847ACBF366 /* Pods-formiktest.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E86D06D53E73C224F96DEFE90A05D8D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4052AE720EB23E396CE137DC904084D4 /* Pods-formiktest.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDE44C32F2BCEE20B4AE25E7812A90B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A62319931A35380FA949259A506201F /* Pods-formiktestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3F60EBF74184DB8D410D3CE85EDAC05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23977C7C68D58CDCE7E2A00CD160D906 /* Pods-formiktestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC3F73AE96AD2EB93D1397ECD712EBDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2884EF198ADEBE9BA3FBEAAF74479B50 /* Build configuration list for PBXAggregateTarget "TwilioVoice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32619C43B0985BDB1DBBAFF43CF7224F /* Debug */,
+				642E337E75F05FEE20C9FC001F30CE2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EB5A81B27175051077C06A22615784E /* Build configuration list for PBXNativeTarget "Pods-formiktestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE44C32F2BCEE20B4AE25E7812A90B1 /* Debug */,
+				F3F60EBF74184DB8D410D3CE85EDAC05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E5AAFFA46AEE3559BB6610635719F61 /* Debug */,
+				FC3F73AE96AD2EB93D1397ECD712EBDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		921B4D40E843D40C2B1AC9A77D741744 /* Build configuration list for PBXNativeTarget "Pods-formiktest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C79C876089A3BDC5A9B42BA850854E21 /* Debug */,
+				E86D06D53E73C224F96DEFE90A05D8D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB2D6A41E705393ED52C968A7236C325 /* Build configuration list for PBXNativeTarget "Pods-formiktest-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07AB71E31558B3C8D430F3E78F338EA /* Debug */,
+				8B657477970DAB00FF937A0598EE8E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA28FCE124196FD3C546529070FDEF98 /* Build configuration list for PBXNativeTarget "Pods-formiktest-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F83CEC982C4EC7EB8B0E0F03CABBD4 /* Debug */,
+				1021685E9B903F1167507C2D94BED13E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

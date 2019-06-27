@@ -13,6 +13,7 @@
     "react-native-formik": "^1.7.6",
     "react-native-keyboard-accessory": "^0.1.9",
     "react-native-picker": "^4.3.7",
+    "react-native-twilio-programmable-voice": "^3.21.1",
     "recompose": "^0.30.0",
     "yup": "^0.27.0"
   },

@@ -106,7 +106,8 @@ export default class App extends Component{
   submitForm=(values)=>{
     this.pickerValidation()
     this.formik.submitForm()
-    console.log(values)
+    
+    console.log(this.formik.getFormikComputedProps().isValid)
     // Alert.alert(JSON.stringify(values))
   }
 
@@ -328,31 +329,33 @@ export default class App extends Component{
                       </View>
                     }
 
+                    <View style={{borderBottomColor:'rgba(0,0,0,0.16)',borderBottomWidth:1,marginHorizontal:20,marginVertical:10}}></View>
+                    <View style={{padding:20,}}>
+                      <Text style={{fontSize:16,fontWeight:'600',fontFamily:'Helvetica'}}>Associated PCP Details</Text>
+                      <View style={{marginTop:10}}>
+                        {
+                          doctorInfo.map((item,index)=>
+                            <ListCells
+                              key={'list'+index.toString()}
+                              title={item.title}
+                              value={item.value}
+                            />
+                          )
+                        }
+                      </View>
+                    </View>
+                    <View style={{}}>
+                        <TouchableOpacity style={styles.submitBtn} activeOpacity={0.7}
+                          onPress={()=>this.submitForm(values)}
+                          disabled={!isValid}
+                        >
+                          <Text style={{fontSize:16,fontWeight:'600',fontFamily:'Helvetica',color:'#fff'}}>SUBMIT</Text>
+                        </TouchableOpacity>
+                    </View>
+
               </MyView>
             )}
           </Formik>
-          <View style={{borderBottomColor:'rgba(0,0,0,0.16)',borderBottomWidth:1,marginHorizontal:20,marginVertical:10}}></View>
-          <View style={{padding:20,}}>
-            <Text style={{fontSize:16,fontWeight:'600',fontFamily:'Helvetica'}}>Associated PCP Details</Text>
-            <View style={{marginTop:10}}>
-              {
-                doctorInfo.map((item,index)=>
-                  <ListCells
-                    key={'list'+index.toString()}
-                    title={item.title}
-                    value={item.value}
-                  />
-                )
-              }
-            </View>
-          </View>
-          <View style={{}}>
-              <TouchableOpacity style={styles.submitBtn} activeOpacity={0.7}
-                onPress={()=>this.submitForm(this.formik.state.values)}
-              >
-                <Text style={{fontSize:16,fontWeight:'600',fontFamily:'Helvetica',color:'#fff'}}>SUBMIT</Text>
-              </TouchableOpacity>
-          </View>
         </ScrollView>
         <KeyboardAccessoryNavigation
           avoidKeyboard={true}

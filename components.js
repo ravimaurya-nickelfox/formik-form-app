@@ -30,7 +30,7 @@ class Input extends React.PureComponent {
                             width: 0,
                             height: 2,
                         },
-                        shadowOpacity: 0.3,
+                        shadowOpacity: 0,
                         shadowRadius: 3,
                     },
                     android:{
@@ -45,7 +45,7 @@ class Input extends React.PureComponent {
         this.view.setNativeProps({
             style:{
                 shadowColor: Colors.primary,
-                shadowOpacity: 1,
+                shadowOpacity: 0,
                 shadowRadius: 0,
                 shadowOffset: {
                     height: 0,
