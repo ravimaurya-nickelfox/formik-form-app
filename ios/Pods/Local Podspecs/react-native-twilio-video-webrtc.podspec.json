@@ -1,0 +1,32 @@
+{
+  "name": "react-native-twilio-video-webrtc",
+  "version": "1.0.2",
+  "summary": "Twilio Video WebRTC for React Native.",
+  "description": "Twilio Video WebRTC for React Native.",
+  "license": "MIT",
+  "authors": "",
+  "homepage": "https://github.com/blackuy/react-native-twilio-video-webrtc",
+  "source": {
+    "git": "https://github.com/blackuy/react-native-twilio-video-web-rtc",
+    "tag": "1.0.2"
+  },
+  "requires_arc": true,
+  "platforms": {
+    "ios": "8.0"
+  },
+  "preserve_paths": [
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "index.js"
+  ],
+  "source_files": "ios/*.{h,m}",
+  "dependencies": {
+    "React": [
+
+    ],
+    "TwilioVideo": [
+      "~> 2.7.0"
+    ]
+  }
+}

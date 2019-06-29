@@ -161,9 +161,11 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${PODS_ROOT}/TwilioVideo/Build/iOS/TwilioVideo.framework"
   install_framework "${PODS_ROOT}/TwilioVoice/TwilioVoice.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${PODS_ROOT}/TwilioVideo/Build/iOS/TwilioVideo.framework"
   install_framework "${PODS_ROOT}/TwilioVoice/TwilioVoice.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

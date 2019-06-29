@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, SafeAreaView, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
+import { Text, View, SafeAreaView, TextInput, StyleSheet, TouchableOpacity, Platform } from 'react-native'
 import {KeyboardAccessoryNavigation} from 'react-native-keyboard-accessory'
 
 export default class Form extends Component {
@@ -38,27 +38,50 @@ export default class Form extends Component {
     }
 
     onInputChange=()=>{
-        var ref = this[this.inputRefs[this.activeRef]]
-        if(this.validateEmail(ref._lastNativeText)){
-            ref.setNativeProps({
-                style:{
-                    borderColor:'#000',
-                    borderWidth:1
-                }
-            })
-        }else{
-            ref.setNativeProps({
-                style:{
-                    borderColor:'red',
-                    borderWidth:1
-                }
-            })
-        }
+        // var ref = this[this.inputRefs[this.activeRef]]
+        // if(this.validateEmail(ref._lastNativeText)){
+        //     ref.setNativeProps({
+        //         style:{
+        //             borderColor:'#000',
+        //             borderWidth:1
+        //         }
+        //     })
+        // }else{
+        //     ref.setNativeProps({
+        //         style:{
+        //             borderColor:'red',
+        //             borderWidth:1
+        //         }
+        //     })
+        // }
     }
 
     validateEmail=(text='')=>{
         const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return regex.test(text)
+    }
+
+    handleFocus=(ref)=>{
+        this.activeRef = this.inputRefs.indexOf(ref)
+        this[ref].setNativeProps({
+            style:{
+                borderColor:'#5B57DC',
+                shadowColor:'#5B57DC',
+                ...Platform.select({
+                    ios:{
+                        shadowOffset: {
+                            width: 0,
+                            height: 4,
+                        },
+                        shadowOpacity: 0.4,
+                        shadowRadius: 4,
+                    },
+                    android:{
+                        elevation:2
+                    }
+                })
+            }
+        })
     }
 
     render() {
@@ -69,7 +92,7 @@ export default class Form extends Component {
                         placeholder={'First Name'}
                         style={style.input}
                         ref={p=>this.fname=p}
-                        onFocus={()=>this.activeRef=0}
+                        onFocus={()=>this.handleFocus('fname')}
                         autoCorrect={false}
                         onSubmitEditing={this.handleNext}
                         type={'email'}
