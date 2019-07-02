@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import { Text, View, TextInput, TouchableOpacity, Button, StyleSheet } from 'react-native'
+import { Text, View, TextInput, TouchableOpacity, Button, StyleSheet,SafeAreaView, Image } from 'react-native'
 import {
     TwilioVideo,
     TwilioVideoLocalView,
     TwilioVideoParticipantView
   } from 'react-native-twilio-video-webrtc'
+
+const buttonChord = 64
 
 export default class TwilioVideos extends Component {
     constructor(props){
@@ -106,46 +108,84 @@ export default class TwilioVideos extends Component {
     
             {
               (this.state.status === 'connected' || this.state.status === 'connecting') &&
-                <View style={styles.callContainer}>
-                {
-                  this.state.status === 'connected' &&
-                  <View style={styles.remoteGrid}>
+                <SafeAreaView style={styles.callContainer}>
+                  <View style={styles.videoTopBar}>
+                    <View>
+                      <Image
+                        source={require('./assets/icons/network/network.png')}
+                      />
+                    </View>
+                    <View>
+                      <Text style={[styles.txtfont,{fontSize:17,fontWeight:'bold'}]}>Adam Smith</Text>
+                      <Text style={[styles.txtfont,{fontSize:14}]}>05:20</Text>
+                    </View>
+                    <TouchableOpacity
+                      onPress={this._onFlipButtonPress}
+                    >
+                      <Image
+                        source={require('./assets/icons/flip/flip.png')}
+                      />
+                    </TouchableOpacity>
+                  </View>
+                  <View style={styles.localVideo}>
+                    <TwilioVideoLocalView
+                      enabled={true}
+                      style={styles.localVideoInner}
+                    />
+                  </View>
+                  <View style={{flex:1}}>
                     {
-                      Array.from(this.state.videoTracks, ([trackSid, trackIdentifier]) => {
-                        return (
-                          <TwilioVideoParticipantView
-                            style={styles.remoteVideo}
-                            key={trackSid}
-                            trackIdentifier={trackIdentifier}
-                          />
-                        )
-                      })
+                      // this.state.status === 'connected' &&
+                      <View style={styles.remoteGrid}>
+                        {/* {
+                          Array.from(this.state.videoTracks, ([trackSid, trackIdentifier]) => {
+                            return (
+                              <TwilioVideoParticipantView
+                                style={styles.remoteVideo}
+                                key={trackSid}
+                                trackIdentifier={trackIdentifier}
+                              />
+                            )
+                          })
+                        } */}
+                        <Image
+                          source={require('./assets/doctor.png')}
+                          style={{flex:1}}
+                        />
+                      </View>
                     }
                   </View>
-                }
+
                 <View
                   style={styles.optionsContainer}>
-                  <TouchableOpacity
-                    style={styles.optionButton}
-                    onPress={this._onEndButtonPress}>
-                    <Text style={{fontSize: 12}}>End</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={styles.optionButton}
-                    onPress={this._onMuteButtonPress}>
-                    <Text style={{fontSize: 12}}>{ this.state.isAudioEnabled ? "Mute" : "Unmute" }</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={styles.optionButton}
-                    onPress={this._onFlipButtonPress}>
-                    <Text style={{fontSize: 12}}>Flip</Text>
-                  </TouchableOpacity>
-                  <TwilioVideoLocalView
-                    enabled={true}
-                    style={styles.localVideo}
-                  />
+                  <View style={styles.callActionBtnViewUpper}>
+                    <TouchableOpacity
+                      style={styles.optionButton}
+                      onPress={this._onMuteButtonPress}>
+                      <Image
+                        source={require('./assets/icons/mic/mic.png')}
+                      />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      style={styles.optionButton}
+                      onPress={this._onFlipButtonPress}>
+                      <Image
+                        source={require('./assets/icons/video/video.png')}
+                      />
+                    </TouchableOpacity>
+                  </View>
+                  <View style={styles.callActionBtnViewLower}>
+                    <TouchableOpacity
+                      style={styles.endCallButton}
+                      onPress={this._onEndButtonPress}>
+                      <Image
+                        source={require('./assets/icons/phone/phone.png')}
+                      />
+                    </TouchableOpacity>
+                  </View>
+                  
                 </View>
-              </View>
+              </SafeAreaView>
             }
     
             <TwilioVideo
@@ -167,17 +207,20 @@ const styles = StyleSheet.create({
     backgroundColor: 'white'
   },
   callContainer: {
-    flex: 1,
-    position: "absolute",
-    bottom: 0,
-    top: 0,
-    left: 0,
-    right: 0
+    flex: 1
   },
   welcome: {
     fontSize: 30,
     textAlign: 'center',
     paddingTop: 40
+  },
+  videoTopBar:{
+    backgroundColor:'#979797',
+    height:88,
+    paddingHorizontal:20,
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'center'
   },
   input: {
     height: 50,
@@ -193,11 +236,17 @@ const styles = StyleSheet.create({
   },
   localVideo: {
     flex: 1,
-    width: 150,
-    height: 200,
+    width: 126,
+    height: 161,
     position: "absolute",
-    right: 0,
-    bottom: 100
+    right: 12,
+    top: 100,
+    borderRadius:10,
+    zIndex:1,
+    overflow:'hidden'
+  },
+  localVideoInner: {
+    flex: 1
   },
   remoteGrid: {
     flex: 1,
@@ -208,27 +257,48 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginLeft: 10,
     marginRight: 10,
-    width: 100,
-    height: 120,
+    flex:1,
+    borderWidth:1
   },
   optionsContainer: {
     position: "absolute",
     left: 0,
-    bottom: 0,
+    bottom: 45,
     right: 0,
-    height: 100,
-    backgroundColor: 'blue',
-    flexDirection: "row",
-    alignItems: "center"
+    backgroundColor: 'transparent',
+    marginHorizontal:48,
+    zIndex:99
   },
   optionButton: {
-    width: 60,
-    height: 60,
-    marginLeft: 10,
-    marginRight: 10,
-    borderRadius: 100 / 2,
-    backgroundColor: 'grey',
+    width: buttonChord,
+    height: buttonChord,
+    borderRadius: buttonChord / 2,
+    backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: "center"
+  },
+  callActionBtnViewUpper:{
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent:'space-between'
+  },
+  callActionBtnViewLower:{
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent:'center',
+    marginTop:11
+  },
+  endCallButton:{
+    width: buttonChord,
+    height: buttonChord,
+    borderRadius: buttonChord / 2,
+    backgroundColor: '#E41C34',
+    justifyContent: 'center',
+    alignItems: "center"
+  },
+  txtfont:{
+    fontFamily:'Helvetica',
+    color:'#fff',
+    textAlign:'center'
   }
 })
