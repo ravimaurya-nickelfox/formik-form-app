@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, SafeAreaView, TouchableOpacity, Animated,Dimensions } from 'react-native'
+import { Text, View, SafeAreaView, TouchableOpacity, Animated,Dimensions, StyleSheet } from 'react-native'
 
 const {width} = Dimensions.get('window')
 
@@ -8,24 +8,13 @@ export default class SlideShow extends Component {
         super(props)
         this.state = {
             marginLeft:new Animated.Value(0),
-            text:Math.random()*1000000000
+            text:this.generateRandomNumber()
         }
     }
 
-    onPressNext=()=>{
-        this.setState({marginLeft:new Animated.Value(width),text:Math.random()*1000000000},()=>{
-            Animated.timing(
-                this.state.marginLeft,
-                {
-                  toValue: 0,
-                  duration: 500,
-                }
-            ).start();
-        })
-    }
-
-    onPressPrev=()=>{
-        this.setState({marginLeft:new Animated.Value(width*(-1)),text:Math.random()*1000000000},()=>{
+    onActionBtnPress = direction => {
+        const multiplier = direction === 'next' ? 1 : -1
+        this.setState({marginLeft:new Animated.Value(width*multiplier),text:this.generateRandomNumber()},()=>{
             Animated.timing(
                 this.state.marginLeft,
                 {
@@ -36,45 +25,38 @@ export default class SlideShow extends Component {
         })
     }
 
+    generateRandomNumber=()=>{
+        return Math.round(Math.random()*1000000000)
+    }
+
     render() {
         return (
             <SafeAreaView style={{flex:1}}>
                 <Animated.View
                     ref={p=>this.animView=p}
                     style={{
-                        backgroundColor:"brown",
-                        flex:1,
-                        marginLeft:this.state.marginLeft,
-                        flexWrap:'nowrap',
-                        justifyContent:'center',
-                        alignItems:'center',
-                        width:width,
-                        flexDirection:'column',
-                        display: "flex",
-                        paddingHorizontal:10
+                        ...styles.container,
+                        marginLeft:this.state.marginLeft
                     }}
                 >
-                    <View style={{
-                        flexDirection:'row',
-                        justifyContent:'space-between'
-                    }}>
-                        <View style={{flex:1,height:30,borderWidth:1}}>
+                    <View style={styles.cellWrapper}>
+                        <View style={styles.cell}>
                             <Text>{this.state.text}</Text>
                         </View>
-                        <View style={{flex:1,height:30,marginLeft:10,borderWidth:1}}>
+                        <View style={[styles.cell,{marginLeft:10}]}>
                             <Text>{this.state.text}</Text>
                         </View>
                     </View>
                 </Animated.View>
-                <View style={{flexDirection:'row',marginHorizontal:20,justifyContent:'space-between',alignItems:'center',height:40,marginTop:10}}>
+                <View style={styles.btnWrapper}>
                     <TouchableOpacity 
-                        onPress={this.onPressPrev}
-                        style={{backgroundColor:'#ccc',flex:1,alignItems:'center',paddingVertical:10,borderRadius:5}}>
+                        onPress={()=>this.onActionBtnPress('prev')}
+                        style={styles.actionBtn}>
                         <Text>Previous</Text>
                     </TouchableOpacity>
                     <TouchableOpacity 
-                        onPress={this.onPressNext}
-                        style={{backgroundColor:'#748374',flex:1,alignItems:'center',paddingVertical:10,borderRadius:5,marginStart:15}}>
+                        onPress={()=>this.onActionBtnPress('next')}
+                        style={[styles.actionBtn,styles.nextBtn]}>
                         <Text>Next</Text>
                     </TouchableOpacity>
                 </View>
@@ -82,3 +64,45 @@ export default class SlideShow extends Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor:"#f2f2f2",
+        flex:1,
+        justifyContent:'center',
+        alignItems:'center',
+        width:width,
+        paddingHorizontal:10
+    },
+    cellWrapper:{
+        flexDirection:'row',
+        justifyContent:'space-between'
+    },
+    cell:{
+        flex:1,
+        borderWidth:1,
+        justifyContent:'center',
+        alignItems:'center',
+        paddingVertical:15,
+        borderRadius:4
+    },
+    btnWrapper:{
+        flexDirection:'row',
+        marginHorizontal:20,
+        justifyContent:'space-between',
+        alignItems:'center',
+        height:40,
+        marginTop:10
+    },
+    actionBtn:{
+        backgroundColor:'#ccc',
+        flex:1,
+        alignItems:'center',
+        paddingVertical:10,
+        borderRadius:5
+    },
+    nextBtn:{
+        marginStart:15,
+        backgroundColor:'#290'
+    }
+})
