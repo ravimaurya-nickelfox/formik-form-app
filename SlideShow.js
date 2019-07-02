@@ -7,7 +7,6 @@ export default class SlideShow extends Component {
     constructor(props){
         super(props)
         this.state = {
-            marginRight:new Animated.Value(0),
             marginLeft:new Animated.Value(0),
             text:Math.random()*1000000000
         }
@@ -26,9 +25,9 @@ export default class SlideShow extends Component {
     }
 
     onPressPrev=()=>{
-        this.setState({marginRight:new Animated.Value(width),text:Math.random()*1000000000},()=>{
+        this.setState({marginLeft:new Animated.Value(width*(-1)),text:Math.random()*1000000000},()=>{
             Animated.timing(
-                this.state.marginRight,
+                this.state.marginLeft,
                 {
                   toValue: 0,
                   duration: 500,
@@ -43,16 +42,29 @@ export default class SlideShow extends Component {
                 <Animated.View
                     ref={p=>this.animView=p}
                     style={{
-                        backgroundColor:"green",
+                        backgroundColor:"brown",
                         flex:1,
-                        marginRight:this.state.marginRight,
                         marginLeft:this.state.marginLeft,
                         flexWrap:'nowrap',
                         justifyContent:'center',
-                        alignItems:'center'
+                        alignItems:'center',
+                        width:width,
+                        flexDirection:'column',
+                        display: "flex",
+                        paddingHorizontal:10
                     }}
                 >
-                    <Text>{this.state.text}</Text>
+                    <View style={{
+                        flexDirection:'row',
+                        justifyContent:'space-between'
+                    }}>
+                        <View style={{flex:1,height:30,borderWidth:1}}>
+                            <Text>{this.state.text}</Text>
+                        </View>
+                        <View style={{flex:1,height:30,marginLeft:10,borderWidth:1}}>
+                            <Text>{this.state.text}</Text>
+                        </View>
+                    </View>
                 </Animated.View>
                 <View style={{flexDirection:'row',marginHorizontal:20,justifyContent:'space-between',alignItems:'center',height:40,marginTop:10}}>
                     <TouchableOpacity 

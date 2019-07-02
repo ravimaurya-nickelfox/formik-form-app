@@ -8,4 +8,4 @@ import AnimationView from './AnimationView';
 import SlideShow from './SlideShow';
 
 
-AppRegistry.registerComponent(appName, () =>TwilioVideos);
+AppRegistry.registerComponent(appName, () =>SlideShow);
