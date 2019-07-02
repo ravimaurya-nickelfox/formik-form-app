@@ -15,9 +15,10 @@ export default class TwilioVideos extends Component {
             status: 'disconnected',
             participants: new Map(),
             videoTracks: new Map(),
-            roomName: '',
-            token: ''
+            roomName: 'room101',
+            token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzdmNTBmYzdiNzJjZWUyZGRjNmM5Y2Y2YTk0ODQ2YTZhLTE1NjIwNTU3MjgiLCJpc3MiOiJTSzdmNTBmYzdiNzJjZWUyZGRjNmM5Y2Y2YTk0ODQ2YTZhIiwic3ViIjoiQUM0M2RkNTQzMmUzMjUzZDJlOTI4ZmFlZmVhY2Y3NzJkYSIsImV4cCI6MTU2MjA5MTcyOCwiZ3JhbnRzIjp7ImlkZW50aXR5Ijoiam9obl9kb2UxIiwidmlkZW8iOnsicm9vbSI6InJvb20xMDEifX19.doBChvIGPbY0aSBzc0O7vEMRisy5wADudDeILSRWjSk'
         }
+        console.log(this.state)
     }
 
     componentDidMount(){
@@ -43,13 +44,13 @@ export default class TwilioVideos extends Component {
       }
     
       _onRoomDidDisconnect = ({roomName, error}) => {
-        console.log("ERROR: ", error)
+        console.log("ERROR1: ", error, roomName)
     
         this.setState({status: 'disconnected'})
       }
     
       _onRoomDidFailToConnect = (error) => {
-        console.log("ERROR: ", error)
+        console.log("ERROR2: ", error)
     
         this.setState({status: 'disconnected'})
       }
@@ -161,9 +162,73 @@ export default class TwilioVideos extends Component {
 }
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-        marginVertical:50,
-        marginHorizontal:20
-    }
+  container: {
+    flex: 1,
+    backgroundColor: 'white'
+  },
+  callContainer: {
+    flex: 1,
+    position: "absolute",
+    bottom: 0,
+    top: 0,
+    left: 0,
+    right: 0
+  },
+  welcome: {
+    fontSize: 30,
+    textAlign: 'center',
+    paddingTop: 40
+  },
+  input: {
+    height: 50,
+    borderWidth: 1,
+    marginRight: 70,
+    marginLeft: 70,
+    marginTop: 50,
+    textAlign: 'center',
+    backgroundColor: 'white'
+  },
+  button: {
+    marginTop: 100
+  },
+  localVideo: {
+    flex: 1,
+    width: 150,
+    height: 200,
+    position: "absolute",
+    right: 0,
+    bottom: 100
+  },
+  remoteGrid: {
+    flex: 1,
+    flexDirection: "row",
+    flexWrap: 'wrap'
+  },
+  remoteVideo: {
+    marginTop: 20,
+    marginLeft: 10,
+    marginRight: 10,
+    width: 100,
+    height: 120,
+  },
+  optionsContainer: {
+    position: "absolute",
+    left: 0,
+    bottom: 0,
+    right: 0,
+    height: 100,
+    backgroundColor: 'blue',
+    flexDirection: "row",
+    alignItems: "center"
+  },
+  optionButton: {
+    width: 60,
+    height: 60,
+    marginLeft: 10,
+    marginRight: 10,
+    borderRadius: 100 / 2,
+    backgroundColor: 'grey',
+    justifyContent: 'center',
+    alignItems: "center"
+  }
 })
