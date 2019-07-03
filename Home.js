@@ -28,6 +28,9 @@ export default class Home extends Component {
                 <TouchableOpacity style={Styles.button} onPress={()=>this.btnPressAction('deeplinked')}>
                     <Text style={Styles.btnTxt}>Deep Linked Screen</Text>
                 </TouchableOpacity>
+                <TouchableOpacity style={Styles.button} onPress={()=>this.btnPressAction('form')}>
+                    <Text style={Styles.btnTxt}>Forms</Text>
+                </TouchableOpacity>
             </SafeAreaView>
         )
     }
@@ -43,7 +46,8 @@ const Styles = StyleSheet.create({
         backgroundColor:'#d3d3d3',
         paddingHorizontal:30,
         paddingVertical:15,
-        borderRadius:4
+        borderRadius:4,
+        marginBottom:15
     },
     btnTxt:{
         fontWeight:'500',
