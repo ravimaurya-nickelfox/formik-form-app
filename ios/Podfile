@@ -11,6 +11,8 @@ target 'formiktest' do
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
+  pod 'RNAnalytics', :path => '../node_modules/@segment/analytics-react-native'
+
   target 'formiktestTests' do
     inherit! :search_paths
     # Pods for testing
