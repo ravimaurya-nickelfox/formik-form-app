@@ -9,6 +9,8 @@ target 'formiktest' do
 
   # Pods for formiktest
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'formiktestTests' do
     inherit! :search_paths
     # Pods for testing

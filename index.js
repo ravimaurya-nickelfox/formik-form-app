@@ -6,6 +6,7 @@ import Twillio from './Twillio';
 import TwilioVideos from './TwilioVideos';
 import AnimationView from './AnimationView';
 import SlideShow from './SlideShow';
+import Main from './Main';
 
 
-AppRegistry.registerComponent(appName, () =>SlideShow);
+AppRegistry.registerComponent(appName, () =>Main);
