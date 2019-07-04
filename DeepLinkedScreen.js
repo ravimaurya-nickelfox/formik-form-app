@@ -5,9 +5,8 @@ export default class DeepLinkedScreen extends Component {
     constructor(props){
         super(props)
         this.state = {
-            params:this.props.navigation.state.params
+            params:this.props.navigation.state.params || {appointment_id:'xxxxxx-xxxx-xx-xxxx'}
         }
-        console.log()
     }
     render() {
         return (
