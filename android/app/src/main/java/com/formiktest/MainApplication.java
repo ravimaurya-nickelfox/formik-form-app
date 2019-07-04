@@ -3,6 +3,7 @@ package com.formiktest;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.segment.analytics.reactnative.core.RNAnalyticsPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.hoxfon.react.RNTwilioVoice.TwilioVoicePackage;
 import com.beefe.picker.PickerViewPackage;
@@ -27,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNAnalyticsPackage(),
             new RNGestureHandlerPackage(),
             new TwilioVoicePackage(),
             new PickerViewPackage(),

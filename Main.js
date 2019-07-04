@@ -6,6 +6,7 @@ import SlideShow from './SlideShow';
 import DeepLinkedScreen from './DeepLinkedScreen';
 import Home from './Home';
 import Form from './Form';
+import Analytics from './Analytics';
 
 const AppStacks = createStackNavigator({
     home:{
@@ -26,6 +27,9 @@ const AppStacks = createStackNavigator({
     },
     form:{
         screen:Form
+    },
+    analytics:{
+        screen:Analytics
     }
 },{
     initialRouteName:'home'

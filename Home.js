@@ -31,6 +31,9 @@ export default class Home extends Component {
                 <TouchableOpacity style={Styles.button} onPress={()=>this.btnPressAction('form')}>
                     <Text style={Styles.btnTxt}>Forms</Text>
                 </TouchableOpacity>
+                <TouchableOpacity style={Styles.button} onPress={()=>this.btnPressAction('analytics')}>
+                    <Text style={Styles.btnTxt}>Analytics</Text>
+                </TouchableOpacity>
             </SafeAreaView>
         )
     }

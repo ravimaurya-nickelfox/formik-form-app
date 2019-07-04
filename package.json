@@ -7,6 +7,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@segment/analytics-ios": "github:segmentio/analytics-ios",
+    "@segment/analytics-react-native": "^1.1.0-beta.0",
     "formik": "^1.5.7",
     "react": "16.8.3",
     "react-native": "0.59.9",
