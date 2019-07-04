@@ -135,9 +135,9 @@ export default class TwilioVideos extends Component {
                   </View>
                   <View style={{flex:1}}>
                     {
-                      // this.state.status === 'connected' &&
+                      this.state.status === 'connected' &&
                       <View style={styles.remoteGrid}>
-                        {/* {
+                        {
                           Array.from(this.state.videoTracks, ([trackSid, trackIdentifier]) => {
                             return (
                               <TwilioVideoParticipantView
@@ -147,11 +147,11 @@ export default class TwilioVideos extends Component {
                               />
                             )
                           })
-                        } */}
-                        <Image
+                        }
+                        {/* <Image
                           source={require('./assets/doctor.png')}
                           style={{flex:1}}
-                        />
+                        /> */}
                       </View>
                     }
                   </View>
