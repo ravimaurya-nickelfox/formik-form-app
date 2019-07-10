@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native'
+import Loaders from './Loaders';
 
 export default class Home extends Component {
     constructor(props){
@@ -34,6 +35,10 @@ export default class Home extends Component {
                 <TouchableOpacity activeOpacity={0.7} style={Styles.button} onPress={()=>this.btnPressAction('analytics')}>
                     <Text style={Styles.btnTxt}>Analytics</Text>
                 </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.7} style={Styles.button} onPress={()=>this.btnPressAction('loader')}>
+                    <Text style={Styles.btnTxt}>Loaders</Text>
+                </TouchableOpacity>
+                {/* <Loaders label={'Loading'} color={'#848484'} /> */}
             </SafeAreaView>
         )
     }

@@ -21,8 +21,8 @@ export default class Analytics extends Component {
             id:Math.floor(Math.random()*10000)
         })
         analytics.track('User tapped on analytic button', {
-            time:new Date(),
-            platform:Platform.OS
+            category:'Analytics Category',
+            name:Platform.OS
         })
     }
 
