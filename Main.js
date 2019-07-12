@@ -7,6 +7,7 @@ import DeepLinkedScreen from './DeepLinkedScreen';
 import Home from './Home';
 import Form from './Form';
 import Analytics from './Analytics';
+import SendBirdView from './SendBirdView';
 
 const AppStacks = createStackNavigator({
     home:{
@@ -30,6 +31,9 @@ const AppStacks = createStackNavigator({
     },
     analytics:{
         screen:Analytics
+    },
+    chat:{
+        screen:SendBirdView
     }
 },{
     initialRouteName:'home'
