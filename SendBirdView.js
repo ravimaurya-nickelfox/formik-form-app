@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Text, View, SafeAreaView } from 'react-native'
-const sendbird = require('sendbird')
+import SendBird from 'sendbird'
 
-
+const SB_APP_ID = '609B359F-699F-4E48-970C-9202A1574D9D'
 
 export default class SendBirdView extends Component {
     constructor(props){
@@ -10,10 +10,12 @@ export default class SendBirdView extends Component {
         this.state = {
 
         }
+        this.libSendBird = null;
     }
 
     componentDidMount(){
-        console.log(sendbird)
+        this.libSendBird = new SendBird({appId:SB_APP_ID})
+        console.log(this.libSendBird)
     }
 
     render() {
