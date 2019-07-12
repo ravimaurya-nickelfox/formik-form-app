@@ -29,6 +29,7 @@
 		14912FE422CCC4A4000F0CAD /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14912FE322CCC4A4000F0CAD /* Analytics.framework */; };
 		14912FE522CCC4A4000F0CAD /* Analytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14912FE322CCC4A4000F0CAD /* Analytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14912FE722CCC4D5000F0CAD /* libRNAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14912FE222CCC488000F0CAD /* libRNAnalytics.a */; };
+		149EB5A722CE33C200D8B4BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 149EB57B22CE33C200D8B4BF /* GoogleService-Info.plist */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -412,6 +413,7 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		14912FDC22CCC488000F0CAD /* RNAnalytics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNAnalytics.xcodeproj; path = "../node_modules/@segment/analytics-react-native/ios/RNAnalytics.xcodeproj"; sourceTree = "<group>"; };
 		14912FE322CCC4A4000F0CAD /* Analytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Analytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		149EB57B22CE33C200D8B4BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1DD3153D25524BABBC03B407 /* RCTBEEPickerManager.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTBEEPickerManager.xcodeproj; path = "../node_modules/react-native-picker/ios/RCTBEEPickerManager.xcodeproj"; sourceTree = "<group>"; };
 		28EA60AD1282EB2F11493395 /* Pods-formiktest-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-formiktest-tvOS.release.xcconfig"; path = "Target Support Files/Pods-formiktest-tvOS/Pods-formiktest-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* formiktest-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "formiktest-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -583,6 +585,7 @@
 		13B07FAE1A68108700A75B9A /* formiktest */ = {
 			isa = PBXGroup;
 			children = (
+				149EB57B22CE33C200D8B4BF /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -1301,6 +1304,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				149EB5A722CE33C200D8B4BF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
