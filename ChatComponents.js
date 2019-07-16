@@ -4,6 +4,41 @@ import dateTime from './Utils';
 
 const {height} = Dimensions.get('window')
 
+export const ContactCards =props=> {
+    return(
+        <TouchableOpacity 
+            style={[styles.contactParentView,styles.contactCardShadow]}
+            onPress={()=>props.navigation.navigate('chat',{channelId:props.channelUrl})}
+        >
+            <View>
+                <Image 
+                    source={require('./assets/cat.jpg')}
+                    style={styles.contactThumbnail}
+                />
+                {
+                    props.unreadCount > 0 &&
+                    <View style={styles.messageCountView}>
+                        <Text style={styles.countText}>{props.unreadCount}</Text>
+                    </View>
+                }
+            </View>
+            <View style={styles.contactTextView}>
+                <View>
+                    <Text style={styles.contactNameText}>{props._sender.userId}</Text>
+                    <Text style={styles.contactMessageText} numberOfLines={1}>
+                        {props.message}
+                    </Text>
+                </View>
+                <View>
+                    <Text style={styles.lastMessageTimeText}>
+                        {dateTime.convertTo24Hrs(props.createdAt)}
+                    </Text>
+                </View>
+            </View>
+        </TouchableOpacity>
+    )
+}
+
 export const ReceiverBuuble =props=> {
     return(
         <View style={styles.receiverBubbleView}>
@@ -14,7 +49,7 @@ export const ReceiverBuuble =props=> {
                     style={styles.thumbnail}
                 />
             </View>
-            <View style={[{flexDirection:'row',backgroundColor:'#fff'},styles.shadow]}>
+            <View style={[{flexDirection:'row'},styles.shadow]}>
                 <View style={styles.caretLeft}/>
                 <TouchableOpacity style={styles.receiverBubbleMessageContainer}>
                     <Text style={styles.receiverText}>{props.message}</Text>
@@ -84,11 +119,11 @@ export const ChatMenues =props=> {
     return(
         <TouchableOpacity style={styles.menuView} onPress={props.toggle}>
             <Animated.View style={[styles.menuContainer,{bottom:animatedBottom}]}>
-                <TouchableOpacity style={styles.menuButton}>
+                <TouchableOpacity style={styles.menuButton} onPress={props.clear}>
                     <Text style={styles.menuText}>Delete This Conversation</Text>
                 </TouchableOpacity>
                 <View style={styles.borderBottom} />
-                <TouchableOpacity style={styles.menuButton}>
+                <TouchableOpacity style={styles.menuButton} onPress={props.delete}>
                     <Text style={styles.menuText}>Clear Conversation</Text>
                 </TouchableOpacity>
             </Animated.View>
@@ -233,5 +268,67 @@ const styles = StyleSheet.create({
     },
     marginHorizontal:{
         marginHorizontal:5
-    }
+    },
+    contactParentView:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between',
+        backgroundColor:'#fff',
+        padding:12,
+        borderRadius:4,
+        marginVertical:10
+    },  
+    contactThumbnail:{
+        height:42,
+        width:42,
+        borderRadius:21
+    },
+    contactTextView:{
+        flex:1,
+        paddingHorizontal:12,
+        flexDirection:'row',
+        justifyContent:'space-between'
+    },
+    contactNameText:{
+        fontFamily:'Helvetica',
+        fontSize:16,
+        color:'#222222',
+        fontWeight:'normal',
+        marginBottom:5
+    },
+    contactMessageText:{
+        fontFamily:'Helvetica',
+        fontSize:14,
+        color:'#668391'
+    },
+    lastMessageTimeText:{
+        fontFamily:'Helvetica',
+        fontSize:11,
+        fontWeight:'100'
+    },
+    messageCountView:{
+        backgroundColor:'#5B57DC',
+        alignSelf:'flex-end',
+        borderRadius:10,
+        marginTop:-15,
+        borderWidth:1,
+        borderColor:'#fff',
+        justifyContent:'center',
+        alignItems:'center',
+        paddingHorizontal:5,
+        paddingVertical:2.1
+    },
+    countText:{
+        fontSize:10,
+        color:'#fff'
+    },
+    contactCardShadow:{
+        shadowColor:'#979797',
+        shadowOffset:{
+            height:3,
+            width:0
+        },
+        shadowOpacity:0.5,
+        shadowRadius:3
+    },
 })

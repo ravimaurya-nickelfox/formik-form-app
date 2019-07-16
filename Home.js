@@ -34,7 +34,7 @@ export default class Home extends Component {
                 <TouchableOpacity activeOpacity={0.7} style={Styles.button} onPress={()=>this.btnPressAction('analytics')}>
                     <Text style={Styles.btnTxt}>Analytics</Text>
                 </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.7} style={Styles.button} onPress={()=>this.btnPressAction('chat')}>
+                <TouchableOpacity activeOpacity={0.7} style={Styles.button} onPress={()=>this.btnPressAction('contacts')}>
                     <Text style={Styles.btnTxt}>Open Chat</Text>
                 </TouchableOpacity>
             </SafeAreaView>

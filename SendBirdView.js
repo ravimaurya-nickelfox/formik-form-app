@@ -31,10 +31,8 @@ export default class SendBirdView extends Component {
     }
 
     componentDidMount(){
-        SendBirdLib.senderUser = 'user-test-01';
         SendBirdLib.participentUser = 'user-test-02'
         SendBirdLib.connectUser().then((user)=>{
-            console.log(user);
             SendBirdLib.createChannel().then((channel)=>{
                 SendBirdLib.connectToChannel()
                 .then((connect)=>console.log('Channel Connected',connect))
@@ -72,10 +70,10 @@ export default class SendBirdView extends Component {
             return;
         }
         let messageParam = SendBirdLib.messageParams;
-        messageParam.message = this.state.inputText;
+        messageParam.message = this.state.inputText.trim();
         SendBirdLib.sendMessage(messageParam).then((res)=>{
             this.setState({inputText:''},()=>{
-                this.updateMessages(res);   
+                this.updateMessages(res);
             })
         }).catch(c=>console.log(c))
     }
@@ -106,6 +104,16 @@ export default class SendBirdView extends Component {
         this.setState({showChatMenu:!this.state.showChatMenu})
     }
 
+    clearChat =()=> {
+        this.chatMenuToggle()
+        alert('clear')
+    }
+
+    deleteChat =()=> {
+        this.chatMenuToggle()
+        alert('delete')
+    }
+
     render() {
         return (
             <SafeAreaView style={{flex:1}}>
@@ -120,7 +128,7 @@ export default class SendBirdView extends Component {
                             source={require('./assets/cat.jpg')}
                             style={styles.headerTumbnail}
                         />
-                        <Text style={styles.participantText}>Queen Cat</Text>
+                        <Text style={styles.participantText}>{SendBirdLib.participentUser}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttons} onPress={this.chatMenuToggle}>
                         <Image
@@ -132,7 +140,7 @@ export default class SendBirdView extends Component {
                 <Animated.FlatList
                     data={this.state.oldMessages}
                     renderItem={({item,index})=>
-                        <View key={'chats'+index.toString()}>
+                        <View key={'chats'+index.toString()} style={{paddingHorizontal:10}}>
                             {
                                 item._sender && item._sender.userId == SendBirdLib.senderUser &&
                                 <SenderBubble {...this.props} {...item} />
@@ -140,6 +148,10 @@ export default class SendBirdView extends Component {
                             {
                                  item._sender && item._sender.userId == SendBirdLib.participentUser &&
                                 <ReceiverBuuble {...this.props} {...item} />
+                            }
+                            {
+                                item.typing && 
+                                <TypingBubble/>
                             }
                         </View>
                     }
@@ -150,7 +162,6 @@ export default class SendBirdView extends Component {
                     inverted
                     showsVerticalScrollIndicator={false}
                 />
-
                 <KeyboardAvoidingView behavior={'position'}>
                     <View style={styles.bottomView}>
                         <View style={styles.bottomGroupWrapper}>
@@ -179,7 +190,10 @@ export default class SendBirdView extends Component {
                     </View>
                 </KeyboardAvoidingView>
 
-                { this.state.showChatMenu && <ChatMenues {...this.props} toggle={this.chatMenuToggle} />}
+                { 
+                    this.state.showChatMenu && 
+                    <ChatMenues {...this.props} toggle={this.chatMenuToggle} clear={this.clearChat} delete={this.deleteChat} />
+                }
             </SafeAreaView>
         )
     }

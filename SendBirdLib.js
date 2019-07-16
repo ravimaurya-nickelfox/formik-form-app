@@ -22,7 +22,14 @@ class SendBirdLib{
     createChannel =()=> {
         return new Promise((resolve,reject)=>{
             const userIdsArray = [this.senderUser,this.participentUser];
-            this.libSendBird.GroupChannel.createChannelWithUserIds(userIdsArray,true,(res,err)=>{
+            const params = new this.libSendBird.GroupChannelParams()
+            params.isPublic = false;
+            params.isEphemeral = false;
+            params.isDistinct = true;
+            params.addUserIds(userIdsArray);
+            params.operatorIds = userIdsArray;
+
+            this.libSendBird.GroupChannel.createChannel(params,(res,err)=>{
                 if(err) reject(err);
                 this.channelId = res.url;
                 resolve(res);
@@ -33,10 +40,24 @@ class SendBirdLib{
     connectToChannel =(channelId=this.channelId)=> {
         return new Promise((resolve,reject)=>{
             this.libSendBird.GroupChannel.getChannel(channelId,(openChannel,err)=>{
+                console.log(openChannel,err)
                 if(err) reject(err);
                 this.openChannel = openChannel;
             })
         });
+    }
+
+    listCurrentUserChannels =()=>{
+        return new Promise((resolve,reject)=>{
+            var channelListQuery = this.libSendBird.GroupChannel.createMyGroupChannelListQuery();
+            channelListQuery.userIdsFilter = [this.senderUser]
+            if(channelListQuery.hasNext) {
+                channelListQuery.next((list,err)=>{
+                    if(err) reject(err)
+                    resolve(list)
+                })
+            }
+        })
     }
 
     getChannelMessages =(limit=30)=>{
