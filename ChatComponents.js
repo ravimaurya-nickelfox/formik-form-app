@@ -1,9 +1,12 @@
 import React, { Component, useState } from 'react'
-import { Text, View, TouchableOpacity, StyleSheet, Image, Animated } from 'react-native'
+import { Text, View, TouchableOpacity, StyleSheet, Image, Animated, Dimensions } from 'react-native'
+import dateTime from './Utils';
+
+const {height} = Dimensions.get('window')
 
 export const ReceiverBuuble =props=> {
     return(
-        <View style={[styles.receiverBubbleView,styles.shadow]}>
+        <View style={styles.receiverBubbleView}>
             <View style={{marginEnd:5}}>
                 <Image
                     source={require('./assets/cat.jpg')}
@@ -11,21 +14,23 @@ export const ReceiverBuuble =props=> {
                     style={styles.thumbnail}
                 />
             </View>
-            <View style={styles.caretLeft}/>
-            <TouchableOpacity style={styles.receiverBubbleMessageContainer}>
-                <Text style={styles.receiverText}>This message is received from other person</Text>
-                <Text style={styles.receiverTimingText}>16.08</Text>
-            </TouchableOpacity>
+            <View style={[{flexDirection:'row',backgroundColor:'#fff'},styles.shadow]}>
+                <View style={styles.caretLeft}/>
+                <TouchableOpacity style={styles.receiverBubbleMessageContainer}>
+                    <Text style={styles.receiverText}>{props.message}</Text>
+                    <Text style={styles.receiverTimingText}>{dateTime.convertTo24Hrs(props.createdAt)}</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
 
 export const SenderBubble =props=> {
     return(
-        <View style={[styles.senderBubbleView,styles.shadow]}>
-            <TouchableOpacity style={styles.senderBubbleMessageContainer}>
-                <Text style={styles.senderText}>this message is sent by me.</Text>
-                <Text style={styles.senderTimingText}>16.08</Text>
+        <View style={styles.senderBubbleView}>
+            <TouchableOpacity style={[styles.senderBubbleMessageContainer,styles.shadow]}>
+                <Text style={styles.senderText}>{props.message}</Text>
+                <Text style={styles.senderTimingText}>{dateTime.convertTo24Hrs(props.createdAt)}</Text>
             </TouchableOpacity>
             <View style={styles.caretRight}></View>
         </View>
@@ -111,7 +116,7 @@ const styles = StyleSheet.create({
         marginBottom:15
     },
     receiverBubbleMessageContainer:{
-        padding:15,
+        padding:12,
         backgroundColor:'#fff',
         borderTopEndRadius:6,
         borderBottomStartRadius:6,
@@ -155,7 +160,8 @@ const styles = StyleSheet.create({
         borderTopStartRadius:6,
         borderBottomStartRadius:6,
         borderBottomEndRadius:6,
-        marginBottom:15
+        marginBottom:15,
+        backgroundColor:'#fff'
     },
     senderBubbleMessageContainer:{
         padding:15,
@@ -189,7 +195,7 @@ const styles = StyleSheet.create({
     menuView:{
         position:'absolute',
         width:'100%',
-        height:'100%',
+        height:height,
         flex:1,
         backgroundColor:'rgba(0,0,0,0.51)',
         zIndex:9
@@ -197,12 +203,12 @@ const styles = StyleSheet.create({
     menuContainer:{
         backgroundColor:'#fff',
         position:'absolute',
-        bottom:-150,
         width:'100%',
         paddingHorizontal:20,
         paddingVertical:5,
         borderTopStartRadius:10,
-        borderTopEndRadius:10
+        borderTopEndRadius:10,
+        paddingBottom:30
     },
     menuButton:{
         paddingVertical:25
@@ -226,6 +232,6 @@ const styles = StyleSheet.create({
         backgroundColor:'#668391'
     },
     marginHorizontal:{
-        marginHorizontal:10
+        marginHorizontal:5
     }
 })

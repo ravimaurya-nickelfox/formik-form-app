@@ -1,5 +1,17 @@
 import React, { Component } from 'react'
-import { Text, View, SafeAreaView, Button, StyleSheet, TouchableOpacity, Image, TextInput, ScrollView, KeyboardAvoidingView } from 'react-native'
+import { 
+        Text, 
+        View, 
+        SafeAreaView, 
+        StyleSheet, 
+        TouchableOpacity, 
+        Image, 
+        TextInput, 
+        KeyboardAvoidingView, 
+        FlatList,
+        Keyboard,
+        Animated
+ } from 'react-native'
 import SendBirdLib from './SendBirdLib';
 import { ReceiverBuuble, SenderBubble, ChatMenues, TypingBubble } from './ChatComponents';
 
@@ -10,7 +22,10 @@ export default class SendBirdView extends Component {
     constructor(props){
         super(props)
         this.state = {
-            showChatMenu:false
+            showChatMenu:false,
+            oldMessages:[],
+            inputText:'',
+            animatedPadding: new Animated.Value(50)
         }
         this.messageHandlerId = Math.floor(Math.random()*100000000)
     }
@@ -25,19 +40,50 @@ export default class SendBirdView extends Component {
                 .then((connect)=>console.log('Channel Connected',connect))
                 .catch(c=>console.log(c))
                 SendBirdLib.getChannelMessages()
-                .then((messages)=>console.log('Prev Messages',messages))
-                .catch(c=>console.log(c))
+                .then((oldMessages)=>{
+                    console.log('Prev Messages',oldMessages)
+                    this.setState({oldMessages});
+                }).catch(c=>console.log(c))
                 this.messageObserver()
             }).catch(c=>console.log(c))
         }).catch(c=>console.log(c))
+        this.keyboardListener()
     }
 
-    sendMessage=(payload)=>{
+    keyboardListener =()=> {
+        Keyboard.addListener('keyboardDidShow',()=>{
+            Animated.timing(this.state.animatedPadding,{
+                toValue:280,
+                duration:500
+            }).start()
+        })
+        Keyboard.addListener('keyboardDidHide',()=>{
+            this.setState({animatedPadding:new Animated.Value(280)},()=>{
+                Animated.timing(this.state.animatedPadding,{
+                    toValue:50,
+                    duration:500
+                }).start()
+            })
+        })
+    }
+
+    sendMessage =()=> {
+        if(this.state.inputText.trim().length == 0) {
+            return;
+        }
         let messageParam = SendBirdLib.messageParams;
-        messageParam.message = 'Hello A';
+        messageParam.message = this.state.inputText;
         SendBirdLib.sendMessage(messageParam).then((res)=>{
-            console.log(res)
+            this.setState({inputText:''},()=>{
+                this.updateMessages(res);   
+            })
         }).catch(c=>console.log(c))
+    }
+
+    updateMessages =(res)=> {
+        var { oldMessages } = this.state
+        oldMessages = [res,...oldMessages]
+        this.setState({oldMessages})
     }
 
     messageObserver =()=>{
@@ -82,22 +128,29 @@ export default class SendBirdView extends Component {
                         />
                     </TouchableOpacity>
                 </View>
-                
-                <ScrollView
-                    contentContainerStyle={{paddingBottom:60}}                
-                >
-                    <View style={{padding:10}}>
-                        <ReceiverBuuble/>
-                        <ReceiverBuuble/>
-                        <SenderBubble/>
-                        <SenderBubble/>
-                        <ReceiverBuuble/>
-                        <SenderBubble/>
-                        <ReceiverBuuble/>
-                        {/* <TypingBubble/> */}
-                    </View>
-                </ScrollView>
-                
+
+                <Animated.FlatList
+                    data={this.state.oldMessages}
+                    renderItem={({item,index})=>
+                        <View key={'chats'+index.toString()}>
+                            {
+                                item._sender && item._sender.userId == SendBirdLib.senderUser &&
+                                <SenderBubble {...this.props} {...item} />
+                            }
+                            {
+                                 item._sender && item._sender.userId == SendBirdLib.participentUser &&
+                                <ReceiverBuuble {...this.props} {...item} />
+                            }
+                        </View>
+                    }
+                    extraData={this.state}
+                    keyExtractor={(item,index)=>index.toString()}
+                    contentContainerStyle={{paddingVertical:10}}
+                    style={{marginBottom:this.state.animatedPadding}}
+                    inverted
+                    showsVerticalScrollIndicator={false}
+                />
+
                 <KeyboardAvoidingView behavior={'position'}>
                     <View style={styles.bottomView}>
                         <View style={styles.bottomGroupWrapper}>
@@ -112,9 +165,14 @@ export default class SendBirdView extends Component {
                                     style={styles.inputField}
                                     placeholderTextColor={'#668391'}
                                     multiline
+                                    onChangeText={(inputText)=>this.setState({inputText})}
+                                    value={this.state.inputText.toString()}
                                 />
                             </View>
-                            <TouchableOpacity style={styles.sendButtonWrapper}>
+                            <TouchableOpacity 
+                                style={styles.sendButtonWrapper}
+                                onPress={this.sendMessage}
+                            >
                                 <Text style={styles.sendButtonText}>Send</Text>
                             </TouchableOpacity>
                         </View>
@@ -179,15 +237,15 @@ const styles = StyleSheet.create({
     bottomGroupWrapper:{
         flexDirection:'row',
         justifyContent:'space-between',
-        padding:20,
-        flex:1
+        paddingHorizontal:20,
+        flex:1,
+        paddingVertical:15
     },
     inputGroupWrapper:{
         flexDirection:'row',
         borderEndWidth:2,
         borderEndColor:'#d8d8d8',
         flex:1,
-        padding:5,
         alignItems:'center'
     },
     sendButtonWrapper:{
@@ -206,7 +264,7 @@ const styles = StyleSheet.create({
         fontFamily:'Helvetica',
         fontSize:15,
         color:'#668391',
-        maxHeight:60,
+        maxHeight:40,
         flex:1
     }
 })

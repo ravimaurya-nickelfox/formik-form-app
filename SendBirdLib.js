@@ -43,10 +43,9 @@ class SendBirdLib{
         return new Promise((resolve,reject)=>{
             var msgQuery = this.openChannel.createPreviousMessageListQuery();
             msgQuery.limit = limit;
-            msgQuery.reverse = true
             msgQuery.load((messages,error)=>{
                 if(error) reject(error)
-                resolve(messages)
+                resolve(messages.reverse())
             })
         })
     }
