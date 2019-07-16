@@ -18,7 +18,7 @@ export default class TwilioVideos extends Component {
             participants: new Map(),
             videoTracks: new Map(),
             roomName: 'room101',
-            token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzdmNTBmYzdiNzJjZWUyZGRjNmM5Y2Y2YTk0ODQ2YTZhLTE1NjIwNTU3MjgiLCJpc3MiOiJTSzdmNTBmYzdiNzJjZWUyZGRjNmM5Y2Y2YTk0ODQ2YTZhIiwic3ViIjoiQUM0M2RkNTQzMmUzMjUzZDJlOTI4ZmFlZmVhY2Y3NzJkYSIsImV4cCI6MTU2MjA5MTcyOCwiZ3JhbnRzIjp7ImlkZW50aXR5Ijoiam9obl9kb2UxIiwidmlkZW8iOnsicm9vbSI6InJvb20xMDEifX19.doBChvIGPbY0aSBzc0O7vEMRisy5wADudDeILSRWjSk'
+            token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzdmNTBmYzdiNzJjZWUyZGRjNmM5Y2Y2YTk0ODQ2YTZhLTE1NjMyNTYyMTEiLCJpc3MiOiJTSzdmNTBmYzdiNzJjZWUyZGRjNmM5Y2Y2YTk0ODQ2YTZhIiwic3ViIjoiQUM0M2RkNTQzMmUzMjUzZDJlOTI4ZmFlZmVhY2Y3NzJkYSIsImV4cCI6MTU2MzI5MjIxMSwiZ3JhbnRzIjp7ImlkZW50aXR5Ijoiam9obl9kb2UxIiwidmlkZW8iOnsicm9vbSI6InJvb20xMDEifX19.ZTi-2ZrgxR2ZunJUUMF9pgg2Kx8bifkrW2APeMbMtN4'
         }
         console.log(this.state)
     }
@@ -28,7 +28,8 @@ export default class TwilioVideos extends Component {
     }
 
     _onConnectButtonPress = () => {
-        this.refs.twilioVideo.connect({ roomName: this.state.roomName, accessToken: this.state.token })
+        let x = this.refs.twilioVideo.connect({ roomName: this.state.roomName, accessToken: this.state.token })
+        console.log('qq',x)
         this.setState({status: 'connecting'})
       }
     
@@ -75,6 +76,10 @@ export default class TwilioVideos extends Component {
         videoTracks.delete(track.trackSid)
     
         this.setState({videoTracks: { ...videoTracks }})
+      }
+
+      _onStatsReceivedEvent = (event) =>{
+        console.log('Stats',event)
       }
 
     render() {
@@ -195,6 +200,7 @@ export default class TwilioVideos extends Component {
               onRoomDidFailToConnect= { this._onRoomDidFailToConnect }
               onParticipantAddedVideoTrack={ this._onParticipantAddedVideoTrack }
               onParticipantRemovedVideoTrack= { this._onParticipantRemovedVideoTrack }
+              onStatsReceived={this._onStatsReceivedEvent}
             />
           </View>
         )
