@@ -80,6 +80,14 @@ class SendBirdLib{
         })
     }
 
+    markMessageAsRead =()=> {
+        return new Promise((resolve,reject)=>{
+            this.openChannel.markAsRead(()=>{
+                resolve(true)
+            })
+        })
+    }
+
 }
 
 export default new SendBirdLib()

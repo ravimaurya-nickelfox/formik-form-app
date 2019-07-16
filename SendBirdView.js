@@ -25,26 +25,25 @@ export default class SendBirdView extends Component {
             showChatMenu:false,
             oldMessages:[],
             inputText:'',
-            animatedPadding: new Animated.Value(50)
+            animatedPadding: new Animated.Value(50),
+            channelId: this.props.navigation.state.params.channelId,
+            showEmojiPanel:false
         }
         this.messageHandlerId = Math.floor(Math.random()*100000000)
     }
 
     componentDidMount(){
         SendBirdLib.participentUser = 'user-test-02'
-        SendBirdLib.connectUser().then((user)=>{
-            SendBirdLib.createChannel().then((channel)=>{
-                SendBirdLib.connectToChannel()
-                .then((connect)=>console.log('Channel Connected',connect))
-                .catch(c=>console.log(c))
-                SendBirdLib.getChannelMessages()
-                .then((oldMessages)=>{
-                    console.log('Prev Messages',oldMessages)
-                    this.setState({oldMessages});
-                }).catch(c=>console.log(c))
-                this.messageObserver()
-            }).catch(c=>console.log(c))
+        SendBirdLib.connectToChannel(this.state.channelId)
+        .then((connect)=>console.log('Channel Connected',connect))
+        .catch(c=>console.log(c))
+        SendBirdLib.getChannelMessages()
+        .then((oldMessages)=>{
+            console.log('Prev Messages',oldMessages)
+            this.setState({oldMessages});
+            SendBirdLib.markMessageAsRead()
         }).catch(c=>console.log(c))
+        this.messageObserver()
         this.keyboardListener()
     }
 
