@@ -140,6 +140,15 @@ export const DeleteChatPop =props=> {
         duration:400,
         easing:Easing.linear
     }).start()
+
+    fadeOutAnimation =()=> {
+        Animated.timing(show,{
+            toValue:0,
+            duration:400,
+            easing:Easing.linear
+        }).start(()=>props.cancel())
+    }
+
     return(
         <View style={[styles.menuView,styles.centerOfScreen]}>
             <Animated.View easing="bounce" style={[styles.deletePopUpParentView,styles.shadow,{opacity:show}]}>
@@ -159,7 +168,7 @@ export const DeleteChatPop =props=> {
                 <View style={styles.popUpButtonsView}>
                     <TouchableOpacity 
                         style={[styles.outlineButton,styles.centerOfScreen]}
-                        onPress={props.cancel}
+                        onPress={fadeOutAnimation}
                         activeOpacity={0.6}
                     >
                         <Text style={styles.outlineButtonText}>CANCEL</Text>
@@ -184,6 +193,15 @@ export const ClearChatPop =props=> {
         duration:400,
         easing:Easing.linear
     }).start()
+
+    fadeOutAnimation =()=> {
+        Animated.timing(show,{
+            toValue:0,
+            duration:400,
+            easing:Easing.linear
+        }).start(()=>props.cancel())
+    }
+
     return(
         <View style={[styles.menuView,styles.centerOfScreen]}>
             <Animated.View style={[styles.deletePopUpParentView,styles.shadow,{opacity:show}]}>
@@ -198,7 +216,7 @@ export const ClearChatPop =props=> {
                 <View style={styles.popUpButtonsView}>
                     <TouchableOpacity 
                         style={[styles.outlineButton,styles.centerOfScreen]}
-                        onPress={props.cancel}
+                        onPress={fadeOutAnimation}
                         activeOpacity={0.6}
                     >
                         <Text style={styles.outlineButtonText}>CANCEL</Text>
@@ -430,7 +448,9 @@ const styles = StyleSheet.create({
         borderRadius:50,
         height:64,
         width:64,
-        alignSelf:'center'
+        alignSelf:'center',
+        marginTop:10,
+        marginBottom:20
     },
     popUpTextView:{
         marginVertical:10,
