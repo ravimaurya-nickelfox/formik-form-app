@@ -1,18 +1,20 @@
 import React, { Component, useState } from 'react'
-import { Text, View, TouchableOpacity, StyleSheet, Image, Animated, Dimensions } from 'react-native'
+import { Text, View, TouchableOpacity, StyleSheet, Image, Animated, Dimensions, Easing } from 'react-native'
 import dateTime from './Utils';
+import SendBirdLib from './SendBirdLib';
 
 const {height} = Dimensions.get('window')
 
 export const ContactCards =props=> {
+    const friend = dateTime.getChatFriend(props.members,SendBirdLib.senderUser)
     return(
         <TouchableOpacity 
             style={[styles.contactParentView,styles.contactCardShadow]}
-            onPress={()=>props.navigation.navigate('chat',{channelId:props.channelUrl})}
+            onPress={()=>props.navigation.navigate('chat',{channelId:props.channelUrl,friend:friend})}
         >
             <View>
                 <Image 
-                    source={require('./assets/cat.jpg')}
+                    source={{uri : friend.profileUrl}}
                     style={styles.contactThumbnail}
                 />
                 {
@@ -24,14 +26,14 @@ export const ContactCards =props=> {
             </View>
             <View style={styles.contactTextView}>
                 <View>
-                    <Text style={styles.contactNameText}>{props._sender.userId}</Text>
+                    <Text style={styles.contactNameText}>{friend.userId}</Text>
                     <Text style={styles.contactMessageText} numberOfLines={1}>
                         {props.message}
                     </Text>
                 </View>
                 <View>
                     <Text style={styles.lastMessageTimeText}>
-                        {dateTime.convertTo24Hrs(props.createdAt)}
+                        {props.message ? dateTime.convertTo24Hrs(props.createdAt) : ''}
                     </Text>
                 </View>
             </View>
@@ -51,7 +53,7 @@ export const ReceiverBuuble =props=> {
             </View>
             <View style={[{flexDirection:'row'},styles.shadow]}>
                 <View style={styles.caretLeft}/>
-                <TouchableOpacity style={styles.receiverBubbleMessageContainer}>
+                <TouchableOpacity style={styles.receiverBubbleMessageContainer} activeOpacity={1}>
                     <Text style={styles.receiverText}>{props.message}</Text>
                     <Text style={styles.receiverTimingText}>{dateTime.convertTo24Hrs(props.createdAt)}</Text>
                 </TouchableOpacity>
@@ -63,7 +65,7 @@ export const ReceiverBuuble =props=> {
 export const SenderBubble =props=> {
     return(
         <View style={styles.senderBubbleView}>
-            <TouchableOpacity style={[styles.senderBubbleMessageContainer,styles.shadow]}>
+            <TouchableOpacity style={[styles.senderBubbleMessageContainer,styles.shadow]} activeOpacity={1}>
                 <Text style={styles.senderText}>{props.message}</Text>
                 <Text style={styles.senderTimingText}>{dateTime.convertTo24Hrs(props.createdAt)}</Text>
             </TouchableOpacity>
@@ -119,15 +121,98 @@ export const ChatMenues =props=> {
     return(
         <TouchableOpacity style={styles.menuView} onPress={props.toggle}>
             <Animated.View style={[styles.menuContainer,{bottom:animatedBottom}]}>
-                <TouchableOpacity style={styles.menuButton} onPress={props.clear}>
+                <TouchableOpacity style={styles.menuButton} onPress={props.delete}>
                     <Text style={styles.menuText}>Delete This Conversation</Text>
                 </TouchableOpacity>
                 <View style={styles.borderBottom} />
-                <TouchableOpacity style={styles.menuButton} onPress={props.delete}>
+                <TouchableOpacity style={styles.menuButton} onPress={props.clear}>
                     <Text style={styles.menuText}>Clear Conversation</Text>
                 </TouchableOpacity>
             </Animated.View>
         </TouchableOpacity>
+    )
+}
+
+export const DeleteChatPop =props=> {
+    const [ show,setShow ] = useState(new Animated.Value(0))
+    Animated.timing(show,{
+        toValue:1,
+        duration:400,
+        easing:Easing.linear
+    }).start()
+    return(
+        <View style={[styles.menuView,styles.centerOfScreen]}>
+            <Animated.View easing="bounce" style={[styles.deletePopUpParentView,styles.shadow,{opacity:show}]}>
+                <View style={[styles.trashImageView,styles.centerOfScreen]}>
+                    <Image
+                        source={require('./assets/icons/trash/trash.png')}
+                    />
+                </View>
+                <View style={styles.popUpTextView}>
+                    <Text style={styles.popUpTitleText}>
+                        Delete Conversation
+                    </Text>
+                    <Text style={styles.popUpSubTitleText}>
+                        Are you sure you want to delete this conversation?
+                    </Text>
+                </View>
+                <View style={styles.popUpButtonsView}>
+                    <TouchableOpacity 
+                        style={[styles.outlineButton,styles.centerOfScreen]}
+                        onPress={props.cancel}
+                        activeOpacity={0.6}
+                    >
+                        <Text style={styles.outlineButtonText}>CANCEL</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                        style={[styles.fillButton,styles.centerOfScreen]}
+                        onPress={props.delete}
+                        activeOpacity={0.6}
+                    >
+                        <Text style={styles.fillButtonText}>DELETE</Text>
+                    </TouchableOpacity>
+                </View>
+            </Animated.View>
+        </View>
+    )
+}
+
+export const ClearChatPop =props=> {
+    const [ show,setShow ] = useState(new Animated.Value(0))
+    Animated.timing(show,{
+        toValue:1,
+        duration:400,
+        easing:Easing.linear
+    }).start()
+    return(
+        <View style={[styles.menuView,styles.centerOfScreen]}>
+            <Animated.View style={[styles.deletePopUpParentView,styles.shadow,{opacity:show}]}>
+                <View style={styles.popUpTextView}>
+                    <Text style={styles.popUpTitleText}>
+                        Clear Conversation
+                    </Text>
+                    <Text style={styles.popUpSubTitleText}>
+                        Are you sure you want to clear this conversation?
+                    </Text>
+                </View>
+                <View style={styles.popUpButtonsView}>
+                    <TouchableOpacity 
+                        style={[styles.outlineButton,styles.centerOfScreen]}
+                        onPress={props.cancel}
+                        activeOpacity={0.6}
+                    >
+                        <Text style={styles.outlineButtonText}>CANCEL</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                        style={[styles.fillButton,styles.centerOfScreen]}
+                        onPress={props.clear}
+                        activeOpacity={0.6}
+                    >
+                        <Text style={styles.fillButtonText}>CLEAR</Text>
+                    </TouchableOpacity>
+                </View>
+            </Animated.View>
+        </View>
     )
 }
 
@@ -331,4 +416,73 @@ const styles = StyleSheet.create({
         shadowOpacity:0.5,
         shadowRadius:3
     },
+    centerOfScreen:{
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    deletePopUpParentView:{
+        backgroundColor:'#fff',
+        padding:25,
+        borderRadius:10
+    },
+    trashImageView:{
+        backgroundColor:'#5B57DC',
+        borderRadius:50,
+        height:64,
+        width:64,
+        alignSelf:'center'
+    },
+    popUpTextView:{
+        marginVertical:10,
+        alignItems:'center'
+    },
+    popUpTitleText:{
+        fontFamily:'Helvetica',
+        fontSize:17,
+        fontWeight:'bold',
+        color:'#222222',
+        marginBottom:20
+    },
+    popUpSubTitleText:{
+        fontFamily:'Helvetica',
+        fontSize:15,
+        fontWeight:'normal',
+        color:'#222222',
+        textAlign:'center'
+    },
+    popUpButtonsView:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        marginTop:20
+    },
+    outlineButton:{
+        paddingHorizontal:30,
+        paddingVertical:15,
+        backgroundColor:'#fff',
+        borderColor:'#00E2B2',
+        borderWidth:1,
+        borderRadius:5
+    },
+    outlineButtonText:{
+        fontFamily:'Helvetica',
+        fontSize:15,
+        fontWeight:'bold',
+        color:'#00E2B2'
+    },
+    fillButton:{
+        paddingHorizontal:30,
+        paddingVertical:15,
+        backgroundColor:'#00E2B2',
+        borderWidth:1,
+        borderColor:'#00E2B2',
+        marginStart:15,
+        borderRadius:5
+    },
+    fillButtonText:{
+        fontFamily:'Helvetica',
+        fontSize:15,
+        fontWeight:'bold',
+        color:'#FFF'
+    }
 })

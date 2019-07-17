@@ -31,7 +31,6 @@ class ChatList extends Component {
     connectToChannel =()=> {
         SendBirdLib.listCurrentUserChannels()
         .then((list)=>{
-            console.log(list)
             this.setState({chatList:list})
         }).catch(c=>console.log(c))
     }
@@ -60,7 +59,13 @@ class ChatList extends Component {
                         <FlatList
                             data={this.state.chatList}
                             renderItem={({item,index})=>
-                                <ContactCards {...this.props} {...item.lastMessage} unreadCount={item.unreadMessageCount} />
+                                <ContactCards 
+                                    {...this.props} 
+                                    {...item.lastMessage} 
+                                    members={item.members} 
+                                    unreadCount={item.unreadMessageCount} 
+                                    channelUrl={item.url}
+                                />
                             }
                             extraData={this.state}
                             keyExtractor={(item,index)=>index.toString()}

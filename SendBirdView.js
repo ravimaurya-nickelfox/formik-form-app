@@ -7,13 +7,15 @@ import {
         TouchableOpacity, 
         Image, 
         TextInput, 
-        KeyboardAvoidingView, 
-        FlatList,
+        KeyboardAvoidingView,
         Keyboard,
-        Animated
+        Animated,
+        Dimensions
  } from 'react-native'
 import SendBirdLib from './SendBirdLib';
-import { ReceiverBuuble, SenderBubble, ChatMenues, TypingBubble } from './ChatComponents';
+import { ReceiverBuuble, SenderBubble, ChatMenues, TypingBubble, DeleteChatPop, ClearChatPop } from './ChatComponents';
+
+const { height } = Dimensions.get('screen')
 
 export default class SendBirdView extends Component {
     static navigationOptions = {
@@ -21,19 +23,26 @@ export default class SendBirdView extends Component {
     }
     constructor(props){
         super(props)
+        this.flatlistMinPadding = 50
+        this.flatListMaxPadding = height/2.3
+        this.messageHandlerId = Math.floor(Math.random()*100000000)
+        this.typingHandlerId = Math.floor(Math.random()*100000000)
         this.state = {
             showChatMenu:false,
             oldMessages:[],
             inputText:'',
-            animatedPadding: new Animated.Value(50),
+            animatedPadding: new Animated.Value(this.flatlistMinPadding),
             channelId: this.props.navigation.state.params.channelId,
-            showEmojiPanel:false
+            frinedUser: this.props.navigation.state.params.friend,
+            showEmojiPanel:false,
+            showDeletePopUp:false,
+            showClearChatPopUp:false
         }
-        this.messageHandlerId = Math.floor(Math.random()*100000000)
     }
 
     componentDidMount(){
-        SendBirdLib.participentUser = 'user-test-02'
+        SendBirdLib.participentUser = this.state.frinedUser.userId
+        SendBirdLib.reconnectUser()
         SendBirdLib.connectToChannel(this.state.channelId)
         .then((connect)=>console.log('Channel Connected',connect))
         .catch(c=>console.log(c))
@@ -43,21 +52,23 @@ export default class SendBirdView extends Component {
             this.setState({oldMessages});
             SendBirdLib.markMessageAsRead()
         }).catch(c=>console.log(c))
-        this.messageObserver()
+        this.eventObservers()
         this.keyboardListener()
     }
 
     keyboardListener =()=> {
         Keyboard.addListener('keyboardDidShow',()=>{
+            SendBirdLib.updateTypingStatus(true)
             Animated.timing(this.state.animatedPadding,{
-                toValue:280,
+                toValue:this.flatListMaxPadding,
                 duration:500
             }).start()
         })
         Keyboard.addListener('keyboardDidHide',()=>{
-            this.setState({animatedPadding:new Animated.Value(280)},()=>{
+            SendBirdLib.updateTypingStatus(false)
+            this.setState({animatedPadding:new Animated.Value(this.flatListMaxPadding)},()=>{
                 Animated.timing(this.state.animatedPadding,{
-                    toValue:50,
+                    toValue:this.flatlistMinPadding,
                     duration:500
                 }).start()
             })
@@ -81,18 +92,39 @@ export default class SendBirdView extends Component {
         var { oldMessages } = this.state
         oldMessages = [res,...oldMessages]
         this.setState({oldMessages})
+        SendBirdLib.markMessageAsRead()
     }
 
-    messageObserver =()=>{
+    eventObservers =()=>{
         var handler = new SendBirdLib.libSendBird.ChannelHandler()
+        const SendBirdView = this
         handler.onMessageReceived = function(channel,message){
             console.log(channel,message)
+            SendBirdView.setParticipantTypingEnd()
+            SendBirdView.updateMessages(message)
+        }
+        handler.onTypingStatusUpdated = function(channel){
+            var member = channel.getTypingMembers()
+            console.log(member)
         }
         SendBirdLib.libSendBird.addChannelHandler(this.messageHandlerId,handler)
     }
 
+    setParticipantTypingStart =()=> {
+        var { oldMessages } = this.state
+        oldMessages = [{typing:true},...oldMessages]
+        this.setState({oldMessages})
+    }
+
+    setParticipantTypingEnd =()=> {
+        var { oldMessages } = this.state
+        oldMessages.splice(0,1)
+        this.setState({oldMessages})
+    }
+
     componentWillUnmount(){
         SendBirdLib.libSendBird.removeChannelHandler(this.messageHandlerId)
+        SendBirdLib.updateTypingStatus(false)
     }
 
     backButtonHandler =()=> {
@@ -103,14 +135,29 @@ export default class SendBirdView extends Component {
         this.setState({showChatMenu:!this.state.showChatMenu})
     }
 
+    toggleDeletePopUp =()=> {
+        this.setState({showChatMenu:false, showDeletePopUp:!this.state.showDeletePopUp})
+    }
+
+    toggleClearChatPopUp =()=> {
+        this.setState({showChatMenu:false, showClearChatPopUp:!this.state.showClearChatPopUp})
+    }
+
     clearChat =()=> {
-        this.chatMenuToggle()
-        alert('clear')
+        this.toggleClearChatPopUp()
+        SendBirdLib.clearChatHistory()
+        .then((res)=>{
+            console.log(res)
+        }).catch(c=>console.log(c))
     }
 
     deleteChat =()=> {
-        this.chatMenuToggle()
-        alert('delete')
+        this.toggleDeletePopUp()
+        SendBirdLib.deleteChannel()
+        .then((res)=>{
+            console.log(res)
+            this.props.navigation.pop()
+        }).catch(c=>console.log(c))
     }
 
     render() {
@@ -124,10 +171,10 @@ export default class SendBirdView extends Component {
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.headerCenteralView}>
                         <Image 
-                            source={require('./assets/cat.jpg')}
+                            source={{uri : this.state.frinedUser.profileUrl}}
                             style={styles.headerTumbnail}
                         />
-                        <Text style={styles.participantText}>{SendBirdLib.participentUser}</Text>
+                        <Text style={styles.participantText}>{this.state.frinedUser.userId}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttons} onPress={this.chatMenuToggle}>
                         <Image
@@ -191,7 +238,15 @@ export default class SendBirdView extends Component {
 
                 { 
                     this.state.showChatMenu && 
-                    <ChatMenues {...this.props} toggle={this.chatMenuToggle} clear={this.clearChat} delete={this.deleteChat} />
+                    <ChatMenues {...this.props} toggle={this.chatMenuToggle} clear={this.toggleClearChatPopUp} delete={this.toggleDeletePopUp} />
+                }
+                {
+                    this.state.showDeletePopUp && 
+                    <DeleteChatPop {...this.props} cancel={this.toggleDeletePopUp} delete={this.deleteChat} />
+                }
+                {
+                    this.state.showClearChatPopUp && 
+                    <ClearChatPop {...this.props} cancel={this.toggleClearChatPopUp} clear={this.clearChat} />
                 }
             </SafeAreaView>
         )

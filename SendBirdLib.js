@@ -19,6 +19,10 @@ class SendBirdLib{
         });
     }
 
+    reconnectUser =()=> {
+        this.libSendBird.reconnect()
+    }
+
     createChannel =()=> {
         return new Promise((resolve,reject)=>{
             const userIdsArray = [this.senderUser,this.participentUser];
@@ -27,7 +31,9 @@ class SendBirdLib{
             params.isEphemeral = false;
             params.isDistinct = true;
             params.addUserIds(userIdsArray);
-            params.operatorIds = userIdsArray;
+            params.operatorUserIds = userIdsArray
+            params.operators = userIdsArray
+            params.name = this.senderUser+this.participentUser;
 
             this.libSendBird.GroupChannel.createChannel(params,(res,err)=>{
                 if(err) reject(err);
@@ -40,9 +46,9 @@ class SendBirdLib{
     connectToChannel =(channelId=this.channelId)=> {
         return new Promise((resolve,reject)=>{
             this.libSendBird.GroupChannel.getChannel(channelId,(openChannel,err)=>{
-                console.log(openChannel,err)
                 if(err) reject(err);
                 this.openChannel = openChannel;
+                resolve(true)
             })
         });
     }
@@ -51,6 +57,7 @@ class SendBirdLib{
         return new Promise((resolve,reject)=>{
             var channelListQuery = this.libSendBird.GroupChannel.createMyGroupChannelListQuery();
             channelListQuery.userIdsFilter = [this.senderUser]
+            channelListQuery.includeEmpty = true
             if(channelListQuery.hasNext) {
                 channelListQuery.next((list,err)=>{
                     if(err) reject(err)
@@ -84,6 +91,32 @@ class SendBirdLib{
         return new Promise((resolve,reject)=>{
             this.openChannel.markAsRead(()=>{
                 resolve(true)
+            })
+        })
+    }
+
+    updateTypingStatus =status=> {
+        if(status) {
+            this.openChannel.startTyping()
+        } else {
+            this.openChannel.endTyping()
+        }
+    }
+
+    clearChatHistory =()=> {
+        return new Promise((resolve,reject)=>{
+            this.openChannel.resetMyHistory((res,err)=>{
+                if(err) reject(err)
+                resolve(res)
+            })
+        })
+    }
+
+    deleteChannel =()=> {
+        return new Promise((resolve,reject)=>{
+            this.openChannel.delete((res,err)=>{
+                if(err) reject(err)
+                resolve(res)
             })
         })
     }
