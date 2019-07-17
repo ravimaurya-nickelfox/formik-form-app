@@ -16,6 +16,7 @@ export const ContactCards =props=> {
                 <Image 
                     source={{uri : friend.profileUrl}}
                     style={styles.contactThumbnail}
+                    defaultSource={SendBirdLib.fallbackProfilePic}
                 />
                 {
                     props.unreadCount > 0 &&
@@ -26,7 +27,7 @@ export const ContactCards =props=> {
             </View>
             <View style={styles.contactTextView}>
                 <View>
-                    <Text style={styles.contactNameText}>{friend.userId}</Text>
+                    <Text style={styles.contactNameText}>{friend.nickname}</Text>
                     <Text style={styles.contactMessageText} numberOfLines={1}>
                         {props.message}
                     </Text>
