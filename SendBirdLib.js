@@ -2,12 +2,33 @@ import SendBird from 'sendbird'
 class SendBirdLib{
     constructor(){
         this.app_id = '609B359F-699F-4E48-970C-9202A1574D9D'
+        this.api_token = '87cc83a5cf66833e926d91201d822775a31b4251'
+        this.apiRequestURL = `https://api-${this.app_id}.sendbird.com/`
         this.libSendBird = new SendBird({appId:this.app_id})
         this.channelId;
         this.openChannel;
         this.messageParams = new this.libSendBird.UserMessageParams()
         this.senderUser;       // My user id
         this.participentUser;
+        this.fallbackProfilePic = require('./assets/cat.jpg')
+    }
+
+    createUser =payload=> {
+        return new Promise((resolve,reject)=>{
+            fetch(
+                this.apiRequestURL+'v3/users',{
+                    method:'POST',
+                    body:JSON.stringify(payload),
+                    headers:{
+                        "Content-Type": "application/json, charset=utf8",
+                        "Api-Token": this.api_token
+                    }
+                }
+            ).then(res=>res.json())
+            .then(response=>resolve(response))
+            .catch(c=>reject(c))
+        });
+        this.libSendBird.createUserListQuery
     }
     
     connectUser =()=> {

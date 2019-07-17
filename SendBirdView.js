@@ -173,8 +173,9 @@ export default class SendBirdView extends Component {
                         <Image 
                             source={{uri : this.state.frinedUser.profileUrl}}
                             style={styles.headerTumbnail}
+                            defaultSource={SendBirdLib.fallbackProfilePic}
                         />
-                        <Text style={styles.participantText}>{this.state.frinedUser.userId}</Text>
+                        <Text style={styles.participantText}>{this.state.frinedUser.nickname}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttons} onPress={this.chatMenuToggle}>
                         <Image

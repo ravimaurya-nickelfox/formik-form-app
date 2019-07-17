@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native'
+import SendBirdLib from './SendBirdLib';
 
 export default class Home extends Component {
     constructor(props){
@@ -11,6 +12,23 @@ export default class Home extends Component {
 
     btnPressAction=route=>{
         this.props.navigation.navigate(route)
+    }
+
+    createUser =()=> {
+        let url = `https://sendbird.com/main/img/profiles/profile_0${Math.floor(Math.random()*10)}_512px.png`
+        const userData = {
+            "user_id": "user-id-06",
+            "nickname": "David Hussey",
+            "profile_url": url
+        }
+        SendBirdLib.createUser(userData)
+        .then((res)=>{
+            if(res.error) {
+                alert(res.message);
+                return;
+            }
+            console.log(res)
+        }).catch(c=>console.log(c))
     }
 
     render() {
@@ -33,6 +51,9 @@ export default class Home extends Component {
                 </TouchableOpacity>
                 <TouchableOpacity activeOpacity={0.7} style={Styles.button} onPress={()=>this.btnPressAction('analytics')}>
                     <Text style={Styles.btnTxt}>Analytics</Text>
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.7} style={Styles.button} onPress={this.createUser}>
+                    <Text style={Styles.btnTxt}>Register User</Text>
                 </TouchableOpacity>
                 <TouchableOpacity activeOpacity={0.7} style={Styles.button} onPress={()=>this.btnPressAction('contacts')}>
                     <Text style={Styles.btnTxt}>Open Chat</Text>
