@@ -8,7 +8,9 @@ class ChatList extends Component {
     constructor(props){
         super(props)
         this.state = {
-            chatList:[]
+            chatList:[],
+            chatListCopy:[],
+            filterQuery:''
         }
         SendBirdLib.senderUser = 'user-test-01';
     }
@@ -31,7 +33,8 @@ class ChatList extends Component {
     connectToChannel =()=> {
         SendBirdLib.listCurrentUserChannels()
         .then((list)=>{
-            this.setState({chatList:list})
+            console.log(list)
+            this.setState({chatList:list,chatListCopy:list})
         }).catch(c=>console.log(c))
     }
 
@@ -40,37 +43,69 @@ class ChatList extends Component {
             this.refresher.remove()
     }
 
+    filterContacts =(filterQuery)=>{
+        this.setState({filterQuery},()=>{
+            let list = this.state.chatListCopy.filter((contacts)=>{
+                return contacts.members.find((member)=>{
+                    return member.userId != SendBirdLib.senderUser && member.userId.toLowerCase().indexOf(this.state.filterQuery.toLowerCase()) > -1
+                })
+            })
+            this.setState({chatList:list})
+        })
+    }
+
+    clearFilter =()=> {
+
+    }
+
     render() {
         return (
             <SafeAreaView style={{flex:1}}>
                 <View style={styles.parentView}>
-                    <View style={styles.searchBarView}>
-                        <Image
-                            source={require('./assets/icons/search/search.png')}
-                        />
-                        <TextInput
-                            placeholder={'Search'}
-                            placeholderTextColor={'#668391'}
-                            style={styles.searchBar}
-                            clearButtonMode={'while-editing'}
-                        />
-                    </View>
-                    <View style={{paddingVertical:10}}>
-                        <FlatList
-                            data={this.state.chatList}
-                            renderItem={({item,index})=>
-                                <ContactCards 
-                                    {...this.props} 
-                                    {...item.lastMessage} 
-                                    members={item.members} 
-                                    unreadCount={item.unreadMessageCount} 
-                                    channelUrl={item.url}
+                    {
+                        this.state.chatListCopy.length > 0 &&
+                        <View style={styles.searchBarView}>
+                            <Image
+                                source={require('./assets/icons/search/search.png')}
+                            />
+                            <TextInput
+                                placeholder={'Search'}
+                                placeholderTextColor={'#668391'}
+                                style={styles.searchBar}
+                                clearButtonMode={'while-editing'}
+                                textContentType={'name'}
+                                keyboardType={'default'}
+                                onChangeText={this.filterContacts}
+                            />
+                        </View>
+                    }
+                    <View style={{paddingVertical:10,flex:1}}>
+                        {
+                            this.state.chatListCopy.length > 0 &&    
+                            <FlatList
+                                data={this.state.chatList}
+                                renderItem={({item,index})=>
+                                    <ContactCards 
+                                        {...this.props} 
+                                        {...item.lastMessage} 
+                                        members={item.members} 
+                                        unreadCount={item.unreadMessageCount} 
+                                        channelUrl={item.url}
+                                    />
+                                }
+                                extraData={this.state}
+                                keyExtractor={(item,index)=>index.toString()}
+                                contentContainerStyle={{paddingHorizontal:16}}
+                            />
+                        }
+                        {
+                            this.state.chatListCopy.length == 0 &&
+                            <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+                                <Image
+                                    source={require('./assets/icons/no_chat/no_chat.png')}
                                 />
-                            }
-                            extraData={this.state}
-                            keyExtractor={(item,index)=>index.toString()}
-                            contentContainerStyle={{paddingHorizontal:16}}
-                        />
+                            </View>
+                        }
                     </View>
                 </View>
             </SafeAreaView>
