@@ -44,13 +44,14 @@ export default class SendBirdView extends Component {
         SendBirdLib.participentUser = this.state.frinedUser.userId
         SendBirdLib.reconnectUser()
         SendBirdLib.connectToChannel(this.state.channelId)
-        .then((connect)=>console.log('Channel Connected',connect))
-        .catch(c=>console.log(c))
-        SendBirdLib.getChannelMessages()
-        .then((oldMessages)=>{
-            console.log('Prev Messages',oldMessages)
-            this.setState({oldMessages});
-            SendBirdLib.markMessageAsRead()
+        .then((connect)=>{
+            console.log('Channel Connected',connect)
+            SendBirdLib.getChannelMessages()
+            .then((oldMessages)=>{
+                console.log('Prev Messages',oldMessages)
+                this.setState({oldMessages});
+                SendBirdLib.markMessageAsRead()
+            }).catch(c=>console.log(c))
         }).catch(c=>console.log(c))
         this.eventObservers()
         this.keyboardListener()
