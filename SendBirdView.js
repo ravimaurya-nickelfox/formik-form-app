@@ -226,6 +226,7 @@ export default class SendBirdView extends Component {
                                     multiline
                                     onChangeText={(inputText)=>this.setState({inputText})}
                                     value={this.state.inputText.toString()}
+                                    selectionColor={'#668391'}
                                 />
                             </View>
                             <TouchableOpacity 
