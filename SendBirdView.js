@@ -10,7 +10,8 @@ import {
         KeyboardAvoidingView,
         Keyboard,
         Animated,
-        Dimensions
+        Dimensions,
+        Platform
  } from 'react-native'
 import SendBirdLib from './SendBirdLib';
 import { ReceiverBuuble, SenderBubble, ChatMenues, TypingBubble, DeleteChatPop, ClearChatPop } from './ChatComponents';
@@ -296,14 +297,22 @@ const styles = StyleSheet.create({
         width:'100%',
         bottom:0,
         flex:1,
-        shadowColor:'#d8d8d8',
-        shadowOffset:{
-            height:-3,
-            width:0
-        },
-        shadowOpacity:0.3,
-        shadowRadius:4,
-        backgroundColor:'#fff'
+        ...Platform.select({
+            ios:{
+                shadowColor:'#d8d8d8',
+                shadowOffset:{
+                    height:-3,
+                    width:0
+                },
+                shadowOpacity:0.3,
+                shadowRadius:4,
+            },
+            android:{
+                elevation:4
+            }
+        }),
+        backgroundColor:'#fff',
+        zIndex:99
     },
     bottomGroupWrapper:{
         flexDirection:'row',
