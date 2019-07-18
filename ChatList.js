@@ -88,6 +88,7 @@ class ChatList extends Component {
                                     textContentType={'name'}
                                     keyboardType={'default'}
                                     onChangeText={this.filterContacts}
+                                    selectionColor={'#668391'}
                                 />
                             </View>
                         }
