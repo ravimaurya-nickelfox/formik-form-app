@@ -48,7 +48,7 @@ class ChatList extends Component {
         this.setState({filterQuery},()=>{
             let list = this.state.chatListCopy.filter((contacts)=>{
                 return contacts.members.find((member)=>{
-                    return member.userId != SendBirdLib.senderUser && member.userId.toLowerCase().indexOf(this.state.filterQuery.toLowerCase()) > -1
+                    return member.userId != SendBirdLib.senderUser && member.nickname.toLowerCase().indexOf(this.state.filterQuery.toLowerCase()) > -1
                 })
             })
             this.setState({chatList:list})
