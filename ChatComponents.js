@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react'
-import { Text, View, TouchableOpacity, StyleSheet, Image, Animated, Dimensions, Easing } from 'react-native'
+import { Text, View, TouchableOpacity, StyleSheet, Image, Animated, Dimensions, Easing, Platform } from 'react-native'
 import dateTime from './Utils';
 import SendBirdLib from './SendBirdLib';
 
@@ -11,6 +11,7 @@ export const ContactCards =props=> {
         <TouchableOpacity 
             style={[styles.contactParentView,styles.contactCardShadow]}
             onPress={()=>props.navigation.navigate('chat',{channelId:props.channelUrl,friend:friend})}
+            activeOpacity={0.65}
         >
             <View>
                 <Image 
@@ -237,13 +238,20 @@ export const ClearChatPop =props=> {
 
 const styles = StyleSheet.create({
     shadow:{
-        shadowColor:'#000',
-        shadowOffset:{
-            height:3,
-            width:0
-        },
-        shadowOpacity:0.2,
-        shadowRadius:3
+        ...Platform.select({
+            ios:{
+                shadowColor:'#000',
+                shadowOffset:{
+                    height:3,
+                    width:0
+                },
+                shadowOpacity:0.2,
+                shadowRadius:3
+            },
+            android:{
+                elevation:2
+            }
+        })
     },
     receiverBubbleView:{
         alignSelf:'flex-start',
@@ -428,12 +436,19 @@ const styles = StyleSheet.create({
     },
     contactCardShadow:{
         shadowColor:'#979797',
-        shadowOffset:{
-            height:3,
-            width:0
-        },
-        shadowOpacity:0.5,
-        shadowRadius:3
+        ...Platform.select({
+            ios:{
+                shadowOffset:{
+                    height:3,
+                    width:0
+                },
+                shadowOpacity:0.5,
+                shadowRadius:3,
+            },
+            android:{
+                elevation:3
+            }
+        })
     },
     centerOfScreen:{
         justifyContent:'center',
