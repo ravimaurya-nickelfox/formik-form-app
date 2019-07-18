@@ -28,7 +28,6 @@ class SendBirdLib{
             .then(response=>resolve(response))
             .catch(c=>reject(c))
         });
-        this.libSendBird.createUserListQuery
     }
     
     connectUser =()=> {

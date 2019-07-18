@@ -44,13 +44,14 @@ export default class SendBirdView extends Component {
         SendBirdLib.participentUser = this.state.frinedUser.userId
         SendBirdLib.reconnectUser()
         SendBirdLib.connectToChannel(this.state.channelId)
-        .then((connect)=>console.log('Channel Connected',connect))
-        .catch(c=>console.log(c))
-        SendBirdLib.getChannelMessages()
-        .then((oldMessages)=>{
-            console.log('Prev Messages',oldMessages)
-            this.setState({oldMessages});
-            SendBirdLib.markMessageAsRead()
+        .then((connect)=>{
+            console.log('Channel Connected',connect)
+            SendBirdLib.getChannelMessages()
+            .then((oldMessages)=>{
+                console.log('Prev Messages',oldMessages)
+                this.setState({oldMessages});
+                SendBirdLib.markMessageAsRead()
+            }).catch(c=>console.log(c))
         }).catch(c=>console.log(c))
         this.eventObservers()
         this.keyboardListener()
@@ -164,12 +165,12 @@ export default class SendBirdView extends Component {
         return (
             <SafeAreaView style={{flex:1}}>
                 <View style={styles.headerView}>
-                    <TouchableOpacity style={styles.buttons} onPress={this.backButtonHandler}>
+                    <TouchableOpacity style={styles.buttons} onPress={this.backButtonHandler} activeOpacity={0.6}>
                         <Image
                             source={require('./assets/icons/back/back.png')}
                         />
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.headerCenteralView}>
+                    <TouchableOpacity style={styles.headerCenteralView} activeOpacity={0.9}>
                         <Image 
                             source={{uri : this.state.frinedUser.profileUrl}}
                             style={styles.headerTumbnail}
@@ -177,7 +178,7 @@ export default class SendBirdView extends Component {
                         />
                         <Text style={styles.participantText}>{this.state.frinedUser.nickname}</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttons} onPress={this.chatMenuToggle}>
+                    <TouchableOpacity style={styles.buttons} onPress={this.chatMenuToggle} activeOpacity={0.6}>
                         <Image
                             source={require('./assets/icons/vertical_dots/vertical_dots.png')}
                         />

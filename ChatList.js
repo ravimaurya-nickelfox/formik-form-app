@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, SafeAreaView, TextInput, StyleSheet, Image, FlatList } from 'react-native'
+import { Text, View, SafeAreaView, TextInput, StyleSheet, Image, FlatList, ActivityIndicator } from 'react-native'
 import SendBirdLib from './SendBirdLib';
 import { ContactCards } from './ChatComponents';
 import { withNavigation } from 'react-navigation'
@@ -8,6 +8,7 @@ class ChatList extends Component {
     constructor(props){
         super(props)
         this.state = {
+            isLoading:true,
             chatList:[],
             chatListCopy:[],
             filterQuery:''
@@ -34,7 +35,7 @@ class ChatList extends Component {
         SendBirdLib.listCurrentUserChannels()
         .then((list)=>{
             console.log(list)
-            this.setState({chatList:list,chatListCopy:list})
+            this.setState({chatList:list,chatListCopy:list,isLoading:false})
         }).catch(c=>console.log(c))
     }
 
@@ -61,53 +62,65 @@ class ChatList extends Component {
     render() {
         return (
             <SafeAreaView style={{flex:1}}>
-                <View style={styles.parentView}>
-                    {
-                        this.state.chatListCopy.length > 0 &&
-                        <View style={styles.searchBarView}>
-                            <Image
-                                source={require('./assets/icons/search/search.png')}
-                            />
-                            <TextInput
-                                placeholder={'Search'}
-                                placeholderTextColor={'#668391'}
-                                style={styles.searchBar}
-                                clearButtonMode={'while-editing'}
-                                textContentType={'name'}
-                                keyboardType={'default'}
-                                onChangeText={this.filterContacts}
-                            />
-                        </View>
-                    }
-                    <View style={{paddingVertical:10,flex:1}}>
+                {
+                    this.state.isLoading && 
+                    <View style={styles.centerOfScreen}>
+                        <ActivityIndicator
+                            size={'large'}
+                            color={'#5B57DC'}
+                        />
+                    </View>
+                }
+                {
+                    !this.state.isLoading &&
+                    <View style={styles.parentView}>
                         {
-                            this.state.chatListCopy.length > 0 &&    
-                            <FlatList
-                                data={this.state.chatList}
-                                renderItem={({item,index})=>
-                                    <ContactCards 
-                                        {...this.props} 
-                                        {...item.lastMessage} 
-                                        members={item.members} 
-                                        unreadCount={item.unreadMessageCount} 
-                                        channelUrl={item.url}
-                                    />
-                                }
-                                extraData={this.state}
-                                keyExtractor={(item,index)=>index.toString()}
-                                contentContainerStyle={{paddingHorizontal:16}}
-                            />
-                        }
-                        {
-                            this.state.chatListCopy.length == 0 &&
-                            <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+                            this.state.chatListCopy.length > 0 &&
+                            <View style={styles.searchBarView}>
                                 <Image
-                                    source={require('./assets/icons/no_chat/no_chat.png')}
+                                    source={require('./assets/icons/search/search.png')}
+                                />
+                                <TextInput
+                                    placeholder={'Search'}
+                                    placeholderTextColor={'#668391'}
+                                    style={styles.searchBar}
+                                    clearButtonMode={'while-editing'}
+                                    textContentType={'name'}
+                                    keyboardType={'default'}
+                                    onChangeText={this.filterContacts}
                                 />
                             </View>
                         }
+                        <View style={{paddingVertical:10,flex:1}}>
+                            {
+                                this.state.chatListCopy.length > 0 &&    
+                                <FlatList
+                                    data={this.state.chatList}
+                                    renderItem={({item,index})=>
+                                        <ContactCards 
+                                            {...this.props} 
+                                            {...item.lastMessage} 
+                                            members={item.members} 
+                                            unreadCount={item.unreadMessageCount} 
+                                            channelUrl={item.url}
+                                        />
+                                    }
+                                    extraData={this.state}
+                                    keyExtractor={(item,index)=>index.toString()}
+                                    contentContainerStyle={{paddingHorizontal:16}}
+                                />
+                            }
+                            {
+                                this.state.chatListCopy.length == 0 &&
+                                <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+                                    <Image
+                                        source={require('./assets/icons/no_chat/no_chat.png')}
+                                    />
+                                </View>
+                            }
+                        </View>
                     </View>
-                </View>
+                }
             </SafeAreaView>
         )
     }
@@ -131,6 +144,11 @@ const styles = StyleSheet.create({
     searchBar:{
         flex:1,
         padding:10
+    },
+    centerOfScreen:{
+        justifyContent:'center',
+        alignItems:'center',
+        flex:1
     }
 })
 
