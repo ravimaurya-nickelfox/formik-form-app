@@ -23,13 +23,13 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		1415E7B622CC7C090085E0BA /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1415E7B322CC7BFD0085E0BA /* libRNGestureHandler.a */; };
-		14213EEF22C747F300B35E78 /* libRNTwilioVideoWebRTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14213EED22C747A300B35E78 /* libRNTwilioVideoWebRTC.a */; };
 		144175AC22C38A0A0024CDCB /* libRNTwilioVoice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 144175AB22C389F00024CDCB /* libRNTwilioVoice.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		14912FE422CCC4A4000F0CAD /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14912FE322CCC4A4000F0CAD /* Analytics.framework */; };
 		14912FE522CCC4A4000F0CAD /* Analytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14912FE322CCC4A4000F0CAD /* Analytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14912FE722CCC4D5000F0CAD /* libRNAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14912FE222CCC488000F0CAD /* libRNAnalytics.a */; };
 		149EB5A722CE33C200D8B4BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 149EB57B22CE33C200D8B4BF /* GoogleService-Info.plist */; };
+		14AFADAB22E1F930006168CD /* libRNTwilioVideoWebRTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AFADA922E1F925006168CD /* libRNTwilioVideoWebRTC.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -44,7 +44,6 @@
 		2DCD954D1E0B4F2C00145EB5 /* formiktestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* formiktestTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		407FEB672AA583A10CED875D /* libPods-formiktest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8377682E1EB44E150DF15FA4 /* libPods-formiktest.a */; };
-		4A8C921130A79900DEC28E9D /* libPods-formiktestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5AA73AAEB55155B8630FF7 /* libPods-formiktestTests.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		942310E03EF9479C9F9317FE /* libRCTBEEPickerManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F831CC46224150BBD1904F /* libRCTBEEPickerManager.a */; };
 		A4BC70A992F63EA31D2214AB /* Pods_formiktest_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB60760D7CA5AC402EF9A6E0 /* Pods_formiktest_tvOS.framework */; };
@@ -160,13 +159,6 @@
 			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
 			remoteInfo = "RNGestureHandler-tvOS";
 		};
-		14213EEC22C747A300B35E78 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14213EC222C747A300B35E78 /* RNTwilioVideoWebRTC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 738F9D552037604000058972;
-			remoteInfo = RNTwilioVideoWebRTC;
-		};
 		144175AA22C389F00024CDCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 144175A622C389F00024CDCB /* RNTwilioVoice.xcodeproj */;
@@ -187,6 +179,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNAnalytics;
+		};
+		14AFADA822E1F925006168CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14AFAD7B22E1F925006168CD /* RNTwilioVideoWebRTC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 738F9D552037604000058972;
+			remoteInfo = RNTwilioVideoWebRTC;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -408,22 +407,20 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = formiktest/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = formiktest/main.m; sourceTree = "<group>"; };
 		1415E7AD22CC7BFD0085E0BA /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
-		14213EC222C747A300B35E78 /* RNTwilioVideoWebRTC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNTwilioVideoWebRTC.xcodeproj; path = "../node_modules/react-native-twilio-video-webrtc/ios/RNTwilioVideoWebRTC.xcodeproj"; sourceTree = "<group>"; };
 		144175A622C389F00024CDCB /* RNTwilioVoice.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNTwilioVoice.xcodeproj; path = "../node_modules/react-native-twilio-programmable-voice/ios/RNTwilioVoice.xcodeproj"; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		14912FDC22CCC488000F0CAD /* RNAnalytics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNAnalytics.xcodeproj; path = "../node_modules/@segment/analytics-react-native/ios/RNAnalytics.xcodeproj"; sourceTree = "<group>"; };
 		14912FE322CCC4A4000F0CAD /* Analytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Analytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		149EB57B22CE33C200D8B4BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14AFAD7B22E1F925006168CD /* RNTwilioVideoWebRTC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNTwilioVideoWebRTC.xcodeproj; path = "../node_modules/react-native-twilio-video-webrtc/ios/RNTwilioVideoWebRTC.xcodeproj"; sourceTree = "<group>"; };
 		1DD3153D25524BABBC03B407 /* RCTBEEPickerManager.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTBEEPickerManager.xcodeproj; path = "../node_modules/react-native-picker/ios/RCTBEEPickerManager.xcodeproj"; sourceTree = "<group>"; };
 		28EA60AD1282EB2F11493395 /* Pods-formiktest-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-formiktest-tvOS.release.xcconfig"; path = "Target Support Files/Pods-formiktest-tvOS/Pods-formiktest-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* formiktest-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "formiktest-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* formiktest-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "formiktest-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		441FC89970CEC3B479A69CD1 /* Pods-formiktest-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-formiktest-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-formiktest-tvOSTests/Pods-formiktest-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4D8C813BBA4CF77C5DEB299F /* Pods-formiktestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-formiktestTests.debug.xcconfig"; path = "Target Support Files/Pods-formiktestTests/Pods-formiktestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		649F6BC115A755CC47DDDF58 /* Pods-formiktest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-formiktest.debug.xcconfig"; path = "Target Support Files/Pods-formiktest/Pods-formiktest.debug.xcconfig"; sourceTree = "<group>"; };
-		74D0DE4F1098A60C8D0755ED /* Pods-formiktestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-formiktestTests.release.xcconfig"; path = "Target Support Files/Pods-formiktestTests/Pods-formiktestTests.release.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8377682E1EB44E150DF15FA4 /* libPods-formiktest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-formiktest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -434,7 +431,6 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F27AA6A0FD486303B580383C /* Pods_formiktest_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_formiktest_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE5AA73AAEB55155B8630FF7 /* libPods-formiktestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-formiktestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,7 +439,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				4A8C921130A79900DEC28E9D /* libPods-formiktestTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +446,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14AFADAB22E1F930006168CD /* libRNTwilioVideoWebRTC.a in Frameworks */,
 				14912FE722CCC4D5000F0CAD /* libRNAnalytics.a in Frameworks */,
 				144175AC22C38A0A0024CDCB /* libRNTwilioVoice.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
@@ -469,7 +465,6 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				942310E03EF9479C9F9317FE /* libRCTBEEPickerManager.a in Frameworks */,
 				407FEB672AA583A10CED875D /* libPods-formiktest.a in Frameworks */,
-				14213EEF22C747F300B35E78 /* libRNTwilioVideoWebRTC.a in Frameworks */,
 				1415E7B622CC7C090085E0BA /* libRNGestureHandler.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,14 +617,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14213EC322C747A300B35E78 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				14213EED22C747A300B35E78 /* libRNTwilioVideoWebRTC.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		144175A722C389F00024CDCB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,6 +656,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		14AFAD7C22E1F925006168CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14AFADA922E1F925006168CD /* libRNTwilioVideoWebRTC.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,7 +673,6 @@
 				CB60760D7CA5AC402EF9A6E0 /* Pods_formiktest_tvOS.framework */,
 				F27AA6A0FD486303B580383C /* Pods_formiktest_tvOSTests.framework */,
 				8377682E1EB44E150DF15FA4 /* libPods-formiktest.a */,
-				FE5AA73AAEB55155B8630FF7 /* libPods-formiktestTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -692,8 +686,6 @@
 				28EA60AD1282EB2F11493395 /* Pods-formiktest-tvOS.release.xcconfig */,
 				441FC89970CEC3B479A69CD1 /* Pods-formiktest-tvOSTests.debug.xcconfig */,
 				132D090E8DBCD8E66257A0D1 /* Pods-formiktest-tvOSTests.release.xcconfig */,
-				4D8C813BBA4CF77C5DEB299F /* Pods-formiktestTests.debug.xcconfig */,
-				74D0DE4F1098A60C8D0755ED /* Pods-formiktestTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -719,9 +711,9 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				14AFAD7B22E1F925006168CD /* RNTwilioVideoWebRTC.xcodeproj */,
 				14912FDC22CCC488000F0CAD /* RNAnalytics.xcodeproj */,
 				1415E7AD22CC7BFD0085E0BA /* RNGestureHandler.xcodeproj */,
-				14213EC222C747A300B35E78 /* RNTwilioVideoWebRTC.xcodeproj */,
 				144175A622C389F00024CDCB /* RNTwilioVoice.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -793,11 +785,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "formiktestTests" */;
 			buildPhases = (
-				6F6632AAC463EAA592926BCD /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C9687E29E8FD478BA58C3C69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -968,8 +958,8 @@
 					ProjectRef = 1415E7AD22CC7BFD0085E0BA /* RNGestureHandler.xcodeproj */;
 				},
 				{
-					ProductGroup = 14213EC322C747A300B35E78 /* Products */;
-					ProjectRef = 14213EC222C747A300B35E78 /* RNTwilioVideoWebRTC.xcodeproj */;
+					ProductGroup = 14AFAD7C22E1F925006168CD /* Products */;
+					ProjectRef = 14AFAD7B22E1F925006168CD /* RNTwilioVideoWebRTC.xcodeproj */;
 				},
 				{
 					ProductGroup = 144175A722C389F00024CDCB /* Products */;
@@ -1085,13 +1075,6 @@
 			remoteRef = 1415E7B422CC7BFD0085E0BA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		14213EED22C747A300B35E78 /* libRNTwilioVideoWebRTC.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNTwilioVideoWebRTC.a;
-			remoteRef = 14213EEC22C747A300B35E78 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		144175AB22C389F00024CDCB /* libRNTwilioVoice.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1111,6 +1094,13 @@
 			fileType = archive.ar;
 			path = libRNAnalytics.a;
 			remoteRef = 14912FE122CCC488000F0CAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14AFADA922E1F925006168CD /* libRNTwilioVideoWebRTC.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNTwilioVideoWebRTC.a;
+			remoteRef = 14AFADA822E1F925006168CD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */ = {
@@ -1418,28 +1408,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6F6632AAC463EAA592926BCD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-formiktestTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8381160B01E567A6CED8AB3D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1460,26 +1428,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9687E29E8FD478BA58C3C69 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-formiktestTests/Pods-formiktestTests-frameworks.sh",
-				"${PODS_ROOT}/TwilioVideo/Build/iOS/TwilioVideo.framework",
-				"${PODS_ROOT}/TwilioVoice/TwilioVoice.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwilioVideo.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwilioVoice.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-formiktestTests/Pods-formiktestTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1549,7 +1497,6 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D8C813BBA4CF77C5DEB299F /* Pods-formiktestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1576,7 +1523,6 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74D0DE4F1098A60C8D0755ED /* Pods-formiktestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
