@@ -44,7 +44,6 @@
 		2DCD954D1E0B4F2C00145EB5 /* formiktestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* formiktestTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		407FEB672AA583A10CED875D /* libPods-formiktest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8377682E1EB44E150DF15FA4 /* libPods-formiktest.a */; };
-		4A8C921130A79900DEC28E9D /* libPods-formiktestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5AA73AAEB55155B8630FF7 /* libPods-formiktestTests.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		942310E03EF9479C9F9317FE /* libRCTBEEPickerManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F831CC46224150BBD1904F /* libRCTBEEPickerManager.a */; };
 		A4BC70A992F63EA31D2214AB /* Pods_formiktest_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB60760D7CA5AC402EF9A6E0 /* Pods_formiktest_tvOS.framework */; };
@@ -420,10 +419,8 @@
 		2D02E4901E0B4A5D006451C7 /* formiktest-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "formiktest-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		441FC89970CEC3B479A69CD1 /* Pods-formiktest-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-formiktest-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-formiktest-tvOSTests/Pods-formiktest-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4D8C813BBA4CF77C5DEB299F /* Pods-formiktestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-formiktestTests.debug.xcconfig"; path = "Target Support Files/Pods-formiktestTests/Pods-formiktestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		649F6BC115A755CC47DDDF58 /* Pods-formiktest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-formiktest.debug.xcconfig"; path = "Target Support Files/Pods-formiktest/Pods-formiktest.debug.xcconfig"; sourceTree = "<group>"; };
-		74D0DE4F1098A60C8D0755ED /* Pods-formiktestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-formiktestTests.release.xcconfig"; path = "Target Support Files/Pods-formiktestTests/Pods-formiktestTests.release.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8377682E1EB44E150DF15FA4 /* libPods-formiktest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-formiktest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -434,7 +431,6 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F27AA6A0FD486303B580383C /* Pods_formiktest_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_formiktest_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE5AA73AAEB55155B8630FF7 /* libPods-formiktestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-formiktestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,7 +439,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				4A8C921130A79900DEC28E9D /* libPods-formiktestTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,7 +673,6 @@
 				CB60760D7CA5AC402EF9A6E0 /* Pods_formiktest_tvOS.framework */,
 				F27AA6A0FD486303B580383C /* Pods_formiktest_tvOSTests.framework */,
 				8377682E1EB44E150DF15FA4 /* libPods-formiktest.a */,
-				FE5AA73AAEB55155B8630FF7 /* libPods-formiktestTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -692,8 +686,6 @@
 				28EA60AD1282EB2F11493395 /* Pods-formiktest-tvOS.release.xcconfig */,
 				441FC89970CEC3B479A69CD1 /* Pods-formiktest-tvOSTests.debug.xcconfig */,
 				132D090E8DBCD8E66257A0D1 /* Pods-formiktest-tvOSTests.release.xcconfig */,
-				4D8C813BBA4CF77C5DEB299F /* Pods-formiktestTests.debug.xcconfig */,
-				74D0DE4F1098A60C8D0755ED /* Pods-formiktestTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -793,11 +785,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "formiktestTests" */;
 			buildPhases = (
-				6F6632AAC463EAA592926BCD /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C9687E29E8FD478BA58C3C69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1418,28 +1408,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6F6632AAC463EAA592926BCD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-formiktestTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8381160B01E567A6CED8AB3D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1460,26 +1428,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9687E29E8FD478BA58C3C69 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-formiktestTests/Pods-formiktestTests-frameworks.sh",
-				"${PODS_ROOT}/TwilioVideo/Build/iOS/TwilioVideo.framework",
-				"${PODS_ROOT}/TwilioVoice/TwilioVoice.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwilioVideo.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwilioVoice.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-formiktestTests/Pods-formiktestTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1549,7 +1497,6 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D8C813BBA4CF77C5DEB299F /* Pods-formiktestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1576,7 +1523,6 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74D0DE4F1098A60C8D0755ED /* Pods-formiktestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;

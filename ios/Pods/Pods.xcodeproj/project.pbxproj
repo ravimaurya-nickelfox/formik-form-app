@@ -80,7 +80,7 @@
 		178E75DE2938CCFCEE8DE1C3A13FB126 /* GULReachabilityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6609994B26424F186FA440D27325E1 /* GULReachabilityChecker.m */; };
 		17B708B0BF4A1665B2097B0C0A0FDF82 /* GULAppDelegateSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = A34C172A28DCC10F9DB7159FD953664B /* GULAppDelegateSwizzler.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		17D2A3D9D174A9BE8815BCA3EC73B4CA /* GoogleUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB59B20D83BA10FD39A59116E118861 /* GoogleUtilities-dummy.m */; };
-		18694C69E5580223BD857473D9F2BB0E /* Pods-formiktest-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A46E6D8341F8BB94238888E19BA95B6A /* Pods-formiktest-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18694C69E5580223BD857473D9F2BB0E /* Pods-formiktest-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88BAB5B30D810C7F78D08DABDBA1C192 /* Pods-formiktest-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D5F5F678961D7C8C93C45F11738AFBF /* FIRInstanceIDKeyPair.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C57DA75AFE11FCB5DE929771B35BD1D /* FIRInstanceIDKeyPair.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1FF80DF872BCB66E1261CAB6F70D4060 /* SEGGroupPayload.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9F0ABEC0C8C45E99A412926AB1B411 /* SEGGroupPayload.m */; };
 		20559C3BE0C87A17C6FBE247B47B59ED /* FIRComponentContainerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AA5CA6868DEB4C17C0931994E8B9369 /* FIRComponentContainerInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -90,7 +90,7 @@
 		23B2C2297A7C488F93040136C52A6051 /* SEGSegmentIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 24353DF9ABB26A9307E5FFF80A2E620A /* SEGSegmentIntegration.m */; };
 		2561497AFB31DC7B371D043890C41566 /* GULAppDelegateSwizzler_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = CF6436EDBF1EA1F5366DE1A71DC93D78 /* GULAppDelegateSwizzler_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		26F883BC68976B501F36F01D2A0F9C27 /* NSError+FIRInstanceID.h in Headers */ = {isa = PBXBuildFile; fileRef = 9099AA0D5BC8BEE9A16CF412C165ED17 /* NSError+FIRInstanceID.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		27F3F5C9E284E1072D5B4EAAFE248F51 /* Pods-formiktest-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8050BB1C3D42ACAC7D0B091EDE481A5 /* Pods-formiktest-tvOSTests-dummy.m */; };
+		27F3F5C9E284E1072D5B4EAAFE248F51 /* Pods-formiktest-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14866D0051A69615BC8E874748AA5D9A /* Pods-formiktest-tvOSTests-dummy.m */; };
 		28E7AC333F4708412DD015CD7A972FE3 /* GULReachabilityChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = E482183A25B00991762270985358BF94 /* GULReachabilityChecker.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2C301F59E16291961A53C6EFE487CBA9 /* FIRInstanceIDTokenFetchOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD702C758F60B033FFBBA4BF184053D /* FIRInstanceIDTokenFetchOperation.m */; };
 		2CC83BB2013D16BD0F0D32E2B9B5E49E /* FIRInstanceIDLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F0B1CF7EC1391E07592EC82C2D816173 /* FIRInstanceIDLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -196,7 +196,7 @@
 		988447A1CC5CB928DC07F182F1BFB2C5 /* FIRInstanceIDStringEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A0392BBB727438166171645CD519CE /* FIRInstanceIDStringEncoding.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		99B7C795EB408B9DC9F482963DC86502 /* SEGAnalyticsUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 730F05133F30580EE60BB630B5D49E5C /* SEGAnalyticsUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9A4C4DE231B717992F77933B95EF133D /* FIRConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4493B6BE255887242D8931FE7ADD54CA /* FIRConfiguration.m */; };
-		9BD82166A4819CAEBEC363DC093BA219 /* Pods-formiktest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 205578F105421B4484C1F5CC507D28E5 /* Pods-formiktest-dummy.m */; };
+		9BD82166A4819CAEBEC363DC093BA219 /* Pods-formiktest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43046100C616E076EF2C3C24D7ECF08E /* Pods-formiktest-dummy.m */; };
 		9C79314D37D61BEC60A6DAF556D0AC3C /* SEGScreenPayload.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D76130B21B8A8BE8494B44976BDE12 /* SEGScreenPayload.m */; };
 		9D177978B20BD863656B38284109D2A4 /* FIRConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AF0A0A4280D1B0A4AEDADC70FCAB93B /* FIRConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9E66453D10A11F0164593AD596E0E8E0 /* FIRInstanceIDCheckinStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B448052B33F34BCED4517234B15C19 /* FIRInstanceIDCheckinStore.m */; };
@@ -212,7 +212,7 @@
 		A94784EAF661951F2747FFC097955EA3 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = E5F208AE1B8360E913097B9D9EC3380A /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
 		A99D016A3588F636AF86A6D2FB1EC3CD /* GULAppEnvironmentUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DCE33EF6A24BBEA91DB148C6B2A732 /* GULAppEnvironmentUtil.m */; };
 		AB5861946F5F6D1564A4BAEAE37CF5B3 /* SEGAnalyticsConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = E3FDC768BCB3C0F49D928960A63EE71D /* SEGAnalyticsConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AC1F6CFB60BD55AAF2446929FF9138BF /* Pods-formiktest-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A97431AB5CA16154FE643D0C3D85BF /* Pods-formiktest-tvOS-dummy.m */; };
+		AC1F6CFB60BD55AAF2446929FF9138BF /* Pods-formiktest-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DADC8A738AFA12E6A28FC33C20BE502D /* Pods-formiktest-tvOS-dummy.m */; };
 		AC7E6E3BD2A7CD3A72D5C70405E31DB7 /* FIRInstanceIDCheckinService.m in Sources */ = {isa = PBXBuildFile; fileRef = A834C79DAA6F2FCC4F4D84CE0D9489E9 /* FIRInstanceIDCheckinService.m */; };
 		AE126E6C2E79D0F7B690714E0286CB00 /* Analytics-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B2DA57344A4A6C33739D318285D2C5 /* Analytics-dummy.m */; };
 		B0547B8D15FCB3A691622479C3100311 /* SEGAliasPayload.m in Sources */ = {isa = PBXBuildFile; fileRef = D367894CC947AB91C3309638965C7C4E /* SEGAliasPayload.m */; };
@@ -220,7 +220,6 @@
 		B350DA3DF951BFDFC56331C90C01E200 /* FIRInstanceIDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E422B13871B60258EE8B1AB428F6D6 /* FIRInstanceIDConstants.m */; };
 		B4301151A816A48953878DE37D7529EC /* FIRInstanceIDTokenOperation+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 78343FD0064BAD537CF4D182AF55C7AE /* FIRInstanceIDTokenOperation+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B52C9CADF1CF4001A0BBADD6E5079DC2 /* UIViewController+SEGScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 649547A35B2BF69BD43921EDA2E310A7 /* UIViewController+SEGScreen.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B5735973E6E49870DD5AA28118B0173A /* Pods-formiktestTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A746354502F46AD844D4E1543AED6 /* Pods-formiktestTests-dummy.m */; };
 		B5A25EBEFDA27A38586B061AD4076487 /* FIRLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FA2EB719DE95C5F06850C92783AD290 /* FIRLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B5D700A4123C98533314F59A7FCF4FD6 /* SEGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 899A2AF6FF424249E4C76DB757E60FE6 /* SEGReachability.m */; };
 		B7CD0FD62D719CD32708E99D49F6E99E /* GULNetworkLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A7B397FAFFDDAB343CAE7A26B5C3E12 /* GULNetworkLoggerProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -256,7 +255,7 @@
 		E98BA996F28CEA9576FFA3BB63F0BD5F /* pb_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 77C386C26519DF22097E122B66938740 /* pb_common.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc -fno-objc-arc"; }; };
 		EC551076E1D0A91623D7D854592E4E2C /* SEGIntegrationsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E080BBE88DACBCFF5FDA7A227DB72448 /* SEGIntegrationsManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EE89F5F7C22EB4900A0B00A537C2F6D0 /* SEGCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 1915AEFCA5CD12AA8157E1DF46A42BF7 /* SEGCrypto.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EF30C63D62E87D4EE93750BD3079AD84 /* Pods-formiktest-tvOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 085F413A6F882631946ADF3E0D1DB5A1 /* Pods-formiktest-tvOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF30C63D62E87D4EE93750BD3079AD84 /* Pods-formiktest-tvOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D40FA66B4C4B22F253F10C24E63CA8A /* Pods-formiktest-tvOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3D627DC15CA09424071F3BC53A106D0 /* FIRInstanceIDKeyPairUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AE07624D5684CA57E1EF82A684EFD877 /* FIRInstanceIDKeyPairUtilities.m */; };
 		F44F925458B278A1A1AF49946D4B42A5 /* FIRLoggerLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A87D9B731A482F6C8DF8591E5A5C9C3 /* FIRLoggerLevel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F4FA257FDF50C746D0BB2BD9B643A41D /* GULAppEnvironmentUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AE69C09974C0CB5FE16D724604E9C29 /* GULAppEnvironmentUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -285,13 +284,6 @@
 			remoteGlobalIDString = 4402AFF83DBDC4DD07E198685FDC2DF2;
 			remoteInfo = FirebaseCore;
 		};
-		15F2A496E04878FF0B7754A135EEF0DB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8F50A15C556FFEAD343B69C7EA54092F;
-			remoteInfo = Analytics;
-		};
 		1996C5F8EC14085B56CC00E749B92EC2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -312,13 +304,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
 			remoteInfo = GoogleUtilities;
-		};
-		30048EF5C83614B67DDF86F14F8251F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 072CEA044D2EF26F03496D5996BBF59F;
-			remoteInfo = Firebase;
 		};
 		35E161E94CDD13FD326F1F340754DBA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -376,13 +361,6 @@
 			remoteGlobalIDString = 5494C8AABC075FDBAD127577EAB99BCE;
 			remoteInfo = "Segment-Firebase";
 		};
-		60DFBFCE91EEBDD81F02AB0FB4A6E22F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
-			remoteInfo = nanopb;
-		};
 		7AEA5761B26CAEF1A0C0E82599059DA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -390,26 +368,12 @@
 			remoteGlobalIDString = C49E7A4D59E5C8BE8DE9FB1EFB150185;
 			remoteInfo = FirebaseAnalytics;
 		};
-		83D732A792508F890693255BCB009BB3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4402AFF83DBDC4DD07E198685FDC2DF2;
-			remoteInfo = FirebaseCore;
-		};
 		8DC4E9C8091BCB0A5589BA87F242C0AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 072CEA044D2EF26F03496D5996BBF59F;
 			remoteInfo = Firebase;
-		};
-		910A23BC72D6A5A7E548BE7318DD4E8F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDD5C1F83CD3BFD14CA423E44C19DE16;
-			remoteInfo = "Pods-formiktest";
 		};
 		9851470B5462CF54B202F4045A3CCCF3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -425,26 +389,12 @@
 			remoteGlobalIDString = C4062493E1D20306F1EA4108871D1ED7;
 			remoteInfo = TwilioVideo;
 		};
-		9EB2B5AC2601A30387BE434AA5C84719 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C49E7A4D59E5C8BE8DE9FB1EFB150185;
-			remoteInfo = FirebaseAnalytics;
-		};
 		A0B494695318E04B51D8FD9BEBC61D96 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B53D977A951AFC38B21751B706C1DF83;
 			remoteInfo = GoogleAppMeasurement;
-		};
-		B66DE7DA0FEE94CC3CA4ED37551EF8B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 73614281932881D538B76C26B92E0193;
-			remoteInfo = TwilioVoice;
 		};
 		BBDC7C661CA5567D3925BC0747CAAEC5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -481,27 +431,6 @@
 			remoteGlobalIDString = 8F50A15C556FFEAD343B69C7EA54092F;
 			remoteInfo = Analytics;
 		};
-		CD4EAD5C9B4FE587120A35946A5A3FC5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5494C8AABC075FDBAD127577EAB99BCE;
-			remoteInfo = "Segment-Firebase";
-		};
-		CE75D912AAA0E1742379403B6809E170 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9E25537BF40D1A3B30CF43FD3E6ACD94;
-			remoteInfo = FirebaseInstanceID;
-		};
-		D1944050DAE242EC773B7D9D7287E7EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
-			remoteInfo = GoogleUtilities;
-		};
 		DD085A8D9C99547F9117C90D3141D951 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -516,20 +445,6 @@
 			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
 			remoteInfo = nanopb;
 		};
-		EF62D69E5DCB6F85667343DC777027EC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B53D977A951AFC38B21751B706C1DF83;
-			remoteInfo = GoogleAppMeasurement;
-		};
-		F2F7CE96E0B824BD26A048E39DE0B9E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C4062493E1D20306F1EA4108871D1ED7;
-			remoteInfo = TwilioVideo;
-		};
 		F6A14184DE3C02C257A7298719E4FD9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -540,25 +455,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01F7DF04F95430054A8769098AA15DAC /* Pods-formiktest-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		02685535A3FB194B6DE6865ECDC5F1B1 /* FIRInstanceIDTokenOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDTokenOperation.m; path = Firebase/InstanceID/FIRInstanceIDTokenOperation.m; sourceTree = "<group>"; };
 		0381E17B75514EC91852EC0F93A23F5B /* GULNetworkConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkConstants.h; path = GoogleUtilities/Network/Private/GULNetworkConstants.h; sourceTree = "<group>"; };
 		03DC8AA163F6573B478BE6084514B546 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = CoreOnly/Sources/Firebase.h; sourceTree = "<group>"; };
 		03FC2BFE607831B4C89EFE6080EA19AD /* SEGFirebaseIntegrationFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGFirebaseIntegrationFactory.h; path = "Segment-Firebase/Classes/SEGFirebaseIntegrationFactory.h"; sourceTree = "<group>"; };
 		06FC5C9CF96D60C50FCD47D339C91951 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libnanopb.a; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0743B34F1F8BC480E7758F102CF2ED82 /* FIRErrorCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRErrorCode.h; path = Firebase/Core/Private/FIRErrorCode.h; sourceTree = "<group>"; };
-		085F413A6F882631946ADF3E0D1DB5A1 /* Pods-formiktest-tvOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-formiktest-tvOSTests-umbrella.h"; sourceTree = "<group>"; };
 		09C91AEDF687D609CF00B0EC2134C7FB /* FIRVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRVersion.m; path = Firebase/Core/FIRVersion.m; sourceTree = "<group>"; };
 		0AA58CC2C015C9F13A89FD738B1685BA /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
-		0BA03D618CF17EB3AF9148A311FEFA44 /* Pods-formiktest-tvOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-formiktest-tvOSTests.modulemap"; sourceTree = "<group>"; };
-		0BCD0F0DE8C16F1069D85C780478818A /* Pods-formiktest-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-formiktest-tvOS.modulemap"; sourceTree = "<group>"; };
 		0C58580E670D9B2365EBB729C8B3166C /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
 		0D8043054D41F988753ADBE376E79B05 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Frameworks/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
 		12E0FB940CF2A40CFC241FD2E6312714 /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
+		14866D0051A69615BC8E874748AA5D9A /* Pods-formiktest-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-formiktest-tvOSTests-dummy.m"; sourceTree = "<group>"; };
 		15734431D7C1E7FEEA62480120BFC98A /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
 		16D76130B21B8A8BE8494B44976BDE12 /* SEGScreenPayload.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGScreenPayload.m; path = Analytics/Classes/Integrations/SEGScreenPayload.m; sourceTree = "<group>"; };
 		1915AEFCA5CD12AA8157E1DF46A42BF7 /* SEGCrypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGCrypto.h; path = Analytics/Classes/Crypto/SEGCrypto.h; sourceTree = "<group>"; };
-		1930F619A9C887281F8444A6B4BA2A5E /* Pods-formiktest-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		19922182F324D2108F187EB0B3E74792 /* FIRApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRApp.m; path = Firebase/Core/FIRApp.m; sourceTree = "<group>"; };
 		19D047FB2D5A37ACF6BA0315BA68EB51 /* SEGUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGUtils.h; path = Analytics/Classes/Internal/SEGUtils.h; sourceTree = "<group>"; };
 		1A0ABEA8C8F7B51346BD0DE3608136E6 /* FIRInstanceIDTokenManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDTokenManager.m; path = Firebase/InstanceID/FIRInstanceIDTokenManager.m; sourceTree = "<group>"; };
@@ -567,16 +478,15 @@
 		1B4CA6D7B2D3B262B52BFA73BB70AEDD /* FIRInstanceIDAuthService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDAuthService.h; path = Firebase/InstanceID/FIRInstanceIDAuthService.h; sourceTree = "<group>"; };
 		1DD702C758F60B033FFBBA4BF184053D /* FIRInstanceIDTokenFetchOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDTokenFetchOperation.m; path = Firebase/InstanceID/FIRInstanceIDTokenFetchOperation.m; sourceTree = "<group>"; };
 		1EB5CECADCE7B98ADAF2A0A722A605FD /* SEGScreenPayload.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGScreenPayload.h; path = Analytics/Classes/Integrations/SEGScreenPayload.h; sourceTree = "<group>"; };
-		205578F105421B4484C1F5CC507D28E5 /* Pods-formiktest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-formiktest-dummy.m"; sourceTree = "<group>"; };
 		21833DC9D01F46497C02C45F13B9C4B3 /* SEGTrackPayload.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGTrackPayload.m; path = Analytics/Classes/Integrations/SEGTrackPayload.m; sourceTree = "<group>"; };
 		2309413ACEB8A7128530FBA0DFD6F0E3 /* SEGFirebaseIntegrationFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGFirebaseIntegrationFactory.m; path = "Segment-Firebase/Classes/SEGFirebaseIntegrationFactory.m"; sourceTree = "<group>"; };
-		23977C7C68D58CDCE7E2A00CD160D906 /* Pods-formiktestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktestTests.release.xcconfig"; sourceTree = "<group>"; };
 		23F8113FC6FE3588092FA55530013631 /* FIRInstanceIDAuthKeyChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDAuthKeyChain.m; path = Firebase/InstanceID/FIRInstanceIDAuthKeyChain.m; sourceTree = "<group>"; };
 		24353DF9ABB26A9307E5FFF80A2E620A /* SEGSegmentIntegration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGSegmentIntegration.m; path = Analytics/Classes/Internal/SEGSegmentIntegration.m; sourceTree = "<group>"; };
 		27B5C62A10D71B853020322BFD233FEB /* SEGUserDefaultsStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGUserDefaultsStorage.h; path = Analytics/Classes/Internal/SEGUserDefaultsStorage.h; sourceTree = "<group>"; };
 		27F4DA4438787C2936CC635DF82F5C85 /* FIRInstanceIDCombinedHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDCombinedHandler.h; path = Firebase/InstanceID/FIRInstanceIDCombinedHandler.h; sourceTree = "<group>"; };
 		28A0D56143ACB57B7A8E3F488FCF5C77 /* SEGPayload.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGPayload.h; path = Analytics/Classes/Integrations/SEGPayload.h; sourceTree = "<group>"; };
 		2A7B397FAFFDDAB343CAE7A26B5C3E12 /* GULNetworkLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkLoggerProtocol.h; path = GoogleUtilities/Network/Private/GULNetworkLoggerProtocol.h; sourceTree = "<group>"; };
+		2B008846B44CBDA28E5585E94B105C56 /* Pods-formiktest-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C8C47A82DC1DD7D912D3860AC465675 /* GULReachabilityChecker+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULReachabilityChecker+Internal.h"; path = "GoogleUtilities/Reachability/GULReachabilityChecker+Internal.h"; sourceTree = "<group>"; };
 		2CE4B6165F426953A26419DF02AF0D93 /* libAnalytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAnalytics.a; path = libAnalytics.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA0D814DFCB860D31D7BCD63D795858 /* libFirebaseInstanceID.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFirebaseInstanceID.a; path = libFirebaseInstanceID.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -596,14 +506,12 @@
 		38593A73D15D5EA2AE57BC5FA46C7DBB /* TwilioVideo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TwilioVideo.xcconfig; sourceTree = "<group>"; };
 		38F85BF89DEFBC0D0BE87BD4591C6DBB /* NSError+FIRInstanceID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+FIRInstanceID.m"; path = "Firebase/InstanceID/NSError+FIRInstanceID.m"; sourceTree = "<group>"; };
 		38FDBB4A41C3DFD50A2F90C4484E50C5 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
-		390140E739FE0385E1DAC6847ACBF366 /* Pods-formiktest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1D5F43EE1B603BC1DC13720A23DDC6 /* Analytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Analytics.xcconfig; sourceTree = "<group>"; };
 		3B48399E52D445FB7676BC5D54758A6F /* libPods-formiktest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-formiktest.a"; path = "libPods-formiktest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C934AB6D39AA623CDA81D34258431C9 /* Pods-formiktest-tvOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOSTests-Info.plist"; sourceTree = "<group>"; };
 		3F9707594901DD2A8B4C66ED5A696D0C /* GULNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetwork.h; path = GoogleUtilities/Network/Private/GULNetwork.h; sourceTree = "<group>"; };
 		3FB14AE2AAC3F25B32DC73585D78DA0F /* SEGAnalyticsUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGAnalyticsUtils.m; path = Analytics/Classes/Internal/SEGAnalyticsUtils.m; sourceTree = "<group>"; };
-		4052AE720EB23E396CE137DC904084D4 /* Pods-formiktest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest.release.xcconfig"; sourceTree = "<group>"; };
 		42D6BD00E5FBAA53CB69694A518D5400 /* FIRInstanceIDStringEncoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDStringEncoding.m; path = Firebase/InstanceID/FIRInstanceIDStringEncoding.m; sourceTree = "<group>"; };
+		43046100C616E076EF2C3C24D7ECF08E /* Pods-formiktest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-formiktest-dummy.m"; sourceTree = "<group>"; };
 		431F40E1ABDA9DBCA07067A995B7CEBA /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FIRAnalyticsConnector.framework; path = Frameworks/FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
 		43C10F8D392AF7D2A814C47B8790AC5A /* SEGFirebaseIntegration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGFirebaseIntegration.m; path = "Segment-Firebase/Classes/SEGFirebaseIntegration.m"; sourceTree = "<group>"; };
 		440DA40131F65B97AC405C7EC9F8C739 /* FIRAppAssociationRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppAssociationRegistration.h; path = Firebase/Core/Private/FIRAppAssociationRegistration.h; sourceTree = "<group>"; };
@@ -612,6 +520,7 @@
 		4591C47EE432082960E27C521EDB4432 /* SEGFileStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGFileStorage.m; path = Analytics/Classes/Internal/SEGFileStorage.m; sourceTree = "<group>"; };
 		45CBC009721764BA6D61266C370D16F8 /* FIRInstanceIDCheckinStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDCheckinStore.h; path = Firebase/InstanceID/FIRInstanceIDCheckinStore.h; sourceTree = "<group>"; };
 		4610CED1AE15157EB81F9518C22E7FA6 /* FIRInstanceIDKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDKeychain.h; path = Firebase/InstanceID/FIRInstanceIDKeychain.h; sourceTree = "<group>"; };
+		4A033F952BDDE6E6DB8354D7F299490B /* Pods-formiktest-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F34C6C4F336A4B8C450742DD8CC44CD /* FIRInstanceIDTokenInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDTokenInfo.h; path = Firebase/InstanceID/FIRInstanceIDTokenInfo.h; sourceTree = "<group>"; };
 		4FEB3EEA5EBC98B60DE530C91F0E28BC /* FIRInstanceIDCheckinPreferences+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRInstanceIDCheckinPreferences+Internal.h"; path = "Firebase/InstanceID/FIRInstanceIDCheckinPreferences+Internal.h"; sourceTree = "<group>"; };
 		509F0C6A6BBB93D4E208A25763ECAE44 /* SEGIdentifyPayload.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGIdentifyPayload.m; path = Analytics/Classes/Integrations/SEGIdentifyPayload.m; sourceTree = "<group>"; };
@@ -619,65 +528,61 @@
 		54F7246E5DBF87E7A00A4B201C5B8E1A /* SEGFirebaseIntegration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGFirebaseIntegration.h; path = "Segment-Firebase/Classes/SEGFirebaseIntegration.h"; sourceTree = "<group>"; };
 		57A7E41C4580DA4A3561ABB49FB68882 /* FIRDependency.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDependency.h; path = Firebase/Core/Private/FIRDependency.h; sourceTree = "<group>"; };
 		587ACB9C2CC0A53EA247E7545462A11B /* FIRInstanceIDStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDStore.h; path = Firebase/InstanceID/FIRInstanceIDStore.h; sourceTree = "<group>"; };
-		5A39B13250A2F7878E6A4A88C6FC4A16 /* Pods-formiktest-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		5A54C48A53CB5082964CDB1914086A01 /* Pods-formiktest-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5B23EFC440372B9B5A06A9DC5A777AE0 /* FirebaseCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseCore.h; path = Firebase/Core/Public/FirebaseCore.h; sourceTree = "<group>"; };
 		5BA1C1102F0E6E08A4C687896CB371F3 /* SEGIdentifyPayload.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGIdentifyPayload.h; path = Analytics/Classes/Integrations/SEGIdentifyPayload.h; sourceTree = "<group>"; };
 		5C176C5832248F7EC25510C0BCE9F2D4 /* FIRInstanceIDLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDLogger.m; path = Firebase/InstanceID/FIRInstanceIDLogger.m; sourceTree = "<group>"; };
 		5EAEFDD73072830863F0D63AF3FC4ACB /* FIRInstanceIDCheckinPreferences.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDCheckinPreferences.h; path = Firebase/InstanceID/FIRInstanceIDCheckinPreferences.h; sourceTree = "<group>"; };
+		5F1A743542F1FF3CB2E9814697FBC68C /* Pods-formiktest-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-formiktest-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		61045B058B25159428F32A57F4AFACEB /* Pods-formiktest-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		62AB15A1D5FD79BA952CB8EC94EBEF4E /* SEGContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGContext.m; path = Analytics/Classes/Middlewares/SEGContext.m; sourceTree = "<group>"; };
+		62D3FA4CFDF486E268F37CC7930948EC /* Pods-formiktest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-acknowledgements.plist"; sourceTree = "<group>"; };
 		62D40A5570353040105B936F65DDE8B0 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Firebase/InstanceID/Public/FIRInstanceID.h; sourceTree = "<group>"; };
 		649547A35B2BF69BD43921EDA2E310A7 /* UIViewController+SEGScreen.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+SEGScreen.h"; path = "Analytics/Classes/Internal/UIViewController+SEGScreen.h"; sourceTree = "<group>"; };
 		65087AA2B3C80D623882F352958382C7 /* FIRInstanceIDAPNSInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDAPNSInfo.m; path = Firebase/InstanceID/FIRInstanceIDAPNSInfo.m; sourceTree = "<group>"; };
 		656B29717E0CB1F2AAB9759EAC4EC418 /* TwilioVoice.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TwilioVoice.xcconfig; sourceTree = "<group>"; };
 		65A8E1B864F4A14C03C943B1A5CFCCFF /* FIRInstanceIDDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDDefines.h; path = Firebase/InstanceID/FIRInstanceIDDefines.h; sourceTree = "<group>"; };
 		664FF7BA5C8A6F8E1BC81448A1B0F5F5 /* GULMutableDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULMutableDictionary.h; path = GoogleUtilities/Network/Private/GULMutableDictionary.h; sourceTree = "<group>"; };
-		670A746354502F46AD844D4E1543AED6 /* Pods-formiktestTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-formiktestTests-dummy.m"; sourceTree = "<group>"; };
 		672DA7394D9B270F3E3875E6DCDDF991 /* FIRErrors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRErrors.m; path = Firebase/Core/FIRErrors.m; sourceTree = "<group>"; };
 		68755B4F2506455091EC639A380EF999 /* FIRInstanceIDURLQueryItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDURLQueryItem.m; path = Firebase/InstanceID/FIRInstanceIDURLQueryItem.m; sourceTree = "<group>"; };
 		68EE43FA3C157958139633E41B4E494A /* SEGHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGHTTPClient.h; path = Analytics/Classes/Internal/SEGHTTPClient.h; sourceTree = "<group>"; };
 		6936B469EAC811F55FF07D547F9489E4 /* Segment-Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Segment-Firebase-prefix.pch"; sourceTree = "<group>"; };
 		6AA5CA6868DEB4C17C0931994E8B9369 /* FIRComponentContainerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentContainerInternal.h; path = Firebase/Core/Private/FIRComponentContainerInternal.h; sourceTree = "<group>"; };
-		6AACCC1D6256E3BD3E7F63D2B4792C62 /* Pods-formiktest-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-formiktest-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6AD39E8383AF3FF52B95A4E1399344B4 /* SEGGroupPayload.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGGroupPayload.h; path = Analytics/Classes/Integrations/SEGGroupPayload.h; sourceTree = "<group>"; };
+		6AFE7F0F505A712292C23CCCEFEA106F /* Pods-formiktest-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		6B4EC04E2AEC7E96CC217E14E7851046 /* FIRComponentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRComponentType.m; path = Firebase/Core/FIRComponentType.m; sourceTree = "<group>"; };
-		6CBAA913EDE95623B5864342F125AA64 /* libPods-formiktestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-formiktestTests.a"; path = "libPods-formiktestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F5A65C3D19EF60396D58B847A104F08 /* FIRLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLibrary.h; path = Firebase/Core/Private/FIRLibrary.h; sourceTree = "<group>"; };
+		70A4D123152FB3FE0A5DD1E77E8F4ACD /* Pods-formiktest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-formiktest-frameworks.sh"; sourceTree = "<group>"; };
 		713FDD9012713DC06043B97D236E1F4D /* FirebaseInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseInstanceID.h; path = Firebase/InstanceID/Public/FirebaseInstanceID.h; sourceTree = "<group>"; };
 		72D10F753E9F47FE654BE5546F86AD02 /* FIRIMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRIMessageCode.h; path = Firebase/InstanceID/FIRIMessageCode.h; sourceTree = "<group>"; };
 		730F05133F30580EE60BB630B5D49E5C /* SEGAnalyticsUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGAnalyticsUtils.h; path = Analytics/Classes/Internal/SEGAnalyticsUtils.h; sourceTree = "<group>"; };
 		73548041B94AE8976CDF9A24092DCCF5 /* FirebaseInstanceID.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseInstanceID.xcconfig; sourceTree = "<group>"; };
+		73FFA4934907E9BFC559FC1305354307 /* Pods-formiktest-tvOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-formiktest-tvOSTests.modulemap"; sourceTree = "<group>"; };
 		763BF43C10CFBF6DD650296691BDFCBA /* Pods_formiktest_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_formiktest_tvOS.framework; path = "Pods-formiktest-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C386C26519DF22097E122B66938740 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
 		77C4575EB5E4F7376A441F4C028CD68F /* FIRInstanceIDKeyPairStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDKeyPairStore.m; path = Firebase/InstanceID/FIRInstanceIDKeyPairStore.m; sourceTree = "<group>"; };
 		78343FD0064BAD537CF4D182AF55C7AE /* FIRInstanceIDTokenOperation+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRInstanceIDTokenOperation+Private.h"; path = "Firebase/InstanceID/FIRInstanceIDTokenOperation+Private.h"; sourceTree = "<group>"; };
 		7A87D9B731A482F6C8DF8591E5A5C9C3 /* FIRLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLoggerLevel.h; path = Firebase/Core/Public/FIRLoggerLevel.h; sourceTree = "<group>"; };
-		7B762D9FC41F4B851A143ABF5FAB3795 /* Pods-formiktestTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-formiktestTests-frameworks.sh"; sourceTree = "<group>"; };
 		7F6609994B26424F186FA440D27325E1 /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
 		808F7AD7BF2C07BBFE07FB9B797575F0 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		8143A63A7605FCCE182B0B916B4ED614 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		818A397F7700BA6CC29A96F58A55505B /* Pods-formiktest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-formiktest-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8332339E1E67659828468005093E05F2 /* FIRAppInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppInternal.h; path = Firebase/Core/Private/FIRAppInternal.h; sourceTree = "<group>"; };
 		83A0392BBB727438166171645CD519CE /* FIRInstanceIDStringEncoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDStringEncoding.h; path = Firebase/InstanceID/FIRInstanceIDStringEncoding.h; sourceTree = "<group>"; };
 		8569EFB00B5BFC04B9F7988A3DA14D73 /* GULNetworkURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkURLSession.m; path = GoogleUtilities/Network/GULNetworkURLSession.m; sourceTree = "<group>"; };
 		85DCE33EF6A24BBEA91DB148C6B2A732 /* GULAppEnvironmentUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppEnvironmentUtil.m; path = GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.m; sourceTree = "<group>"; };
-		88A97431AB5CA16154FE643D0C3D85BF /* Pods-formiktest-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-formiktest-tvOS-dummy.m"; sourceTree = "<group>"; };
+		88BAB5B30D810C7F78D08DABDBA1C192 /* Pods-formiktest-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-formiktest-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		899A2AF6FF424249E4C76DB757E60FE6 /* SEGReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGReachability.m; path = Analytics/Vendor/SEGReachability.m; sourceTree = "<group>"; };
 		89C88FDEC6883E18F90B36C6C1D9F724 /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
 		89F83061E65AE2B8C78FB5961EECB302 /* SEGAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGAnalytics.h; path = Analytics/Classes/SEGAnalytics.h; sourceTree = "<group>"; };
-		8A6213E2B36E1F97FA4F026F74D814C4 /* Pods-formiktestTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktestTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8A62319931A35380FA949259A506201F /* Pods-formiktestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AF0A0A4280D1B0A4AEDADC70FCAB93B /* FIRConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRConfiguration.h; path = Firebase/Core/Public/FIRConfiguration.h; sourceTree = "<group>"; };
 		8C0B9454599C268F5A9F98AA62D832DC /* FIRInstanceIDCombinedHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDCombinedHandler.m; path = Firebase/InstanceID/FIRInstanceIDCombinedHandler.m; sourceTree = "<group>"; };
+		8D40FA66B4C4B22F253F10C24E63CA8A /* Pods-formiktest-tvOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-formiktest-tvOSTests-umbrella.h"; sourceTree = "<group>"; };
 		9099AA0D5BC8BEE9A16CF412C165ED17 /* NSError+FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+FIRInstanceID.h"; path = "Firebase/InstanceID/NSError+FIRInstanceID.h"; sourceTree = "<group>"; };
-		9182B6655B980C688CD94C6BACFA23D5 /* Pods-formiktest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-formiktest-frameworks.sh"; sourceTree = "<group>"; };
 		91F010E4852FA618DFCE6C0335A8AD3D /* FirebaseAnalytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseAnalytics.xcconfig; sourceTree = "<group>"; };
 		9211CD4306507F026988685A8D38104D /* FIRInstanceIDAuthKeyChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDAuthKeyChain.h; path = Firebase/InstanceID/FIRInstanceIDAuthKeyChain.h; sourceTree = "<group>"; };
 		935A89E3085257F67FE95C985A3A65A8 /* FIRComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponent.h; path = Firebase/Core/Private/FIRComponent.h; sourceTree = "<group>"; };
 		94286891875405838102190B59B79D96 /* NSData+SEGGZIP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+SEGGZIP.m"; path = "Analytics/Classes/Internal/NSData+SEGGZIP.m"; sourceTree = "<group>"; };
 		948462DBC1AFA0C1CC358C209543076F /* SEGFileStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGFileStorage.h; path = Analytics/Classes/Internal/SEGFileStorage.h; sourceTree = "<group>"; };
 		95986E4688BE2CE9F0DE875D67FDCC34 /* GULSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULSwizzler.m; path = GoogleUtilities/MethodSwizzler/GULSwizzler.m; sourceTree = "<group>"; };
-		969DA0E2D185536EE4E9DDF1E958AF74 /* Pods-formiktest-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		97CF5CC95282D256020E5E58428D990F /* FIRInstanceIDCheckinPreferences.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDCheckinPreferences.m; path = Firebase/InstanceID/FIRInstanceIDCheckinPreferences.m; sourceTree = "<group>"; };
 		97FC613CF9F1D3F7193C8EDA73C09665 /* FIRBundleUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRBundleUtil.m; path = Firebase/Core/FIRBundleUtil.m; sourceTree = "<group>"; };
 		9978B63019877CEF0787E163D1AF54AE /* SEGIntegration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGIntegration.h; path = Analytics/Classes/Integrations/SEGIntegration.h; sourceTree = "<group>"; };
@@ -689,7 +594,9 @@
 		9CFD30D9BBFDAFEC139A29B06B97524F /* FIRInstanceIDVersionUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDVersionUtilities.m; path = Firebase/InstanceID/FIRInstanceIDVersionUtilities.m; sourceTree = "<group>"; };
 		9D0ACB1A2DA82F3E8E56F4B4B4AE60EE /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
 		9D34B133DF8049DDDD52BDD0697E5715 /* SEGStoreKitTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGStoreKitTracker.h; path = Analytics/Classes/Internal/SEGStoreKitTracker.h; sourceTree = "<group>"; };
+		9D645EDF5CCF08438C7923A348B024A7 /* Pods-formiktest-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-formiktest-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DA411FDE14BF13174FE84E6C1F18F4E /* Pods-formiktest-tvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOS-Info.plist"; sourceTree = "<group>"; };
 		9F784F976270689DEE08249C3F07CDB0 /* FIRLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRLogger.m; path = Firebase/Core/FIRLogger.m; sourceTree = "<group>"; };
 		9FD4518EBB6C12F382FE0EB15928EC95 /* FIRComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRComponent.m; path = Firebase/Core/FIRComponent.m; sourceTree = "<group>"; };
 		A11805BFA3BF3F8D9AAF243220E329A0 /* SEGSegmentIntegrationFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGSegmentIntegrationFactory.m; path = Analytics/Classes/Internal/SEGSegmentIntegrationFactory.m; sourceTree = "<group>"; };
@@ -697,16 +604,15 @@
 		A1E422B13871B60258EE8B1AB428F6D6 /* FIRInstanceIDConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDConstants.m; path = Firebase/InstanceID/FIRInstanceIDConstants.m; sourceTree = "<group>"; };
 		A34C172A28DCC10F9DB7159FD953664B /* GULAppDelegateSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler.h; path = GoogleUtilities/AppDelegateSwizzler/Private/GULAppDelegateSwizzler.h; sourceTree = "<group>"; };
 		A3B2B97751BE56281C0CFA55C1232CBD /* FIROptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROptions.h; path = Firebase/Core/Public/FIROptions.h; sourceTree = "<group>"; };
-		A46E6D8341F8BB94238888E19BA95B6A /* Pods-formiktest-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-formiktest-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		A4E99818333DED797ADBF10157A5A12E /* FIRInstanceIDTokenDeleteOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDTokenDeleteOperation.m; path = Firebase/InstanceID/FIRInstanceIDTokenDeleteOperation.m; sourceTree = "<group>"; };
 		A4FC841AC1DD6E0EF23C5CFAEFECDA4E /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = Firebase/Core/Public/FIRApp.h; sourceTree = "<group>"; };
 		A504035495F70CB714423CB1C275FE95 /* FIRInstanceIDStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDStore.m; path = Firebase/InstanceID/FIRInstanceIDStore.m; sourceTree = "<group>"; };
 		A59D1B192AC7ABE5696C15378546B8FB /* SEGIntegrationsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGIntegrationsManager.m; path = Analytics/Classes/Integrations/SEGIntegrationsManager.m; sourceTree = "<group>"; };
 		A5B448052B33F34BCED4517234B15C19 /* FIRInstanceIDCheckinStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDCheckinStore.m; path = Firebase/InstanceID/FIRInstanceIDCheckinStore.m; sourceTree = "<group>"; };
 		A78E8B9CA46C2A623446CD39E1B54BDD /* SEGUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGUtils.m; path = Analytics/Classes/Internal/SEGUtils.m; sourceTree = "<group>"; };
-		A8050BB1C3D42ACAC7D0B091EDE481A5 /* Pods-formiktest-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-formiktest-tvOSTests-dummy.m"; sourceTree = "<group>"; };
 		A834C79DAA6F2FCC4F4D84CE0D9489E9 /* FIRInstanceIDCheckinService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDCheckinService.m; path = Firebase/InstanceID/FIRInstanceIDCheckinService.m; sourceTree = "<group>"; };
 		AA29DE8B60E141C8525E40989726463E /* SEGMiddleware.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGMiddleware.m; path = Analytics/Classes/Middlewares/SEGMiddleware.m; sourceTree = "<group>"; };
+		AA559620386D9237102C2C17F4828B26 /* Pods-formiktest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest.debug.xcconfig"; sourceTree = "<group>"; };
 		ACC0970E4D0D1DCA25FA911EFEF3D120 /* FIRInstanceIDCheckinPreferences_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDCheckinPreferences_Private.h; path = Firebase/InstanceID/FIRInstanceIDCheckinPreferences_Private.h; sourceTree = "<group>"; };
 		AD7DAF88A420FEFA2E8973EDE2AABCCF /* FIRComponentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentType.h; path = Firebase/Core/Private/FIRComponentType.h; sourceTree = "<group>"; };
 		AD8F8FA42F038002D30505C8089E4544 /* FIRInstanceIDKeyPair.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDKeyPair.m; path = Firebase/InstanceID/FIRInstanceIDKeyPair.m; sourceTree = "<group>"; };
@@ -717,7 +623,6 @@
 		B3206A387FC35426107763F4275387CD /* SEGReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGReachability.h; path = Analytics/Vendor/SEGReachability.h; sourceTree = "<group>"; };
 		B43874C6CBB50E7134FBEC24BABFE14F /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGoogleUtilities.a; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B2DA57344A4A6C33739D318285D2C5 /* Analytics-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Analytics-dummy.m"; sourceTree = "<group>"; };
-		B6107C593F7D0AAA5706D1360A157B16 /* Pods-formiktestTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-formiktestTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B799A0B3AC42D7F150290BFFFC155CAE /* Pods_formiktest_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_formiktest_tvOSTests.framework; path = "Pods-formiktest-tvOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CF6B8ED1FCE5BDE13532E4420BB1E8 /* FIRComponentContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentContainer.h; path = Firebase/Core/Private/FIRComponentContainer.h; sourceTree = "<group>"; };
 		B98B2694D7C6D5C9056F639B9E0B9095 /* GULLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLogger.h; path = GoogleUtilities/Logger/Private/GULLogger.h; sourceTree = "<group>"; };
@@ -730,11 +635,9 @@
 		C0BB8AC0D3FAD500C8F82A6186658229 /* FIRInstanceIDTokenInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDTokenInfo.m; path = Firebase/InstanceID/FIRInstanceIDTokenInfo.m; sourceTree = "<group>"; };
 		C11390A78C07CD3FCAF992EC22C60461 /* SEGHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGHTTPClient.m; path = Analytics/Classes/Internal/SEGHTTPClient.m; sourceTree = "<group>"; };
 		C2D5064F70469F95F98A94318AC0ED4F /* FIRInstanceIDTokenFetchOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDTokenFetchOperation.h; path = Firebase/InstanceID/FIRInstanceIDTokenFetchOperation.h; sourceTree = "<group>"; };
+		C2F6F6E8764B19132F1133126670FF2F /* Pods-formiktest-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-formiktest-tvOS.modulemap"; sourceTree = "<group>"; };
 		C3177958C6663DB1F9E29B06E1968882 /* FIRInstanceIDTokenStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDTokenStore.m; path = Firebase/InstanceID/FIRInstanceIDTokenStore.m; sourceTree = "<group>"; };
 		C3E00E63E5F308076115C478D4074F00 /* SEGTrackPayload.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGTrackPayload.h; path = Analytics/Classes/Integrations/SEGTrackPayload.h; sourceTree = "<group>"; };
-		C40E99EFF693FAAF127DB06EB9EB10C5 /* Pods-formiktest-tvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOS-Info.plist"; sourceTree = "<group>"; };
-		C40FFB9838D29B29AD0A7E4364C51152 /* Pods-formiktest-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		C7DEDCA4A13D18E2B9E625DF37B8E1CA /* Pods-formiktest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-acknowledgements.plist"; sourceTree = "<group>"; };
 		CA2404424CCEA25C97320E5C9A24997A /* SEGPayload.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGPayload.m; path = Analytics/Classes/Integrations/SEGPayload.m; sourceTree = "<group>"; };
 		CB1C8C709B731D9F3664A628ABF3EF89 /* FIRErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRErrors.h; path = Firebase/Core/Private/FIRErrors.h; sourceTree = "<group>"; };
 		CBE9F35FABC43A0C3BCD20969F39DA5F /* FirebaseCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseCore.xcconfig; sourceTree = "<group>"; };
@@ -746,7 +649,6 @@
 		D117BB56C4AF695FCBE8697C469F3DA6 /* FIRInstanceIDTokenOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDTokenOperation.h; path = Firebase/InstanceID/FIRInstanceIDTokenOperation.h; sourceTree = "<group>"; };
 		D1991322A2FADC2ACF1D93EF750254C9 /* FIRInstanceIDUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDUtilities.m; path = Firebase/InstanceID/FIRInstanceIDUtilities.m; sourceTree = "<group>"; };
 		D1E2F9381DE67585BE407B2B56AF6162 /* Segment-Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Segment-Firebase.xcconfig"; sourceTree = "<group>"; };
-		D2C806E2116F7CA10D966695918803F4 /* Pods-formiktest-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-formiktest-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D31A58B4BB48CC6D921366E23137BD05 /* FIRInstanceIDTokenManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDTokenManager.h; path = Firebase/InstanceID/FIRInstanceIDTokenManager.h; sourceTree = "<group>"; };
 		D367894CC947AB91C3309638965C7C4E /* SEGAliasPayload.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGAliasPayload.m; path = Analytics/Classes/Integrations/SEGAliasPayload.m; sourceTree = "<group>"; };
 		D45235FC2929C03A4671B4E0DB49C75E /* Analytics-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Analytics-prefix.pch"; sourceTree = "<group>"; };
@@ -755,9 +657,12 @@
 		D70A8654BA3FBF489AA14A2157D7E24B /* SEGStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGStorage.h; path = Analytics/Classes/Internal/SEGStorage.h; sourceTree = "<group>"; };
 		D75EE5B6C72469363D3F1CCEBE30A009 /* GULNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetwork.m; path = GoogleUtilities/Network/GULNetwork.m; sourceTree = "<group>"; };
 		D89E7C581EEAFA7E4A1187D2D663C152 /* FIRBundleUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRBundleUtil.h; path = Firebase/Core/Private/FIRBundleUtil.h; sourceTree = "<group>"; };
+		D9AF7B0029B6601BA6C700ED9A63CCE7 /* Pods-formiktest-tvOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-formiktest-tvOSTests-Info.plist"; sourceTree = "<group>"; };
 		D9C757B14E00E8FC08D2FFF9C2D50BA5 /* FIRInstanceIDKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDKeychain.m; path = Firebase/InstanceID/FIRInstanceIDKeychain.m; sourceTree = "<group>"; };
+		DA5DAE90B9D3C3A0791D434758406E32 /* Pods-formiktest-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		DA93AAE6F3D0E8D98DC6F8CF690C2350 /* FIROptionsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROptionsInternal.h; path = Firebase/Core/Private/FIROptionsInternal.h; sourceTree = "<group>"; };
 		DABE47DB126AAB9C8EEE629869B5949D /* GULOriginalIMPConvenienceMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULOriginalIMPConvenienceMacros.h; path = GoogleUtilities/MethodSwizzler/Private/GULOriginalIMPConvenienceMacros.h; sourceTree = "<group>"; };
+		DADC8A738AFA12E6A28FC33C20BE502D /* Pods-formiktest-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-formiktest-tvOS-dummy.m"; sourceTree = "<group>"; };
 		DBA17D2255BB09B12F7F0A94ECE62253 /* FIRDependency.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRDependency.m; path = Firebase/Core/FIRDependency.m; sourceTree = "<group>"; };
 		DD5A17FD49F86AC2708FE43BE59F56C5 /* FIRInstanceIDCheckinPreferences+Internal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FIRInstanceIDCheckinPreferences+Internal.m"; path = "Firebase/InstanceID/FIRInstanceIDCheckinPreferences+Internal.m"; sourceTree = "<group>"; };
 		DDE6CD5F4AC52B20E146B69432C184B2 /* GULUserDefaults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULUserDefaults.h; path = GoogleUtilities/UserDefaults/Private/GULUserDefaults.h; sourceTree = "<group>"; };
@@ -780,6 +685,7 @@
 		E862539EE34A5A4E164281C147BEA9AF /* FIRInstanceIDVersionUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDVersionUtilities.h; path = Firebase/InstanceID/FIRInstanceIDVersionUtilities.h; sourceTree = "<group>"; };
 		E902E20EEE81C00E807150161DB8DD60 /* GULLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULLogger.m; path = GoogleUtilities/Logger/GULLogger.m; sourceTree = "<group>"; };
 		E9F4B89F703B633564EB53A7AAAF5714 /* FIRInstanceIDTokenDeleteOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDTokenDeleteOperation.h; path = Firebase/InstanceID/FIRInstanceIDTokenDeleteOperation.h; sourceTree = "<group>"; };
+		EA77477B8A7231971A307577567E5FD5 /* Pods-formiktest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-formiktest-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EB1FDC266C7C1023451CFDDEC9AD7A46 /* SEGAnalyticsConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEGAnalyticsConfiguration.m; path = Analytics/Classes/SEGAnalyticsConfiguration.m; sourceTree = "<group>"; };
 		EB72121DF1287E7515673023551B3CDE /* GULAppDelegateSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppDelegateSwizzler.m; path = GoogleUtilities/AppDelegateSwizzler/GULAppDelegateSwizzler.m; sourceTree = "<group>"; };
 		ED94243141263D6D6CC4341648D56F48 /* GULNetworkURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkURLSession.h; path = GoogleUtilities/Network/Private/GULNetworkURLSession.h; sourceTree = "<group>"; };
@@ -791,23 +697,18 @@
 		F2AC51F5354A1C662971124481191848 /* GULNetworkConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkConstants.m; path = GoogleUtilities/Network/GULNetworkConstants.m; sourceTree = "<group>"; };
 		F7B2C77C32966B279F598C0E329C8015 /* SEGContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGContext.h; path = Analytics/Classes/Middlewares/SEGContext.h; sourceTree = "<group>"; };
 		F7C4652C696833EC60E180BD75181689 /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
+		F81068D8C0E4AC2D467980E70B13E9A4 /* Pods-formiktest-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F83B9EA7B29D15C590D1A8912EEB2E87 /* FIRInstanceIDConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDConstants.h; path = Firebase/InstanceID/FIRInstanceIDConstants.h; sourceTree = "<group>"; };
 		F8CE2C67FD3AEFD730B139B827167A75 /* GULMutableDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULMutableDictionary.m; path = GoogleUtilities/Network/GULMutableDictionary.m; sourceTree = "<group>"; };
 		F8ED650C32AAB2F4EC20203DF24CAF09 /* libSegment-Firebase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libSegment-Firebase.a"; path = "libSegment-Firebase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9E0A9AED23DF93FB1C7DD9A88C6C47 /* FIRInstanceID+Private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FIRInstanceID+Private.m"; path = "Firebase/InstanceID/FIRInstanceID+Private.m"; sourceTree = "<group>"; };
 		FD1D23F16443BE3FB27C88CDD3C98711 /* FIRComponentContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRComponentContainer.m; path = Firebase/Core/FIRComponentContainer.m; sourceTree = "<group>"; };
+		FE3496DDAD305BD23EF98BDB59247628 /* Pods-formiktest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-formiktest.release.xcconfig"; sourceTree = "<group>"; };
 		FE652D03288EFC146A6D3C84D4E0E1DB /* GULUserDefaults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULUserDefaults.m; path = GoogleUtilities/UserDefaults/GULUserDefaults.m; sourceTree = "<group>"; };
 		FEC42737C87AEC92401423D10385692D /* GoogleUtilities.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUtilities.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		02DAAB562BF3C9F5E0DAAF61BC940FCA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		21073A7CE78F0CD968C4C8357803D12C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -911,17 +812,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		25D9EBE5B0423BC7EF828177F9B46D18 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B35CAAF154AD5313AE2A09CBF0214F6C /* Pods-formiktest */,
-				63A2BEC32B42F1C248542B3D0D88A31F /* Pods-formiktest-tvOS */,
-				5762D8BF8F093B7773E1BEB11B6BA422 /* Pods-formiktest-tvOSTests */,
-				D8AE9F3640F889AEF0D8EEB400488A14 /* Pods-formiktestTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		261BCDDAD00B4CEFCD1593D128FC63B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1023,22 +913,6 @@
 			name = Environment;
 			sourceTree = "<group>";
 		};
-		5762D8BF8F093B7773E1BEB11B6BA422 /* Pods-formiktest-tvOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				0BA03D618CF17EB3AF9148A311FEFA44 /* Pods-formiktest-tvOSTests.modulemap */,
-				6AACCC1D6256E3BD3E7F63D2B4792C62 /* Pods-formiktest-tvOSTests-acknowledgements.markdown */,
-				5A54C48A53CB5082964CDB1914086A01 /* Pods-formiktest-tvOSTests-acknowledgements.plist */,
-				A8050BB1C3D42ACAC7D0B091EDE481A5 /* Pods-formiktest-tvOSTests-dummy.m */,
-				3C934AB6D39AA623CDA81D34258431C9 /* Pods-formiktest-tvOSTests-Info.plist */,
-				085F413A6F882631946ADF3E0D1DB5A1 /* Pods-formiktest-tvOSTests-umbrella.h */,
-				1930F619A9C887281F8444A6B4BA2A5E /* Pods-formiktest-tvOSTests.debug.xcconfig */,
-				5A39B13250A2F7878E6A4A88C6FC4A16 /* Pods-formiktest-tvOSTests.release.xcconfig */,
-			);
-			name = "Pods-formiktest-tvOSTests";
-			path = "Target Support Files/Pods-formiktest-tvOSTests";
-			sourceTree = "<group>";
-		};
 		5F537C39427F944A92E146F69983AE32 /* MethodSwizzler */ = {
 			isa = PBXGroup;
 			children = (
@@ -1047,22 +921,6 @@
 				95986E4688BE2CE9F0DE875D67FDCC34 /* GULSwizzler.m */,
 			);
 			name = MethodSwizzler;
-			sourceTree = "<group>";
-		};
-		63A2BEC32B42F1C248542B3D0D88A31F /* Pods-formiktest-tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				0BCD0F0DE8C16F1069D85C780478818A /* Pods-formiktest-tvOS.modulemap */,
-				D2C806E2116F7CA10D966695918803F4 /* Pods-formiktest-tvOS-acknowledgements.markdown */,
-				C40FFB9838D29B29AD0A7E4364C51152 /* Pods-formiktest-tvOS-acknowledgements.plist */,
-				88A97431AB5CA16154FE643D0C3D85BF /* Pods-formiktest-tvOS-dummy.m */,
-				C40E99EFF693FAAF127DB06EB9EB10C5 /* Pods-formiktest-tvOS-Info.plist */,
-				A46E6D8341F8BB94238888E19BA95B6A /* Pods-formiktest-tvOS-umbrella.h */,
-				969DA0E2D185536EE4E9DDF1E958AF74 /* Pods-formiktest-tvOS.debug.xcconfig */,
-				01F7DF04F95430054A8769098AA15DAC /* Pods-formiktest-tvOS.release.xcconfig */,
-			);
-			name = "Pods-formiktest-tvOS";
-			path = "Target Support Files/Pods-formiktest-tvOS";
 			sourceTree = "<group>";
 		};
 		63E65DCA12D89E461FD390F1306E37C0 /* UserDefaults */ = {
@@ -1083,6 +941,46 @@
 				DF4844E3C09EF6D1887082C9B5DCAC5C /* GULReachabilityMessageCode.h */,
 			);
 			name = Reachability;
+			sourceTree = "<group>";
+		};
+		6543A7742A1B911568BF02719AAB4EB0 /* Pods-formiktest-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				73FFA4934907E9BFC559FC1305354307 /* Pods-formiktest-tvOSTests.modulemap */,
+				5F1A743542F1FF3CB2E9814697FBC68C /* Pods-formiktest-tvOSTests-acknowledgements.markdown */,
+				61045B058B25159428F32A57F4AFACEB /* Pods-formiktest-tvOSTests-acknowledgements.plist */,
+				14866D0051A69615BC8E874748AA5D9A /* Pods-formiktest-tvOSTests-dummy.m */,
+				D9AF7B0029B6601BA6C700ED9A63CCE7 /* Pods-formiktest-tvOSTests-Info.plist */,
+				8D40FA66B4C4B22F253F10C24E63CA8A /* Pods-formiktest-tvOSTests-umbrella.h */,
+				2B008846B44CBDA28E5585E94B105C56 /* Pods-formiktest-tvOSTests.debug.xcconfig */,
+				4A033F952BDDE6E6DB8354D7F299490B /* Pods-formiktest-tvOSTests.release.xcconfig */,
+			);
+			name = "Pods-formiktest-tvOSTests";
+			path = "Target Support Files/Pods-formiktest-tvOSTests";
+			sourceTree = "<group>";
+		};
+		6A399AB646BF0FB1611B90FCEC71308C /* Pods-formiktest */ = {
+			isa = PBXGroup;
+			children = (
+				EA77477B8A7231971A307577567E5FD5 /* Pods-formiktest-acknowledgements.markdown */,
+				62D3FA4CFDF486E268F37CC7930948EC /* Pods-formiktest-acknowledgements.plist */,
+				43046100C616E076EF2C3C24D7ECF08E /* Pods-formiktest-dummy.m */,
+				70A4D123152FB3FE0A5DD1E77E8F4ACD /* Pods-formiktest-frameworks.sh */,
+				AA559620386D9237102C2C17F4828B26 /* Pods-formiktest.debug.xcconfig */,
+				FE3496DDAD305BD23EF98BDB59247628 /* Pods-formiktest.release.xcconfig */,
+			);
+			name = "Pods-formiktest";
+			path = "Target Support Files/Pods-formiktest";
+			sourceTree = "<group>";
+		};
+		6E34DA71FDCD9079B2CBC6B849F33FB4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A399AB646BF0FB1611B90FCEC71308C /* Pods-formiktest */,
+				D77C73DC6D28969CFA413FA8587F8A98 /* Pods-formiktest-tvOS */,
+				6543A7742A1B911568BF02719AAB4EB0 /* Pods-formiktest-tvOSTests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		82DC6E3BB90BB6B10B068E34F122B885 /* Support Files */ = {
@@ -1174,20 +1072,6 @@
 			);
 			name = nanopb;
 			path = nanopb;
-			sourceTree = "<group>";
-		};
-		B35CAAF154AD5313AE2A09CBF0214F6C /* Pods-formiktest */ = {
-			isa = PBXGroup;
-			children = (
-				818A397F7700BA6CC29A96F58A55505B /* Pods-formiktest-acknowledgements.markdown */,
-				C7DEDCA4A13D18E2B9E625DF37B8E1CA /* Pods-formiktest-acknowledgements.plist */,
-				205578F105421B4484C1F5CC507D28E5 /* Pods-formiktest-dummy.m */,
-				9182B6655B980C688CD94C6BACFA23D5 /* Pods-formiktest-frameworks.sh */,
-				390140E739FE0385E1DAC6847ACBF366 /* Pods-formiktest.debug.xcconfig */,
-				4052AE720EB23E396CE137DC904084D4 /* Pods-formiktest.release.xcconfig */,
-			);
-			name = "Pods-formiktest";
-			path = "Target Support Files/Pods-formiktest";
 			sourceTree = "<group>";
 		};
 		B3C36377637D7E86388D3CBEC82DFE71 /* Support Files */ = {
@@ -1354,8 +1238,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1F9FCB3618DC551B524D67B669081319 /* Frameworks */,
 				8FC11326BAFD563FAD97199261FE4D29 /* Pods */,
-				FB09DB8DE7F00205BBA9261B01374E65 /* Products */,
-				25D9EBE5B0423BC7EF828177F9B46D18 /* Targets Support Files */,
+				EFAA9B8B97FCBE662F7E227B9A793F75 /* Products */,
+				6E34DA71FDCD9079B2CBC6B849F33FB4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1384,18 +1268,20 @@
 			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
-		D8AE9F3640F889AEF0D8EEB400488A14 /* Pods-formiktestTests */ = {
+		D77C73DC6D28969CFA413FA8587F8A98 /* Pods-formiktest-tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				B6107C593F7D0AAA5706D1360A157B16 /* Pods-formiktestTests-acknowledgements.markdown */,
-				8A6213E2B36E1F97FA4F026F74D814C4 /* Pods-formiktestTests-acknowledgements.plist */,
-				670A746354502F46AD844D4E1543AED6 /* Pods-formiktestTests-dummy.m */,
-				7B762D9FC41F4B851A143ABF5FAB3795 /* Pods-formiktestTests-frameworks.sh */,
-				8A62319931A35380FA949259A506201F /* Pods-formiktestTests.debug.xcconfig */,
-				23977C7C68D58CDCE7E2A00CD160D906 /* Pods-formiktestTests.release.xcconfig */,
+				C2F6F6E8764B19132F1133126670FF2F /* Pods-formiktest-tvOS.modulemap */,
+				9D645EDF5CCF08438C7923A348B024A7 /* Pods-formiktest-tvOS-acknowledgements.markdown */,
+				6AFE7F0F505A712292C23CCCEFEA106F /* Pods-formiktest-tvOS-acknowledgements.plist */,
+				DADC8A738AFA12E6A28FC33C20BE502D /* Pods-formiktest-tvOS-dummy.m */,
+				9DA411FDE14BF13174FE84E6C1F18F4E /* Pods-formiktest-tvOS-Info.plist */,
+				88BAB5B30D810C7F78D08DABDBA1C192 /* Pods-formiktest-tvOS-umbrella.h */,
+				F81068D8C0E4AC2D467980E70B13E9A4 /* Pods-formiktest-tvOS.debug.xcconfig */,
+				DA5DAE90B9D3C3A0791D434758406E32 /* Pods-formiktest-tvOS.release.xcconfig */,
 			);
-			name = "Pods-formiktestTests";
-			path = "Target Support Files/Pods-formiktestTests";
+			name = "Pods-formiktest-tvOS";
+			path = "Target Support Files/Pods-formiktest-tvOS";
 			sourceTree = "<group>";
 		};
 		E6D942607060B72F86D901B803D5CD41 /* Network */ = {
@@ -1488,17 +1374,7 @@
 			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
-		F8F7A4580E66E0C8AB8EB1B0A6588DDD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CBE9F35FABC43A0C3BCD20969F39DA5F /* FirebaseCore.xcconfig */,
-				CE6F6424B1A73956133A85CD3CD1FF0C /* FirebaseCore-dummy.m */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FirebaseCore";
-			sourceTree = "<group>";
-		};
-		FB09DB8DE7F00205BBA9261B01374E65 /* Products */ = {
+		EFAA9B8B97FCBE662F7E227B9A793F75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				2CE4B6165F426953A26419DF02AF0D93 /* libAnalytics.a */,
@@ -1507,12 +1383,21 @@
 				B43874C6CBB50E7134FBEC24BABFE14F /* libGoogleUtilities.a */,
 				06FC5C9CF96D60C50FCD47D339C91951 /* libnanopb.a */,
 				3B48399E52D445FB7676BC5D54758A6F /* libPods-formiktest.a */,
-				6CBAA913EDE95623B5864342F125AA64 /* libPods-formiktestTests.a */,
 				F8ED650C32AAB2F4EC20203DF24CAF09 /* libSegment-Firebase.a */,
 				763BF43C10CFBF6DD650296691BDFCBA /* Pods_formiktest_tvOS.framework */,
 				B799A0B3AC42D7F150290BFFFC155CAE /* Pods_formiktest_tvOSTests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F8F7A4580E66E0C8AB8EB1B0A6588DDD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBE9F35FABC43A0C3BCD20969F39DA5F /* FirebaseCore.xcconfig */,
+				CE6F6424B1A73956133A85CD3CD1FF0C /* FirebaseCore-dummy.m */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FirebaseCore";
 			sourceTree = "<group>";
 		};
 		FBEC31FF0B80E27C984C3829DF781E06 /* FirebaseAnalytics */ = {
@@ -1662,13 +1547,6 @@
 				FFADBD4680CE8F5C423CB6A1061EBC36 /* SEGUserDefaultsStorage.h in Headers */,
 				E5EEAFCCAD9033D38ABD4CAEF457F206 /* SEGUtils.h in Headers */,
 				B52C9CADF1CF4001A0BBADD6E5079DC2 /* UIViewController+SEGScreen.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9113FBD0F18A1C2CDAE06B8A4E388848 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1865,35 +1743,6 @@
 			productReference = 06FC5C9CF96D60C50FCD47D339C91951 /* libnanopb.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		F127AD11BB5A1B4B9F53882A8A8027AB /* Pods-formiktestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EA404DEE64D8C103C2C9DC910B3714E4 /* Build configuration list for PBXNativeTarget "Pods-formiktestTests" */;
-			buildPhases = (
-				9113FBD0F18A1C2CDAE06B8A4E388848 /* Headers */,
-				7519B247269261983786E9F549B0269E /* Sources */,
-				02DAAB562BF3C9F5E0DAAF61BC940FCA /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				14716040CF1FB0A64D470E42AC124C7D /* PBXTargetDependency */,
-				1A4007D6DF537BDAF6512D13FA2245B0 /* PBXTargetDependency */,
-				21DAA99075F24D253AC600ADEB029BC6 /* PBXTargetDependency */,
-				8FD63D763D5B63ECE1E35D2EB9278E0C /* PBXTargetDependency */,
-				B4DD30B2D4E6E27C7863DE9E560D5AA0 /* PBXTargetDependency */,
-				670C20B9EA4A345178558B8440147DB4 /* PBXTargetDependency */,
-				E238A9541BFE37298B3A4E18220BF900 /* PBXTargetDependency */,
-				6F0210B77806623925C8561F4E04D0FD /* PBXTargetDependency */,
-				3770BA22A9DC6B56F861126A8F54E89E /* PBXTargetDependency */,
-				1E61A909371B672CEA1B67D0EE9B2DF3 /* PBXTargetDependency */,
-				C939AEF441820B074980366E6235B0A4 /* PBXTargetDependency */,
-				176FF1CB7B81ED5B54F1AE4D3E7210AB /* PBXTargetDependency */,
-			);
-			name = "Pods-formiktestTests";
-			productName = "Pods-formiktestTests";
-			productReference = 6CBAA913EDE95623B5864342F125AA64 /* libPods-formiktestTests.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		FDD5C1F83CD3BFD14CA423E44C19DE16 /* Pods-formiktest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45BA70081A2D24EADB110A395F3F6424 /* Build configuration list for PBXNativeTarget "Pods-formiktest" */;
@@ -1939,7 +1788,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = FB09DB8DE7F00205BBA9261B01374E65 /* Products */;
+			productRefGroup = EFAA9B8B97FCBE662F7E227B9A793F75 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1954,7 +1803,6 @@
 				FDD5C1F83CD3BFD14CA423E44C19DE16 /* Pods-formiktest */,
 				4CDB188110A719CBB28C3133DFECCA40 /* Pods-formiktest-tvOS */,
 				0CED1D3B8625C617FC0E4B9064533514 /* Pods-formiktest-tvOSTests */,
-				F127AD11BB5A1B4B9F53882A8A8027AB /* Pods-formiktestTests */,
 				5494C8AABC075FDBAD127577EAB99BCE /* Segment-Firebase */,
 				C4062493E1D20306F1EA4108871D1ED7 /* TwilioVideo */,
 				73614281932881D538B76C26B92E0193 /* TwilioVoice */,
@@ -2085,14 +1933,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7519B247269261983786E9F549B0269E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5735973E6E49870DD5AA28118B0173A /* Pods-formiktestTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9AD4F1AC0AB70E5ABE6AADD2CB0105C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2162,12 +2002,6 @@
 			target = 4402AFF83DBDC4DD07E198685FDC2DF2 /* FirebaseCore */;
 			targetProxy = 0ECB4C54EED84F5258E41AFD4657F11F /* PBXContainerItemProxy */;
 		};
-		14716040CF1FB0A64D470E42AC124C7D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Analytics;
-			target = 8F50A15C556FFEAD343B69C7EA54092F /* Analytics */;
-			targetProxy = 15F2A496E04878FF0B7754A135EEF0DB /* PBXContainerItemProxy */;
-		};
 		166D79A58480304DBDA435AE42F18DD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Firebase;
@@ -2180,41 +2014,11 @@
 			target = 5494C8AABC075FDBAD127577EAB99BCE /* Segment-Firebase */;
 			targetProxy = 5C137EF1A7F4B70CD43E08E238C09F39 /* PBXContainerItemProxy */;
 		};
-		176FF1CB7B81ED5B54F1AE4D3E7210AB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = nanopb;
-			target = D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */;
-			targetProxy = 60DFBFCE91EEBDD81F02AB0FB4A6E22F /* PBXContainerItemProxy */;
-		};
-		1A4007D6DF537BDAF6512D13FA2245B0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Firebase;
-			target = 072CEA044D2EF26F03496D5996BBF59F /* Firebase */;
-			targetProxy = 30048EF5C83614B67DDF86F14F8251F1 /* PBXContainerItemProxy */;
-		};
-		1E61A909371B672CEA1B67D0EE9B2DF3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TwilioVideo;
-			target = C4062493E1D20306F1EA4108871D1ED7 /* TwilioVideo */;
-			targetProxy = F2F7CE96E0B824BD26A048E39DE0B9E5 /* PBXContainerItemProxy */;
-		};
-		21DAA99075F24D253AC600ADEB029BC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FirebaseAnalytics;
-			target = C49E7A4D59E5C8BE8DE9FB1EFB150185 /* FirebaseAnalytics */;
-			targetProxy = 9EB2B5AC2601A30387BE434AA5C84719 /* PBXContainerItemProxy */;
-		};
 		2CCDE436A33C143F208A87A0398B0E06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Analytics;
 			target = 8F50A15C556FFEAD343B69C7EA54092F /* Analytics */;
 			targetProxy = CB4BFB012D14388E5C81F943C1ECD73E /* PBXContainerItemProxy */;
-		};
-		3770BA22A9DC6B56F861126A8F54E89E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Segment-Firebase";
-			target = 5494C8AABC075FDBAD127577EAB99BCE /* Segment-Firebase */;
-			targetProxy = CD4EAD5C9B4FE587120A35946A5A3FC5 /* PBXContainerItemProxy */;
 		};
 		3BDD26DF1C76A2717767412BFEFD633E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2240,18 +2044,6 @@
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
 			targetProxy = 2D6EDD3C6CCCBE88CCCD5A905E2B52A4 /* PBXContainerItemProxy */;
 		};
-		670C20B9EA4A345178558B8440147DB4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleAppMeasurement;
-			target = B53D977A951AFC38B21751B706C1DF83 /* GoogleAppMeasurement */;
-			targetProxy = EF62D69E5DCB6F85667343DC777027EC /* PBXContainerItemProxy */;
-		};
-		6F0210B77806623925C8561F4E04D0FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-formiktest";
-			target = FDD5C1F83CD3BFD14CA423E44C19DE16 /* Pods-formiktest */;
-			targetProxy = 910A23BC72D6A5A7E548BE7318DD4E8F /* PBXContainerItemProxy */;
-		};
 		7AEC0D15EF11C1415A94D769184AD812 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FirebaseAnalytics;
@@ -2269,12 +2061,6 @@
 			name = "Pods-formiktest-tvOS";
 			target = 4CDB188110A719CBB28C3133DFECCA40 /* Pods-formiktest-tvOS */;
 			targetProxy = DD085A8D9C99547F9117C90D3141D951 /* PBXContainerItemProxy */;
-		};
-		8FD63D763D5B63ECE1E35D2EB9278E0C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FirebaseCore;
-			target = 4402AFF83DBDC4DD07E198685FDC2DF2 /* FirebaseCore */;
-			targetProxy = 83D732A792508F890693255BCB009BB3 /* PBXContainerItemProxy */;
 		};
 		9100981ED7CB17F6504B847543382E9F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2312,12 +2098,6 @@
 			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
 			targetProxy = 5BE488B88EB1D7B8BFE4A63D278D4B18 /* PBXContainerItemProxy */;
 		};
-		B4DD30B2D4E6E27C7863DE9E560D5AA0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FirebaseInstanceID;
-			target = 9E25537BF40D1A3B30CF43FD3E6ACD94 /* FirebaseInstanceID */;
-			targetProxy = CE75D912AAA0E1742379403B6809E170 /* PBXContainerItemProxy */;
-		};
 		B89D2CB67178C93A2DFF80F628C7A710 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleUtilities;
@@ -2335,12 +2115,6 @@
 			name = TwilioVideo;
 			target = C4062493E1D20306F1EA4108871D1ED7 /* TwilioVideo */;
 			targetProxy = 986E8FDE76C462413D2E61A073D95474 /* PBXContainerItemProxy */;
-		};
-		C939AEF441820B074980366E6235B0A4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TwilioVoice;
-			target = 73614281932881D538B76C26B92E0193 /* TwilioVoice */;
-			targetProxy = B66DE7DA0FEE94CC3CA4ED37551EF8B3 /* PBXContainerItemProxy */;
 		};
 		CA20CC0CC8595F02B384BCF03BBE9452 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2360,12 +2134,6 @@
 			target = 4402AFF83DBDC4DD07E198685FDC2DF2 /* FirebaseCore */;
 			targetProxy = 1996C5F8EC14085B56CC00E749B92EC2 /* PBXContainerItemProxy */;
 		};
-		E238A9541BFE37298B3A4E18220BF900 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleUtilities;
-			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
-			targetProxy = D1944050DAE242EC773B7D9D7287E7EF /* PBXContainerItemProxy */;
-		};
 		EC3171F115139727DE407DD10B35951B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TwilioVoice;
@@ -2377,7 +2145,7 @@
 /* Begin XCBuildConfiguration section */
 		0B94C23CEDF7A4B4A7B9ACFA474CEDF2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A39B13250A2F7878E6A4A88C6FC4A16 /* Pods-formiktest-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 4A033F952BDDE6E6DB8354D7F299490B /* Pods-formiktest-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -2411,7 +2179,7 @@
 		};
 		13932245884555EA67F55B1C213E6856 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4052AE720EB23E396CE137DC904084D4 /* Pods-formiktest.release.xcconfig */;
+			baseConfigurationReference = FE3496DDAD305BD23EF98BDB59247628 /* Pods-formiktest.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2446,7 +2214,7 @@
 		};
 		1A691480EEA447F6B94F684AE742B1CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 390140E739FE0385E1DAC6847ACBF366 /* Pods-formiktest.debug.xcconfig */;
+			baseConfigurationReference = AA559620386D9237102C2C17F4828B26 /* Pods-formiktest.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2521,7 +2289,7 @@
 		};
 		3CC431572482A7266ED3127DC7BB3181 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01F7DF04F95430054A8769098AA15DAC /* Pods-formiktest-tvOS.release.xcconfig */;
+			baseConfigurationReference = DA5DAE90B9D3C3A0791D434758406E32 /* Pods-formiktest-tvOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -2785,28 +2553,6 @@
 			};
 			name = Release;
 		};
-		9D8227160B2B44F8D64A1CB8BBF36A84 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23977C7C68D58CDCE7E2A00CD160D906 /* Pods-formiktestTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		A5237BD0F4D00A93612F725A170BFC28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 38593A73D15D5EA2AE57BC5FA46C7DBB /* TwilioVideo.xcconfig */;
@@ -2866,27 +2612,6 @@
 			};
 			name = Release;
 		};
-		AC2CF82A9ECF967622FAB5D56B7E90A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A62319931A35380FA949259A506201F /* Pods-formiktestTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		AF43202B07859A1A36397FDB30D2E9AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A1D5F43EE1B603BC1DC13720A23DDC6 /* Analytics.xcconfig */;
@@ -2936,7 +2661,7 @@
 		};
 		BFF488E947EEA1A3F2B58CCDDAA9D778 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1930F619A9C887281F8444A6B4BA2A5E /* Pods-formiktest-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 2B008846B44CBDA28E5585E94B105C56 /* Pods-formiktest-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -3105,7 +2830,7 @@
 		};
 		F55B6961F738E951600A927C9A656A52 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 969DA0E2D185536EE4E9DDF1E958AF74 /* Pods-formiktest-tvOS.debug.xcconfig */;
+			baseConfigurationReference = F81068D8C0E4AC2D467980E70B13E9A4 /* Pods-formiktest-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -3261,15 +2986,6 @@
 			buildConfigurations = (
 				BFF488E947EEA1A3F2B58CCDDAA9D778 /* Debug */,
 				0B94C23CEDF7A4B4A7B9ACFA474CEDF2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EA404DEE64D8C103C2C9DC910B3714E4 /* Build configuration list for PBXNativeTarget "Pods-formiktestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AC2CF82A9ECF967622FAB5D56B7E90A5 /* Debug */,
-				9D8227160B2B44F8D64A1CB8BBF36A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

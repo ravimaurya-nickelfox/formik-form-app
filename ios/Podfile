@@ -15,15 +15,6 @@ target 'formiktest' do
   pod 'Firebase/Core'
   pod 'Segment-Firebase'
 
-  target 'formiktestTests' do
-    inherit! :search_paths
-    # Pods for testing
-    pod 'TwilioVoice', '~> 2.0.0'
-    pod 'TwilioVideo', '~>2.10.0'
-    pod 'Firebase/Core'
-    pod 'Segment-Firebase'
-
-  end
 
 end
 
